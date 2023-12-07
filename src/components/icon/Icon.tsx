@@ -2,13 +2,14 @@ import React from 'react'
 
 // импортируем icon-svg-sprite
 import iconsSprite from '../../assets/icons/iconsSprite.svg'
+import styled from 'styled-components'
 
 // types
 type IconPropsType = {
     iconId: string
-    width?: string
-    height?: string
-    viewBox?: string
+    width: string
+    height: string
+    viewBox: string
 }
 
 export const Icon = (props: IconPropsType) => {

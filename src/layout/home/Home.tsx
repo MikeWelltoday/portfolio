@@ -12,6 +12,7 @@ import {FlexWrapper} from '../../components/FlexWrapper'
 export const Home = () => {
     return (
         <StyledHome>
+
             <FlexWrapper direction={'column'} justifyContent={'center'} alignItems={'center'} flexWrap={'nowrap'}>
                 <Photo src={`${ImageHome}`} alt="something went rong"/>
                 <HomeTextContainer>
@@ -20,6 +21,7 @@ export const Home = () => {
                     <DeveloperTitle>Front-End Developer</DeveloperTitle>
                 </HomeTextContainer>
             </FlexWrapper>
+
             <DecorContainer>
                 <Decor/>
             </DecorContainer>
@@ -28,7 +30,7 @@ export const Home = () => {
     )
 }
 
-const StyledHome = styled.div`
+const StyledHome = styled.section`
   min-height: 800px;
 
   //позиционирование decor
@@ -65,3 +67,4 @@ const DecorContainer = styled.div`
   display: flex;
   justify-content: center;
 `
+
