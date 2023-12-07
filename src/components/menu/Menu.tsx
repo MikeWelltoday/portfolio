@@ -1,25 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const Menu = () => {
+type MenuType = {
+    menuItemsList: string[]
+}
+
+export const Menu = (props: MenuType) => {
     return (
         <StyledNav>
             <ul>
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">Abot</a>
-                </li>
-                <li>
-                    <a href="">MyTechStack</a>
-                </li>
-                <li>
-                    <a href="">Projects</a>
-                </li>
-                <li>
-                    <a href="">Contacts</a>
-                </li>
+                {props.menuItemsList.map((item, index) =>
+                    <li key={index}>
+                        <a href="">{item}</a>
+                    </li>
+                )}
             </ul>
         </StyledNav>
     )

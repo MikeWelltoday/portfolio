@@ -5,11 +5,14 @@ import styled from 'styled-components'
 import {Logo} from '../../components/logo/Logo'
 import {Menu} from '../../components/menu/Menu'
 
+// menuItemsList
+const menuItemsList = ['Home', 'About', 'TechStack', 'Projects', 'Contacts']
+
 export const Header = () => {
     return (
         <StyledHeader>
             <Logo/>
-            <Menu/>
+            <Menu menuItemsList={menuItemsList}/>
         </StyledHeader>
     )
 }

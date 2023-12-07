@@ -51,9 +51,9 @@ const HomeTextContainer = styled.div`
   background: cornflowerblue;
 `
 
-const HelloTitle = styled.p``
+const HelloTitle = styled.h3``
 
-const NameTitle = styled.p``
+const NameTitle = styled.h2``
 
 const DeveloperTitle = styled.h1``
 

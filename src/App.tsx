@@ -7,7 +7,7 @@ import {Home} from './layout/home/Home'
 import {TechStack} from './layout/techstack/TechStack'
 
 // diablo
-import {Skills} from './diablo/skills/Skills'
+import {Works} from './diablo/works/Works'
 
 
 function App() {
@@ -16,12 +16,13 @@ function App() {
 
             <Header/>
             <Home/>
-            <TechStack/>
 
-            <StyledBorder>BORDER</StyledBorder>
+            {/*<TechStack/>*/}
 
-            {/*diablo*/}
-            <Skills/>
+
+            <Border>BORDER</Border>
+
+            <Works/>
 
         </div>
     )
@@ -29,12 +30,12 @@ function App() {
 
 export default App
 
-const StyledBorder = styled.div`
+const Border = styled.div`
   width: 100%;
-  height: 50%;
+  height: 50px;
+  background: red;
+  color: yellow;
+  font-size: 48px;
   text-align: center;
-  background: blue;
-  font-size: 36px;
-  color: red;
-  text-transform: capitalize;
+  margin: 20px 0;
 `
