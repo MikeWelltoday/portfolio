@@ -17,7 +17,7 @@ function App() {
             <Header/>
             <Home/>
 
-            {/*<TechStack/>*/}
+            <TechStack/>
 
 
             <Border>BORDER</Border>
