@@ -14,19 +14,25 @@ export const Home = () => {
         <StyledHome>
             <FlexWrapper direction={'column'} justifyContent={'center'} alignItems={'center'} flexWrap={'nowrap'}>
                 <Photo src={`${ImageHome}`} alt="something went rong"/>
-                <div>
+                <HomeTextContainer>
                     <HelloTitle>Hi There</HelloTitle>
                     <NameTitle>I'm Kuznetsov Mikhail</NameTitle>
                     <DeveloperTitle>Front-End Developer</DeveloperTitle>
-                </div>
+                </HomeTextContainer>
             </FlexWrapper>
-            <Decor/>
+            <DecorContainer>
+                <Decor/>
+            </DecorContainer>
+
         </StyledHome>
     )
 }
 
 const StyledHome = styled.div`
   min-height: 800px;
+
+  //позиционирование decor
+  position: relative;
 
   background: #191919;
 `
@@ -35,6 +41,12 @@ const Photo = styled.img`
   width: 220px;
   height: 400px;
   object-fit: contain;
+
+  background: #aa50e8;
+`
+
+const HomeTextContainer = styled.div`
+  background: cornflowerblue;
 `
 
 const HelloTitle = styled.p``
@@ -42,3 +54,14 @@ const HelloTitle = styled.p``
 const NameTitle = styled.p``
 
 const DeveloperTitle = styled.h1``
+
+//контейнер для декора
+const DecorContainer = styled.div`
+  position: absolute;
+  top: 67px;
+  left: 0;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`
