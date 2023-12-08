@@ -13,17 +13,15 @@ import secondImage from './../../assets/images/image-portfolio-2.webp'
 // menuItemsList
 const menuItemsList = ['All', 'Lending Page', 'React', 'Spa']
 
-// text
-const firstText = 'angularangularangrangularagularangularangularangularangular'
-
-
 export const Works = () => {
     return (
         <StyledWorks>
             <Menu menuItemsList={menuItemsList}/>
             <FlexWrapper justifyContent={'space-around'}>
-                <WorkList src={firstImage} text={firstText} title={'Angular'}/>
-                <WorkList src={secondImage} text={firstText} title={'Angular'}/>
+                <WorkList src={firstImage} text={'angularangula rangrangularagu larangulara ngularangu larangular'}
+                          title={'Angular'}/>
+                <WorkList src={secondImage} text={'angular angul arang rangu laragula rangularang ularangu larangular'}
+                          title={'Angular'}/>
             </FlexWrapper>
         </StyledWorks>
     )

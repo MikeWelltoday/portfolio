@@ -7,7 +7,7 @@ type MenuType = {
 
 export const Menu = (props: MenuType) => {
     return (
-        <StyledNav>
+        <StyledMenu>
             <ul>
                 {props.menuItemsList.map((item, index) =>
                     <li key={index}>
@@ -15,11 +15,11 @@ export const Menu = (props: MenuType) => {
                     </li>
                 )}
             </ul>
-        </StyledNav>
+        </StyledMenu>
     )
 }
 
-const StyledNav = styled.nav`
+const StyledMenu = styled.nav`
   background: aqua;
 
   ul {

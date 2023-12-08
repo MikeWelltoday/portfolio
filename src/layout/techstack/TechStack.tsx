@@ -10,8 +10,10 @@ import {TechStackCard} from './TechStackCard'
 export const TechStack = () => {
     return (
         <StyledTechStack>
+
             <SectionTitle title={'TechStack'} borderColor={'#EBE8E3'}/>
-            <FlexWrapper direction={'row'} justifyContent={'center'} alignItems={'center'} flexWrap={'wrap'}>
+
+            <FlexWrapper direction={'row'} justifyContent={'center'} alignItems={'stretch'} flexWrap={'wrap'}>
                 <TechStackCard iconId={'icon-MyTechStack-HTML'} width={'120'} height={'120'} viewBox={'0 0 120 120'}
                                techNameTitle={'HTML'}/>
                 <TechStackCard iconId={'icon-MyTechStack-CSS'} width={'120'} height={'119'} viewBox={'0 0 120 119'}
@@ -32,10 +34,8 @@ export const TechStack = () => {
                                viewBox={'0 0 105 105'} techNameTitle={'NextJS'}/>
                 <TechStackCard iconId={'icon-MyTechStack-NodeJS'} width={'105'} height={'105'}
                                viewBox={'0 0 105 105'} techNameTitle={'nodeJS'}/>
-
                 <TechStackCard iconId={'icon-MyTechStack-GraphQL'} width={'105'} height={'120'}
                                viewBox={'0 0 105 120'} techNameTitle={'GraphQL'}/>
-
                 <TechStackCard iconId={'icon-MyTechStack-WebPack'} width={'120'} height={'120'}
                                viewBox={'0 0 120 120'} techNameTitle={'Webpack'}/>
                 <TechStackCard iconId={'icon-MyTechStack-SASS'} width={'117'} height={'87'}
@@ -44,9 +44,8 @@ export const TechStack = () => {
                                viewBox={'0 0 120 120'} techNameTitle={'TailWind'}/>
                 <TechStackCard iconId={'icon-MyTechStack-GitHub'} width={'88'} height={'88'}
                                viewBox={'0 0 88 88'} techNameTitle={'GitHub'}/>
-
-
             </FlexWrapper>
+
         </StyledTechStack>
     )
 }

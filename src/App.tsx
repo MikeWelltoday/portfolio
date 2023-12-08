@@ -8,7 +8,9 @@ import {TechStack} from './layout/techstack/TechStack'
 
 // diablo
 import {Works} from './diablo/works/Works'
-import {Testimony} from './diablo/slider/Testimony'
+import {Testimony} from './diablo/testimony/Testimony'
+import {DiabloContacts} from './diablo/diabloContacts/DiabloContacts'
+import {DiabloFooter} from './diablo/diabloFooter/DiabloFooter'
 
 
 function App() {
@@ -22,9 +24,10 @@ function App() {
 
 
             <Border>BORDER</Border>
-
             <Works/>
             <Testimony/>
+            <DiabloContacts/>
+            <DiabloFooter/>
 
 
         </div>

@@ -19,8 +19,8 @@ export const SectionTitle = (props: SectionTitleType) => {
 const StyledSectionTitle = styled.h2<StyledSectionTitleType>`
   background: #3c106b;
 
-  display: flex;
   width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
