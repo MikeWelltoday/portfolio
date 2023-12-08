@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import {Header} from './layout/header/Header'
 import {Home} from './layout/home/Home'
 import {TechStack} from './layout/techstack/TechStack'
+import {About} from './layout/about/About'
+import {Portfolio} from './layout/portfolio/Portfolio'
 
 // diablo
 import {Works} from './diablo/works/Works'
@@ -19,9 +21,9 @@ function App() {
 
             <Header/>
             <Home/>
-
+            <About/>
             <TechStack/>
-
+            <Portfolio/>
 
             <Border>BORDER</Border>
             <Works/>

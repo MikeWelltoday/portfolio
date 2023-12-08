@@ -26,11 +26,12 @@ const StyledTechStackCard = styled.div`
   background: indianred;
 
   width: 200px;
-  text-align: center;
 `
 
 const TechName = styled.h3`
   font-size: 20px;
   font-weight: 500;
   color: #CCCCCC;
+
+  background: cornflowerblue;
 `

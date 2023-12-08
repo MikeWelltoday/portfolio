@@ -13,25 +13,25 @@ export const DiabloFooter = () => {
 
                     <SocialItem>
                         <SolicalLink>
-                            <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'} viewBox={'38'}/>
+                            <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'} viewBox={'0 0 38 38'}/>
                         </SolicalLink>
                     </SocialItem>
 
                     <SocialItem>
                         <SolicalLink>
-                            <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'} viewBox={'38'}/>
+                            <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'} viewBox={'0 0 38 38'}/>
                         </SolicalLink>
                     </SocialItem>
 
                     <SocialItem>
                         <SolicalLink>
-                            <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'} viewBox={'38'}/>
+                            <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'} viewBox={'0 0 38 38'}/>
                         </SolicalLink>
                     </SocialItem>
 
                     <SocialItem>
                         <SolicalLink>
-                            <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'} viewBox={'38'}/>
+                            <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'} viewBox={'0 0 38 38'}/>
                         </SolicalLink>
                     </SocialItem>
 
