@@ -14,7 +14,7 @@ import secondImage from './../../assets/images/image-portfolio-2.webp'
 const menuItemsList = ['All', 'Lending Page', 'React', 'Spa']
 
 // text
-const firstText = 'angularangularangularangularangularangularangularangularangularangularangularangularangularangularangularangularangularangularangularangularangularangularangularangularangularangularangularangular'
+const firstText = 'angularangularangrangularagularangularangularangularangular'
 
 
 export const Works = () => {

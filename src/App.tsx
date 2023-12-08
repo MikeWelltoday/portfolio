@@ -8,6 +8,7 @@ import {TechStack} from './layout/techstack/TechStack'
 
 // diablo
 import {Works} from './diablo/works/Works'
+import {Testimony} from './diablo/slider/Testimony'
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
             <Border>BORDER</Border>
 
             <Works/>
+            <Testimony/>
+
 
         </div>
     )
