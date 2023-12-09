@@ -10,7 +10,7 @@ export const DiabloContacts = () => {
 
         <StyledDiabloContacts>
 
-            <SectionTitle title={'DiabloContacts'} borderColor={'#EBE8E3'}/>
+            <SectionTitle title={'DiabloContacts'} borderColor={'#EBE8E3'} borderHeight={'1.5px'}/>
             <StyledForm>
                 <Field placeholder={'name'}/>
                 <Field placeholder={'subject'}/>

@@ -11,7 +11,7 @@ export const TechStack = () => {
     return (
         <StyledTechStack>
 
-            <SectionTitle title={'TechStack'} borderColor={'#EBE8E3'}/>
+            <SectionTitle title={'TechStack'} borderColor={'#EBE8E3'} borderHeight={'1.5px'}/>
 
             <FlexWrapper direction={'row'} justifyContent={'center'} alignItems={'stretch'} flexWrap={'wrap'}>
                 <TechStackCard iconId={'icon-MyTechStack-HTML'} width={'120'} height={'120'} viewBox={'0 0 120 120'}

@@ -4,15 +4,18 @@ import styled from 'styled-components'
 type SectionTitleType = {
     title: string
     borderColor: string
+    borderHeight: string
 }
 
 type StyledSectionTitleType = {
     borderColor: string
+    borderHeight: string
 }
 
 export const SectionTitle = (props: SectionTitleType) => {
     return (
-        <StyledSectionTitle borderColor={props.borderColor}>{props.title}</StyledSectionTitle>
+        <StyledSectionTitle borderColor={props.borderColor}
+                            borderHeight={props.borderHeight}>{props.title}</StyledSectionTitle>
     )
 }
 
@@ -32,14 +35,14 @@ const StyledSectionTitle = styled.h2<StyledSectionTitleType>`
   &:before {
     content: '';
     flex: 1 1 auto;
-    height: 1.5px;
+    height: ${props => props.borderHeight};
     background: ${props => props.borderColor};
   }
 
   &:after {
     content: '';
     flex: 1 1 auto;
-    height: 1.5px;
+    height: ${props => props.borderHeight};
     background: ${props => props.borderColor};
   }
 `

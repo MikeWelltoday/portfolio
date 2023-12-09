@@ -13,7 +13,7 @@ export const Header = () => {
     return (
         <StyledHeader>
             <FlexWrapper direction={'row'} justifyContent={'center'} alignItems={'center'} flexWrap={'nowrap'}>
-                <Logo/>
+                <Logo logoLink={'#'} iconId={'icon-home-mylogo'} width={'66'} height={'27'} viewBox={'0 0 66 27'}/>
                 <Menu menuItemsList={menuItemsList}/>
             </FlexWrapper>
 

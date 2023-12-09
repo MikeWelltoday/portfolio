@@ -11,7 +11,7 @@ export const Testimony = () => {
     return (
         <StyledTestemony>
 
-            <SectionTitle title={'Testimony'} borderColor={'#EBE8E3'}/>
+            <SectionTitle title={'Testimony'} borderColor={'#EBE8E3'} borderHeight={'1.5px'}/>
             <FlexWrapper direction={'column'} justifyContent={'center'} alignItems={'center'} flexWrap={'wrap'}>
                 <Icon iconId={'icon-home-mylogo'} width={'66'} height={'27'} viewBox={'0 0 66 27'}/>
                 <Slider/>

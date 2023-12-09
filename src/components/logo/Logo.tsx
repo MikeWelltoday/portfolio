@@ -2,13 +2,26 @@ import React from 'react'
 
 // Components
 import {Icon} from '../icon/Icon'
+import styled from 'styled-components'
 
-export const Logo = () => {
+type LogoType = {
+    logoLink: string
+    iconId: string
+    width: string
+    height: string
+    viewBox: string
+}
+
+export const Logo = (props: LogoType) => {
     return (
-        <a href="#">
-            <Icon iconId={'icon-home-mylogo'} width={'66'} height={'27'} viewBox={'0 0 66 27'}/>
-        </a>
+        <StyledLogo href={props.logoLink}>
+            <Icon iconId={props.iconId} width={props.width} height={props.height} viewBox={props.viewBox}/>
+        </StyledLogo>
     )
 }
+
+const StyledLogo = styled.a`
+  cursor: pointer;
+`
 
 

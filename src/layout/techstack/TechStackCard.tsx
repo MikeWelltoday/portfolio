@@ -24,7 +24,6 @@ export const TechStackCard = (props: TechStackCardType) => {
 
 const StyledTechStackCard = styled.div`
   background: indianred;
-
   width: 200px;
 `
 

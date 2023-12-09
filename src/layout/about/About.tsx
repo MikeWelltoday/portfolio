@@ -14,7 +14,7 @@ export const About = () => {
     return (
         <StyledAbout>
             <Card>
-                <SectionTitle title={'About'} borderColor={'#191919'}/>
+                <SectionTitle title={'About'} borderColor={'#191919'} borderHeight={'4px'}/>
                 <FlexWrapper flexWrap={'wrap'} alignItems={'stretch'} justifyContent={'space-between'}
                              direction={'row'}>
                     <CardPerson>
