@@ -68,7 +68,7 @@ const CardDecor = styled.div`
   column-gap: 35px;
 
 
-  &:before {
+  &:before, &:after {
     background-color: #191919;
     display: block;
     content: '';
@@ -78,13 +78,6 @@ const CardDecor = styled.div`
 
   svg {
     background-color: deeppink;
-  }
-
-  &:after {
-    background-color: #191919;
-    content: '';
-    height: 4px;
-    flex: 1 1 auto;
   }
 `
 
