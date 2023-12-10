@@ -39,8 +39,6 @@ export const About = () => {
 const StyledAbout = styled.section`
   background: #963c3c;
   min-height: 800px;
-
-
 `
 
 const Card = styled.div`
@@ -64,7 +62,7 @@ const PersonPhoto = styled.img`
   object-fit: contain;
 `
 
-const PersonText = styled.p`
+const PersonText = styled.span`
 
 `
 

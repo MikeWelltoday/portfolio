@@ -53,11 +53,11 @@ const HomeTextContainer = styled.div`
   background: cornflowerblue;
 `
 
-const HelloTitle = styled.h1``
+const HelloTitle = styled.span``
 
-const NameTitle = styled.h2``
+const NameTitle = styled.h3``
 
-const DeveloperTitle = styled.h2``
+const DeveloperTitle = styled.h1``
 
 //контейнер для декора
 const DecorContainer = styled.div`

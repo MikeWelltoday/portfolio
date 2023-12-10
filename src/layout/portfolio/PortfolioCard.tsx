@@ -47,7 +47,7 @@ const CardImage = styled.img`
   border-top-right-radius: 20px;
 `
 
-const CardTitle = styled.h1`
+const CardTitle = styled.h3`
 
 `
 
@@ -55,7 +55,7 @@ const CardDescription = styled.p`
   flex-grow: 1;
 `
 
-const CardTechStack = styled.h1`
+const CardTechStack = styled.h3`
 
 `
 

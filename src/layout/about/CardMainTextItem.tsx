@@ -37,7 +37,8 @@ const ItemTextBox = styled.div`
   align-content: stretch;
 `
 
-const ItemTitle = styled.div`
+const ItemTitle = styled.span`
+  display: block;
   background: yellow;
 
   &:after {
@@ -49,6 +50,7 @@ const ItemTitle = styled.div`
   }
 `
 
-const ItemText = styled.div`
+const ItemText = styled.p`
+  display: block;
   background: chocolate;
 `
