@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// styles
+import {ThemeSet} from '../../styles/ThemeStyles.styled'
+
 // components
 import {SectionTitle} from '../../components/SectionTitle'
 import {FlexWrapper} from '../../components/FlexWrapper'
@@ -47,7 +50,9 @@ const Card = styled.div`
   width: 100%;
 
   border-radius: 29px;
-  background: #363636 linear-gradient(131deg, #414141 0%, #2D2D2D 100.52%);
+
+  background-color: ${ThemeSet.colors.BackgroundCard};
+  background: ${ThemeSet.colors.BackgroundCardGradient};
   box-shadow: 0 4px 15px 0 rgba(27, 27, 27, 0.28);
 `
 

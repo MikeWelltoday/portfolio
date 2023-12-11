@@ -1,5 +1,8 @@
 import {createGlobalStyle} from 'styled-components'
 
+// styles
+import {ThemeSet} from './ThemeStyles.styled'
+
 export const GlobalStyles = createGlobalStyle`
 
   *, *::before, *::after {
@@ -9,28 +12,45 @@ export const GlobalStyles = createGlobalStyle`
     border: 0;
   }
 
+  html {
+    font-size: 10px;
+    height: 100%;
+  }
+
   body {
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    height: 100%;
+    line-height: 1;
+    background-color: ${ThemeSet.colors.BackgroundMain};
+    color: ${ThemeSet.colors.Font}
   }
 
-  a {
-    text-decoration: none;
+  img {
+    vertical-align: top;
   }
 
   ul {
     list-style-type: none;
   }
 
+  a, a:hover, a:active {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+    font-size: inherit;
+  }
+
   button {
     background-color: unset;
     border: none;
   }
-
-
-
 
 `

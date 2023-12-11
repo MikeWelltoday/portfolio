@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals'
 
 // styled
 import {GlobalStyles} from './styles/GlobalStyles.styled'
-import {ThemeSet} from './styles/Theme.styled'
+import {ThemeSet} from './styles/ThemeStyles.styled'
 import {ThemeProvider} from 'styled-components'
 
 const root = ReactDOM.createRoot(
