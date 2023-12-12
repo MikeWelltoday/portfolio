@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 // импортируем icon-svg-sprite
-import iconsSprite from '../../assets/icons/iconsSprite.svg'
+import iconsSprite from '../assets/icons/iconsSprite.svg'
 
 // types
 type IconPropsType = {

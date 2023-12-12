@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 // components
 import {SectionTitle} from '../../components/SectionTitle'
-import {Icon} from '../../components/icon/Icon'
+import {Icon} from '../../components/Icon'
 import {Slider} from './Slider'
 import {FlexWrapper} from '../../components/FlexWrapper'
 

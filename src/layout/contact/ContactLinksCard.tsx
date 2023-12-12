@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 //components
-import {Logo} from '../../components/logo/Logo'
+import {Logo} from '../../components/Logo'
 
 //types
 type ContactLinksCardType = {

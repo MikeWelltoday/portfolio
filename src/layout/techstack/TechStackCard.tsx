@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 // components
-import {Icon} from '../../components/icon/Icon'
+import {Icon} from '../../components/Icon'
 
 // type
 type TechStackCardType = {

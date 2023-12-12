@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components
-import {Icon} from '../icon/Icon'
+import {Icon} from './Icon'
 import styled from 'styled-components'
 
 type LogoType = {

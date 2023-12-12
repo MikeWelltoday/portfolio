@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+
+// components
 import {FlexWrapper} from '../../components/FlexWrapper'
 import {SectionTitle} from '../../components/SectionTitle'
 import {PortfolioCard} from './PortfolioCard'

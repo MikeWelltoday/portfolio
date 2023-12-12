@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 // components
-import {Menu} from '../../components/menu/Menu'
 import {FlexWrapper} from '../../components/FlexWrapper'
 import {WorkList} from './WorkList'
 
@@ -16,7 +15,13 @@ const menuItemsList = ['All', 'Lending Page', 'React', 'Spa']
 export const Works = () => {
     return (
         <StyledWorks>
-            <Menu menuItemsList={menuItemsList}/>
+            <ul>
+                {menuItemsList.map((item, index) =>
+                    <li key={index}>
+                        <a href="#">{item}</a>
+                    </li>
+                )}
+            </ul>
             <FlexWrapper justifyContent={'space-around'}>
                 <WorkList src={firstImage} text={'angularangula rangrangularagu larangulara ngularangu larangular'}
                           title={'Angular'}/>
@@ -31,7 +36,7 @@ const StyledWorks = styled.section`
   min-height: 800px;
   background: darkcyan;
 
-  Menu {
+  ul {
     text-align: center;
   }
 `

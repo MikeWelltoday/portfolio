@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 // components
 import {SectionTitle} from '../../components/SectionTitle'
-import {Logo} from '../../components/logo/Logo'
 import {ContactLinksCard} from './ContactLinksCard'
 
 // components
