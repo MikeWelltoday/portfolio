@@ -17,7 +17,8 @@ export const Home = () => {
     return (
         <StyledHome>
             <Container>
-                <FlexWrapper direction={'column'} justifyContent={'center'} alignItems={'center'} flexWrap={'nowrap'}>
+                <FlexWrapper direction={'column'} justifyContent={'flex-start'} alignItems={'center'}
+                             flexWrap={'nowrap'}>
                     <Photo src={`${ImageHome}`} alt="sry"/>
                     <HomeTextContainer>
                         <HelloTitle>Hello there</HelloTitle>
@@ -34,9 +35,8 @@ export const Home = () => {
 }
 
 const StyledHome = styled.section`
-  margin-top: 160px;
-  min-height: 800px;
-  background: ${ThemeSet.colors.BackgroundMain};
+  margin-top: 180px;
+  min-height: 700px;
   display: flex;
 
   //позиционирование decor
@@ -78,13 +78,12 @@ const DeveloperTitle = styled.h1`
 //контейнер для декора
 const DecorContainer = styled.div`
   position: absolute;
-  top: 67px;
+  top: 60px;
   left: 0;
   right: 0;
 
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
 `
 

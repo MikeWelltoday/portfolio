@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import {FlexWrapper} from '../../components/FlexWrapper'
+
+// styles
+import {ThemeSet} from '../../styles/ThemeStyles.styled'
 
 type CardMainTextItemType = {
     ItemTitle: string
@@ -20,39 +22,45 @@ export const CardMainTextItem = (props: CardMainTextItemType) => {
 
 const StyledCardMainTextItem = styled.div`
   background: #1c4f3a;
+  width: 100%;
+  padding: 5px 0;
 
   display: flex;
-  flex-direction: row;
-  column-gap: 25px;
+  flex-flow: row nowrap;
+  column-gap: 20px;
+  justify-content: flex-start;
 `
 
 const ItemTextBox = styled.div`
-  background-color: #f1f1ea;
-  min-width: 100px;
+  flex: 0 0 120px;
 
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-flow: column nowrap;
   align-items: flex-end;
   align-content: stretch;
 `
 
 const ItemTitle = styled.span`
   display: block;
-  background: yellow;
-
-  border-bottom: 3px solid #a21488;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
 
   &:after {
     margin-top: 3px;
     display: block;
     content: '';
     height: 1px;
-    background-color: #191919;
+    background-color: ${ThemeSet.colors.Font};
   }
 `
 
 const ItemText = styled.p`
+  flex: 1 1 auto;
   display: block;
-  background: chocolate;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+
 `

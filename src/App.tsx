@@ -34,8 +34,6 @@ function App() {
             <Testimony/>
             <DiabloContacts/>
             <DiabloFooter/>
-
-
         </div>
     )
 }
