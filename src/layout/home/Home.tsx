@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// styles
+import {ThemeSet} from '../../styles/ThemeStyles.styled'
+
 // Components
 import {Decor} from '../header/Decor'
 import {FlexWrapper} from '../../components/FlexWrapper'
@@ -51,13 +54,21 @@ const Photo = styled.img`
 
 const HomeTextContainer = styled.div`
   background: cornflowerblue;
+
+  border-top: ${ThemeSet.colors.Font} 1.5px solid;
 `
 
-const HelloTitle = styled.span``
+const HelloTitle = styled.span`
+  font-size: 46px;
+`
 
-const NameTitle = styled.h3``
+const NameTitle = styled.h3`
+  font-size: 46px;
+`
 
-const DeveloperTitle = styled.h1``
+const DeveloperTitle = styled.h1`
+  font-size: 46px;
+`
 
 //контейнер для декора
 const DecorContainer = styled.div`

@@ -41,6 +41,8 @@ const ItemTitle = styled.span`
   display: block;
   background: yellow;
 
+  border-bottom: 3px solid #a21488;
+
   &:after {
     margin-top: 3px;
     display: block;
