@@ -3,11 +3,9 @@ import styled from 'styled-components'
 
 // styles
 import {ThemeSet} from '../../styles/ThemeStyles.styled'
-import {Container} from '../../components/Container'
-
 
 // components
-
+import {Container} from '../../components/Container'
 
 export const Footer = () => {
     return (
@@ -20,7 +18,9 @@ export const Footer = () => {
 }
 
 const StyledFooter = styled.footer`
-  min-height: 200px;
+  min-height: 100px;
+  margin-top: 100px;
+  display: flex;
 `
 const StyledSmall = styled.small`
   display: block;
@@ -35,5 +35,6 @@ const StyledSmall = styled.small`
     height: 1.5px;
     display: block;
     background-color: ${ThemeSet.colors.Font};
+    margin-bottom: 10px;
   }
 `

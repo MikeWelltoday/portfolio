@@ -16,9 +16,9 @@ type PortfolioCardType = {
     cardPortfolioLink: string
 }
 
-export const PortfolioCard = (props: PortfolioCardType) => {
+export const ProjectsCard = (props: PortfolioCardType) => {
     return (
-        <StyledPortfolioCard>
+        <StyledProjectsCard>
             <CardImage src={`${props.cardImage}`} alt="sry"/>
             <CardTitle>{props.cardTitle}</CardTitle>
             <CardDescription>{props.cardDescription}</CardDescription>
@@ -26,12 +26,12 @@ export const PortfolioCard = (props: PortfolioCardType) => {
             <CardDecor>
                 <Icon iconId={'icon-projects-GitHub'} width={'20'} height={'20'} viewBox={'0 0 20 20'}/>
             </CardDecor>
-            <CardPortfolioLink href={props.cardPortfolioLink} target={'_blank'}>View Code</CardPortfolioLink>
-        </StyledPortfolioCard>
+            <CardProjectsLink href={props.cardPortfolioLink} target={'_blank'}>View Code</CardProjectsLink>
+        </StyledProjectsCard>
     )
 }
 
-const StyledPortfolioCard = styled.div`
+const StyledProjectsCard = styled.div`
   width: 330px;
   height: 600px;
   border-radius: 20px;
@@ -105,7 +105,7 @@ const CardDecor = styled.div`
   }
 `
 
-const CardPortfolioLink = styled.a`
+const CardProjectsLink = styled.a`
   color: ${ThemeSet.colors.Font};
   text-align: center;
   font-size: 16px;

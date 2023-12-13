@@ -6,7 +6,8 @@ export const ThemeSet = {
         BackgroundCard: '#363636',
         BackgroundCardGradient: 'linear-gradient(131deg, #414141 0%, #2D2D2D 100.52%)',
         Font: '#EBE8E3',
-        HeaderLogo: '#397D8C'
+        HeaderLogo: '#397D8C',
+        ButtonBackground: 'linear-gradient(87deg, #E2A300 4.47%, #E29500 95.53%)'
     },
     fontOpacity: `0.9`
 
