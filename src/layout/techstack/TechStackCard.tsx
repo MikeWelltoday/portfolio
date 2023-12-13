@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// styles
+import {ThemeSet} from '../../styles/ThemeStyles.styled'
+
 // components
 import {Icon} from '../../components/Icon'
 
@@ -23,14 +26,41 @@ export const TechStackCard = (props: TechStackCardType) => {
 }
 
 const StyledTechStackCard = styled.div`
-  background: indianred;
-  width: 200px;
+  width: 140px;
+  height: 150px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  svg {
+    flex: 0 0 auto;
+    opacity: 0.9;
+  }
+
+  h3 {
+    flex: 1 0 auto;
+  }
+
+  outline: 1px solid orange;
 `
 
 const TechName = styled.h3`
+  font-family: "JetBrains Mono", monospace;
   font-size: 20px;
-  font-weight: 500;
-  color: #CCCCCC;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  opacity: 0.7;
 
-  background: cornflowerblue;
+
+  color: ${ThemeSet.colors.Font};
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-end;
+
+  //background: cornflowerblue;
 `

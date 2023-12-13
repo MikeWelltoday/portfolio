@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// styles
+import {ThemeSet} from '../styles/ThemeStyles.styled'
+
 type SectionTitleType = {
     title: string
     borderColor: string
@@ -21,6 +24,8 @@ export const SectionTitle = (props: SectionTitleType) => {
 
 const StyledSectionTitle = styled.h2<StyledSectionTitleType>`
 
+  margin-bottom: 30px;
+
   width: 100%;
   display: flex;
   justify-content: center;
@@ -28,9 +33,10 @@ const StyledSectionTitle = styled.h2<StyledSectionTitleType>`
   flex-wrap: nowrap;
   column-gap: 25px;
 
-  color: #CCCCCC;
+  color: ${ThemeSet.colors.Font};
   font-size: 48px;
-  line-height: 50px;
+  font-weight: 600;
+  line-height: 1.2;
 
   &:before, &:after {
     content: '';

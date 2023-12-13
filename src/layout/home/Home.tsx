@@ -21,8 +21,8 @@ export const Home = () => {
                              flexWrap={'nowrap'}>
                     <Photo src={`${ImageHome}`} alt="sry"/>
                     <HomeTextContainer>
-                        <HelloTitle>Hello there</HelloTitle>
-                        <NameTitle>I'm Kuznetsov Mikhail</NameTitle>
+                        <HelloTitle>Hello there,</HelloTitle>
+                        <NameTitle>I'm Mikhail Kuznetsov</NameTitle>
                         <DeveloperTitle>Front-End Developer</DeveloperTitle>
                     </HomeTextContainer>
                 </FlexWrapper>
@@ -35,7 +35,7 @@ export const Home = () => {
 }
 
 const StyledHome = styled.section`
-  margin-top: 180px;
+  margin-top: 140px;
   min-height: 700px;
   display: flex;
 
@@ -47,7 +47,6 @@ const Photo = styled.img`
   width: 220px;
   height: 400px;
   object-fit: contain;
-  background: #aa50e8;
 `
 
 const HomeTextContainer = styled.div`

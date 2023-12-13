@@ -45,6 +45,7 @@ const ItemTitle = styled.span`
   font-size: 18px;
   font-weight: 500;
   line-height: 1.2;
+  opacity: ${ThemeSet.fontOpacity};
 
   &:after {
     margin-top: 3px;
@@ -62,6 +63,7 @@ const ItemText = styled.p`
   font-weight: 300;
   line-height: 1.2;
   letter-spacing: 0.2px;
+  opacity: ${ThemeSet.fontOpacity};
 
   text-align: justify;
 

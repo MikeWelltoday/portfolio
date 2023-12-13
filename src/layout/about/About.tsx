@@ -12,6 +12,14 @@ import {Container} from '../../components/Container'
 //image
 import ImageAbout from '../../assets/images/image-about.webp'
 
+// ItemText
+const ItemTextList: string[] = [
+    'Hardworking fron-end developer based in the Obninsk city, Russia.',
+    'I have experience in creating SPA based on React/Redux/TypeScript. Cross-browser, adaptive, responsive development with CSS-preprocessors, Material UI and Design libraries. Unit Tests.',
+    '2018-2024 | Leading engineer at the Rosatom Technical Academy',
+    '2012-2018 | Tomsk Polytechnic University with degree in Nuclear power plants: design, operation and engineering'
+]
+
 
 export const About = () => {
     return (
@@ -19,7 +27,7 @@ export const About = () => {
             <Container>
                 <Card>
                     <SectionTitle title={'About'} borderColor={`${ThemeSet.colors.BackgroundMain}`}
-                                  borderHeight={'4px'}/>
+                                  borderHeight={'3px'}/>
                     <CardBox>
                         <CardPersonBox>
                             <PersonPhoto src={`${ImageAbout}`} alt="sry"/>
@@ -27,13 +35,13 @@ export const About = () => {
 
                         <CardMainText>
                             <CardMainTextItem ItemTitle={'About Me'}
-                                              ItemText={'Hardworking fron-end developer based in the Obninsk city, Russia.'}/>
+                                              ItemText={ItemTextList[0]}/>
                             <CardMainTextItem ItemTitle={'Skills'}
-                                              ItemText={'I have experience in creating SPA based on React/Redux/TypeScript. Cross-browser, adaptive, responsive development with CSS-preprocessors, Material UI and Design libraries. Unit Tests.'}/>
+                                              ItemText={ItemTextList[1]}/>
                             <CardMainTextItem ItemTitle={'Experience'}
-                                              ItemText={'2018-2024 | Rosatom Technical Academy - Leading engineer'}/>
+                                              ItemText={ItemTextList[2]}/>
                             <CardMainTextItem ItemTitle={'Education'}
-                                              ItemText={'2012-2018 | Tomsk Polytechnic University - Nuclear power plants: design, operation and engineering'}/>
+                                              ItemText={ItemTextList[3]}/>
                         </CardMainText>
                     </CardBox>
                 </Card>
@@ -43,8 +51,9 @@ export const About = () => {
 }
 
 const StyledAbout = styled.section`
-  min-height: 1000px;
+  min-height: 450px;
   margin-top: 100px;
+  display: flex;
 `
 
 const Card = styled.div`
@@ -52,7 +61,7 @@ const Card = styled.div`
   margin: 0 auto;
   width: 100%;
 
-  padding: 15px 0 80px 0;
+  padding: 15px 0 50px 0;
 
   border-radius: 29px;
 
@@ -62,7 +71,6 @@ const Card = styled.div`
 `
 
 const CardBox = styled.div`
-  margin-top: 60px;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
