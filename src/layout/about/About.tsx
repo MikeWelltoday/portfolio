@@ -23,20 +23,17 @@ export const About = () => {
                     <CardBox>
                         <CardPersonBox>
                             <PersonPhoto src={`${ImageAbout}`} alt="sry"/>
-                            <PersonText>
-                                <span>Live in the Obninsk city, Russia.</span>
-                                <span>I am 30 years old, married, and do not have
-                                children</span>
-                            </PersonText>
                         </CardPersonBox>
 
                         <CardMainText>
                             <CardMainTextItem ItemTitle={'About Me'}
-                                              ItemText={'Hardworking team player focused on personal growth.'}/>
+                                              ItemText={'Hardworking fron-end developer based in the Obninsk city, Russia.'}/>
+                            <CardMainTextItem ItemTitle={'Skills'}
+                                              ItemText={'I have experience in creating SPA based on React/Redux/TypeScript. Cross-browser, adaptive, responsive development with CSS-preprocessors, Material UI and Design libraries. Unit Tests.'}/>
                             <CardMainTextItem ItemTitle={'Experience'}
-                                              ItemText={'I help busi helesa helpanis reaaches andd companies reach'}/>
-                            <CardMainTextItem ItemTitle={'General Info'}
-                                              ItemText={'Live in the Obninsk city, Russia. I am 30 years old, married, and do not have children'}/>
+                                              ItemText={'2018-2024 | Rosatom Technical Academy - Leading engineer'}/>
+                            <CardMainTextItem ItemTitle={'Education'}
+                                              ItemText={'2012-2018 | Tomsk Polytechnic University - Nuclear power plants: design, operation and engineering'}/>
                         </CardMainText>
                     </CardBox>
                 </Card>
@@ -84,19 +81,6 @@ const PersonPhoto = styled.img`
   height: 285px;
   object-fit: contain;
 `
-
-const PersonText = styled.p`
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.2;
-  letter-spacing: 0.2px;
-
-  span {
-    display: block;
-    padding-top: 5px;
-  }
-`
-
 
 const CardMainText = styled.div`
   flex: 0 1 600px;

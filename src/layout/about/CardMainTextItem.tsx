@@ -63,4 +63,6 @@ const ItemText = styled.p`
   line-height: 1.2;
   letter-spacing: 0.2px;
 
+  text-align: justify;
+
 `
