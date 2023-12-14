@@ -8,6 +8,7 @@ import {ThemeSet} from '../../styles/ThemeStyles.styled'
 import {SectionTitle} from '../../components/SectionTitle'
 import {ContactLinksCard} from './ContactLinksCard'
 import {Container} from '../../components/Container'
+import {ContactForm} from './ContactFormItem'
 
 
 export const Contact = () => {
@@ -23,7 +24,11 @@ export const Contact = () => {
                     <ContactLinksCard logoLink={'#'} iconId={'icon-contact-github'} width={'39'} height={'38'}
                                       viewBox={'0 0 39 38'} cardTitle={'github'}/>
                 </ContactLinks>
-                <ContactForm>
+
+                <ContactForm/>
+
+
+                <ContactFormLol>
                     <FormBox>
                         <FormInput type="text"/>
                         <span>Name</span>
@@ -38,7 +43,7 @@ export const Contact = () => {
                     </FormBox>
 
                     <FormButton type={'submit'}>contact me</FormButton>
-                </ContactForm>
+                </ContactFormLol>
             </Container>
 
         </StyledContact>
@@ -61,7 +66,7 @@ const ContactLinks = styled.div`
 
 `
 
-const ContactForm = styled.form`
+const ContactFormLol = styled.form`
   margin: 70px auto 0 auto;
 
   outline: 1px solid deeppink;
@@ -74,6 +79,7 @@ const ContactForm = styled.form`
   justify-content: flex-start;
   row-gap: 25px;
 `
+
 
 const FormBox = styled.div`
   position: relative;
@@ -115,7 +121,7 @@ const FormBox = styled.div`
     text-transform: uppercase;
     transition: 0.5s;
 
-    top: 0px;
+    top: 0;
   }
 
   input:focus ~ span {
@@ -142,7 +148,7 @@ const FormButton = styled.button`
   background: ${ThemeSet.colors.ButtonBackground};
   display: block;
   padding: 10px 15px;
-  box-shadow: 0 2px 13px 0 rgba(226, 158, 0, 0.48);
+  box-shadow: 0 2px 13px 0 ${ThemeSet.colors.ButtonShadow};
   cursor: pointer;
   text-align: center;
   width: 30%;
