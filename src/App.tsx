@@ -20,7 +20,6 @@ import {DiabloFooter} from './diablo/diabloFooter/DiabloFooter'
 function App() {
     return (
         <div className="App">
-
             <Header/>
             <Home/>
             <About/>

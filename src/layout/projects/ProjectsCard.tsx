@@ -57,7 +57,7 @@ const CardImage = styled.img`
 
 const CardTitle = styled.h3`
   text-align: center;
-  font-size: 28px;
+  font-size: 2.8rem;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 1.2px;
@@ -67,23 +67,19 @@ const CardTitle = styled.h3`
 const CardDescription = styled.p`
   flex-grow: 1;
   text-align: justify;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 300;
   line-height: 1.4;
   opacity: ${ThemeSet.fontOpacity};
 `
 
 const CardTechStack = styled.h3`
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.2;
+  font: 300 1.6rem/1.2 "JetBrains Mono", monospace;
   opacity: ${ThemeSet.fontOpacity};
-  font-family: "JetBrains Mono", monospace;
+
 
   span {
-    font-size: 18px;
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
+    font: 500 1.8rem/1.2 'Poppins', sans-serif;
   }
 `
 
@@ -108,7 +104,7 @@ const CardDecor = styled.div`
 const CardProjectsLink = styled.a`
   color: ${ThemeSet.colors.Font};
   text-align: center;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.2;
   text-decoration: underline;

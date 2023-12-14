@@ -34,7 +34,7 @@ const StyledSectionTitle = styled.h2<StyledSectionTitleType>`
   column-gap: 25px;
 
   color: ${ThemeSet.colors.Font};
-  font-size: 48px;
+  font-size: 4.8rem;
   font-weight: 600;
   line-height: 1.2;
 

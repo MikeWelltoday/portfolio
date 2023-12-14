@@ -15,3 +15,5 @@ export const ThemeSet = {
     fontOpacity: `0.9`
 
 }
+
+//google background color - #3c3c3c

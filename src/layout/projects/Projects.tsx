@@ -19,16 +19,16 @@ export const Projects = () => {
             <Container>
                 <SectionTitle title={'Projects'} borderColor={'#EBE8E3'} borderHeight={'1.5px'}/>
                 <ProjectsCardBox>
-                    <ProjectsCard cardImage={cardImageOne} cardTitle={'Portfolio'}
+                    <ProjectsCard cardImage={cardImageOne} cardTitle={'< Portfolio >'}
                                   cardDescription={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
                                   cardTechStack={'HTML,TS,SASS,React'} cardPortfolioLink={'#'}/>
-                    <ProjectsCard cardImage={cardImageTwo} cardTitle={'Todolist'}
+                    <ProjectsCard cardImage={cardImageTwo} cardTitle={'< Todolist >'}
                                   cardDescription={'This is sample project description random'}
                                   cardTechStack={'HTML,TS,SASS,React'} cardPortfolioLink={'#'}/>
-                    <ProjectsCard cardImage={cardImageThree} cardTitle={'Social Network'}
+                    <ProjectsCard cardImage={cardImageThree} cardTitle={'< Social Network >'}
                                   cardDescription={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
                                   cardTechStack={'HTML,TS,SASS,React'} cardPortfolioLink={'#'}/>
-                    <ProjectsCard cardImage={cardImageFour} cardTitle={'Shop'}
+                    <ProjectsCard cardImage={cardImageFour} cardTitle={'< Shop >'}
                                   cardDescription={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
                                   cardTechStack={'HTML,TS,SASS,React'} cardPortfolioLink={'#'}/>
                 </ProjectsCardBox>

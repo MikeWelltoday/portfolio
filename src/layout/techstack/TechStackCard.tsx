@@ -48,12 +48,11 @@ const StyledTechStackCard = styled.div`
 
 const TechName = styled.h3`
   font-family: "JetBrains Mono", monospace;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 300;
   line-height: 1.2;
   letter-spacing: -0.5px;
   opacity: 0.7;
-
 
   color: ${ThemeSet.colors.Font};
 
@@ -61,6 +60,4 @@ const TechName = styled.h3`
   flex-flow: row nowrap;
   justify-content: center;
   align-items: flex-end;
-
-  //background: cornflowerblue;
 `

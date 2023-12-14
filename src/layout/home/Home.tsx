@@ -21,7 +21,7 @@ export const Home = () => {
                              flexWrap={'nowrap'}>
                     <Photo src={`${ImageHome}`} alt="sry"/>
                     <HomeTextContainer>
-                        <HelloTitle>Hello there,</HelloTitle>
+                        <HelloTitle>Hello There,</HelloTitle>
                         <NameTitle>I'm Mikhail Kuznetsov</NameTitle>
                         <DeveloperTitle>Front-End Developer</DeveloperTitle>
                     </HomeTextContainer>
@@ -56,20 +56,20 @@ const HomeTextContainer = styled.div`
 `
 
 const HelloTitle = styled.span`
-  font-size: 44px;
+  font-size: 4.4rem;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.5px;
 `
 
 const NameTitle = styled.h3`
-  font-size: 44px;
+  font-size: 4.4rem;
   font-weight: 600;
   line-height: 1.2;
 `
 
 const DeveloperTitle = styled.h1`
-  font-size: 44px;
+  font-size: 4.4rem;
   font-weight: 600;
   line-height: 1.2;
 `

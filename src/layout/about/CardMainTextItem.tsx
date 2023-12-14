@@ -42,7 +42,7 @@ const ItemTextBox = styled.div`
 
 const ItemTitle = styled.span`
   display: block;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.2;
   opacity: ${ThemeSet.fontOpacity};
@@ -59,12 +59,10 @@ const ItemTitle = styled.span`
 const ItemText = styled.p`
   flex: 1 1 auto;
   display: block;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.2;
   letter-spacing: 0.2px;
   opacity: ${ThemeSet.fontOpacity};
-
   text-align: justify;
-
 `

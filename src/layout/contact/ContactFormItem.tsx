@@ -8,17 +8,18 @@ export const ContactForm = () => {
     return (
         <StyledContactForm>
             <ContactFormItemBox>
-                <FormInput type={'text'} name={'name'} id={'name'}/>
-                <FormLabel htmlFor={'name'}>name</FormLabel>
+                <FormInput type={'text'} name={'name'} id={'name'} required={true}/>
+                <FormLabel htmlFor={'name'} aria-labelledby={'name'}>name</FormLabel>
             </ContactFormItemBox>
             <ContactFormItemBox>
-                <FormInput type={'text'} name={'email'} id={'email'}/>
-                <FormLabel htmlFor={'email'}>email</FormLabel>
+                <FormInput type={'text'} name={'email'} id={'email'} required={true}/>
+                <FormLabel htmlFor={'email'} aria-labelledby={'email'}>email</FormLabel>
             </ContactFormItemBox>
             <ContactFormItemBox>
-                <FormInput as={'textarea'} name={'message'} id={'message'}/>
-                <FormLabel htmlFor={'message'}>message</FormLabel>
+                <FormInput as={'textarea'} name={'message'} id={'message'} required={true}/>
+                <FormLabel htmlFor={'message'} aria-labelledby={'message'}>message</FormLabel>
             </ContactFormItemBox>
+            <ContactFormButton type={'submit'}>contact me</ContactFormButton>
         </StyledContactForm>
 
     )
@@ -100,5 +101,23 @@ const FormLabel = styled.label`
   line-height: 1.2;
   letter-spacing: 1.5px;
   opacity: 0.4;
+`
 
+const ContactFormButton = styled.button`
+  background: ${ThemeSet.colors.ButtonBackground};
+  display: block;
+  padding: 10px 15px;
+  box-shadow: 0 2px 13px 0 ${ThemeSet.colors.ButtonShadow};
+  cursor: pointer;
+  text-align: center;
+  width: 30%;
+  border-radius: 5px;
+  margin: 0 auto;
+
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: ${ThemeSet.colors.Font};
 `

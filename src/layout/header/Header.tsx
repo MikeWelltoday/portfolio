@@ -15,7 +15,7 @@ export const Header = () => {
         <StyledHeader>
             <Container>
                 <FlexContainer>
-                    <HeaderLogo>.MikhailKuznetsov</HeaderLogo>
+                    <HeaderLogo aria-label={'header-logo'}>.MikhailKuznetsov</HeaderLogo>
                     <Menu>
                         <ItemsList>
                             {menuItemsList.map((item, index) =>
@@ -34,7 +34,7 @@ export const Header = () => {
 const StyledHeader = styled.header`
   background-color: ${ThemeSet.colors.BackgroundHeader};
   padding: 20px 0;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -50,7 +50,7 @@ const FlexContainer = styled.div`
 
 const HeaderLogo = styled.h3`
   color: ${ThemeSet.colors.HeaderLogo};
-  font: 300 20px/1.2 'JetBrains Mono', monospace;
+  font: 300 2rem/1.2 'JetBrains Mono', monospace;
 `
 
 const Menu = styled.nav`
@@ -66,7 +66,7 @@ const ListItem = styled.li`
 `
 
 const Link = styled.a`
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 500;
   line-height: 1.2;
   color: ${ThemeSet.colors.Font};

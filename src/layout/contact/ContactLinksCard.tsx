@@ -32,18 +32,20 @@ const StyledContactLinksCard = styled.div`
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  row-gap: 15px;
+  row-gap: 10px;
 
   background-color: #99839b;
 `
 
 const CardTitle = styled.a`
+  background-color: #6e6e50;
+
   text-transform: uppercase;
   cursor: pointer;
 
   color: ${ThemeSet.colors.Font};
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.2px;
+  line-height: 1.2;
   letter-spacing: 1.2px;
 `
