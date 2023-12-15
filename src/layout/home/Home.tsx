@@ -26,21 +26,29 @@ export const Home = () => {
                         <DeveloperTitle>Front-End Developer</DeveloperTitle>
                     </HomeTextContainer>
                 </FlexWrapper>
-                <DecorContainer>
-                    <Decor/>
-                </DecorContainer>
+                <Decor/>
             </Container>
         </StyledHome>
     )
 }
 
 const StyledHome = styled.section`
-  margin-top: 140px;
-  min-height: 700px;
-  display: flex;
+
+  h1, h2, span {
+    font-size: 4.4rem;
+    font-weight: 600;
+  }
 
   //позиционирование decor
   position: relative;
+
+  svg {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `
 
 const Photo = styled.img`
@@ -55,31 +63,8 @@ const HomeTextContainer = styled.div`
   padding-top: 15px;
 `
 
-const HelloTitle = styled.span`
-  font-size: 4.4rem;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-`
+const HelloTitle = styled.span``
 
-const NameTitle = styled.h2`
-  font-size: 4.4rem;
-  font-weight: 600;
-`
+const NameTitle = styled.h2``
 
-const DeveloperTitle = styled.h1`
-  font-size: 4.4rem;
-  font-weight: 600;
-`
-
-//контейнер для декора
-const DecorContainer = styled.div`
-  position: absolute;
-  top: 60px;
-  left: 0;
-  right: 0;
-
-  width: 100%;
-  display: flex;
-  justify-content: center;
-`
-
+const DeveloperTitle = styled.h1``

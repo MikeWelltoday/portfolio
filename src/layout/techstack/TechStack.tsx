@@ -53,9 +53,6 @@ export const TechStack = () => {
 }
 
 const StyledTechStack = styled.section`
-  min-height: 700px;
-  margin-top: 100px;
-  display: flex;
 `
 
 const TechStackCardBox = styled.div`

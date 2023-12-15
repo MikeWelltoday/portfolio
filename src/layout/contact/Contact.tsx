@@ -32,9 +32,6 @@ export const Contact = () => {
 }
 
 const StyledContact = styled.section`
-  min-height: 700px;
-  margin-top: 100px;
-  display: flex;
 `
 
 const ContactLinks = styled.div`

@@ -51,9 +51,6 @@ export const About = () => {
 }
 
 const StyledAbout = styled.section`
-  min-height: 450px;
-  margin-top: 100px;
-  display: flex;
 `
 
 const Card = styled.div`

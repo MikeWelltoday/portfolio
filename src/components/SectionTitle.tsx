@@ -39,7 +39,7 @@ const StyledSectionTitle = styled.h2<StyledSectionTitleType>`
 
   &:before, &:after {
     content: '';
-    flex: 1 1 auto;
+    flex: 1 0 auto;
     height: ${props => props.borderHeight};
     background: ${props => props.borderColor};
   }

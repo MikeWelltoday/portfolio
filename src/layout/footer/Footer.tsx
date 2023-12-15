@@ -18,15 +18,13 @@ export const Footer = () => {
 }
 
 const StyledFooter = styled.footer`
-  min-height: 100px;
-  margin-top: 100px;
-  display: flex;
+  padding: 50px 0;
 `
 const StyledSmall = styled.small`
-  //display: block;
+  display: block;
   text-align: center;
   opacity: 0.5;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 400;
 
   &:before {

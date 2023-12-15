@@ -59,4 +59,12 @@ export const GlobalStyles = createGlobalStyle`
     border: none;
   }
 
+  //  растояние между секциями
+  section {
+    padding: 100px 0;
+    display: flex;
+
+    outline: 1px solid #3dce2b;
+  }
+
 `

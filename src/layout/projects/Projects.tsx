@@ -38,9 +38,6 @@ export const Projects = () => {
 }
 
 const StyledProjects = styled.section`
-  min-height: 1700px;
-  margin-top: 100px;
-  display: flex;
 `
 
 const ProjectsCardBox = styled.div`
