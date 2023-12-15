@@ -63,8 +63,7 @@ const TechStackCardBox = styled.div`
   height: 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  align-items: stretch;
+  justify-content: space-evenly;
   align-content: flex-start;
   row-gap: 50px;
   column-gap: 7%;

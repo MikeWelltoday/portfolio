@@ -49,8 +49,7 @@ const ProjectsCardBox = styled.div`
 
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: stretch;
+  justify-content: space-evenly;
   row-gap: 80px;
-  column-gap: 50px;
+  column-gap: 5%;
 `
