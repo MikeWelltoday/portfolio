@@ -36,7 +36,6 @@ const StyledSectionTitle = styled.h2<StyledSectionTitleType>`
   color: ${ThemeSet.colors.Font};
   font-size: 4.8rem;
   font-weight: 600;
-  line-height: 1.2;
 
   &:before, &:after {
     content: '';

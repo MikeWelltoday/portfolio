@@ -58,20 +58,17 @@ const HomeTextContainer = styled.div`
 const HelloTitle = styled.span`
   font-size: 4.4rem;
   font-weight: 600;
-  line-height: 1.2;
   letter-spacing: -0.5px;
 `
 
-const NameTitle = styled.h3`
+const NameTitle = styled.h2`
   font-size: 4.4rem;
   font-weight: 600;
-  line-height: 1.2;
 `
 
 const DeveloperTitle = styled.h1`
   font-size: 4.4rem;
   font-weight: 600;
-  line-height: 1.2;
 `
 
 //контейнер для декора

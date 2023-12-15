@@ -59,7 +59,6 @@ const CardTitle = styled.h3`
   text-align: center;
   font-size: 2.8rem;
   font-weight: 500;
-  line-height: 1.2;
   letter-spacing: 1.2px;
 
 `
@@ -76,7 +75,6 @@ const CardDescription = styled.p`
 const CardTechStack = styled.h3`
   font: 300 1.6rem/1.2 "JetBrains Mono", monospace;
   opacity: ${ThemeSet.fontOpacity};
-
 
   span {
     font: 500 1.8rem/1.2 'Poppins', sans-serif;
@@ -106,7 +104,6 @@ const CardProjectsLink = styled.a`
   text-align: center;
   font-size: 1.6rem;
   font-weight: 500;
-  line-height: 1.2;
   text-decoration: underline;
 
   &:hover {

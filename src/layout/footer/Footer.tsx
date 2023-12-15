@@ -23,12 +23,11 @@ const StyledFooter = styled.footer`
   display: flex;
 `
 const StyledSmall = styled.small`
-  display: block;
+  //display: block;
   text-align: center;
   opacity: 0.5;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.2;
 
   &:before {
     content: '';

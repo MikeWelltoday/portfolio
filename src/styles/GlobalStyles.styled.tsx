@@ -31,7 +31,7 @@ export const GlobalStyles = createGlobalStyle`
     //font-family: 'JetBrains Mono', monospace;
 
     height: 100%;
-    line-height: 1;
+    line-height: 1.2;
     background-color: ${ThemeSet.colors.BackgroundMain};
     color: ${ThemeSet.colors.Font}
   }

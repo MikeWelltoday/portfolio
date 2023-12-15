@@ -68,7 +68,6 @@ const ListItem = styled.li`
 const Link = styled.a`
   font-size: 2rem;
   font-weight: 500;
-  line-height: 1.2;
   color: ${ThemeSet.colors.Font};
 `
 

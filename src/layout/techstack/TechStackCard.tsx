@@ -47,10 +47,7 @@ const StyledTechStackCard = styled.div`
 `
 
 const TechName = styled.h3`
-  font-family: "JetBrains Mono", monospace;
-  font-size: 2rem;
-  font-weight: 300;
-  line-height: 1.2;
+  font: 300 2rem/1.2 "JetBrains Mono", monospace;
   letter-spacing: -0.5px;
   opacity: 0.7;
 

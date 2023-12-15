@@ -61,7 +61,6 @@ const FormInput = styled.input`
 
   font-size: 1.4em;
   font-weight: 400;
-  line-height: 1.2;
   transition: 0.5s;
   height: 50px;
 
@@ -98,7 +97,6 @@ const FormLabel = styled.label`
 
   font-size: 1.4em;
   font-weight: 400;
-  line-height: 1.2;
   letter-spacing: 1.5px;
   opacity: 0.4;
 `
@@ -116,7 +114,6 @@ const ContactFormButton = styled.button`
 
   font-size: 1.2rem;
   letter-spacing: 1.2px;
-  line-height: 1.2;
   font-weight: 700;
   text-transform: uppercase;
   color: ${ThemeSet.colors.Font};
