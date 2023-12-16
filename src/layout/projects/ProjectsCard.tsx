@@ -22,7 +22,7 @@ export const ProjectsCard = (props: PortfolioCardType) => {
         <StyledProjectsCard>
             <CardImageBox>
                 <CardImage src={`${props.cardImage}`} alt="sry"/>
-                <ButtonFrame>view</ButtonFrame>
+                <ButtonFrame>view code</ButtonFrame>
             </CardImageBox>
             <CardTitle>{props.cardTitle}</CardTitle>
             <CardDescription>{props.cardDescription}</CardDescription>
@@ -49,40 +49,35 @@ const StyledProjectsCard = styled.div`
   justify-content: flex-start;
   row-gap: 10px;
 
-  transition: all 0.2s ease;
+  transition: transform 0.3s ease;
 
   &:hover {
     transform: scale(1.01);
+    outline: 2px solid ${ThemeSet.colors.FormFocusShadow}
   }
 `
 
 const CardImageBox = styled.div`
-  display: block;
   width: 100%;
   height: 260px;
   position: relative;
-  z-index: 0;
 
   ${ButtonFrame} {
     display: none;
-    z-index: 1;
     width: 150px;
     position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0 auto;
-    border: 1px solid ${ThemeSet.colors.BackgroundCard};
+    top: 43.26923076923%;
+    left: 23.2727272727%;
   }
-
-  transition: all 0.4s ease;
 
   &:hover {
     &::before {
       content: '';
       display: block;
       position: absolute;
+      background-color: rgba(0, 0, 0, 0.3);
       backdrop-filter: blur(3px);
-      margin: 0 -20px;
+      margin: 0 -15px;
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
       left: 0;

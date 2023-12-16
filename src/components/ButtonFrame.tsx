@@ -5,8 +5,6 @@ import {ThemeSet} from '../styles/ThemeStyles.styled'
 
 export const ButtonFrame = styled.button`
   background: ${ThemeSet.colors.ButtonBackground};
-
-    // box-shadow: 0 2px 13px 0 ${ThemeSet.colors.ButtonShadow};
   box-shadow: 0 0 5px ${ThemeSet.colors.ButtonShadow}, 0 0 20px ${ThemeSet.colors.ButtonShadow};
   text-align: center;
   width: 100%;
@@ -29,6 +27,7 @@ export const ButtonFrame = styled.button`
 
   &:active {
     transform: scale(0.96);
+    border: none;
   }
 `
 

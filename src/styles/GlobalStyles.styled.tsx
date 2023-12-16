@@ -65,6 +65,7 @@ export const GlobalStyles = createGlobalStyle`
   section {
     padding: 100px 0;
     display: flex;
+    flex-direction: column;
 
     outline: 1px solid #3dce2b;
   }

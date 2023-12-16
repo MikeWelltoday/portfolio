@@ -40,6 +40,12 @@ const StyledContactForm = styled.form`
   justify-content: flex-start;
   row-gap: 25px;
 
+  textarea {
+    min-height: 180px;
+    height: 100%;
+    resize: none;
+  }
+
   ${ButtonFrame} {
     width: 200px;
     margin: 0 auto;
@@ -48,12 +54,6 @@ const StyledContactForm = styled.form`
 
 const ContactFormItemBox = styled.div`
   position: relative;
-
-  & + & + & > textarea {
-    min-height: 240px;
-    height: 100%;
-    resize: none;
-  }
 `
 
 const FormInput = styled.input`
@@ -61,6 +61,8 @@ const FormInput = styled.input`
   padding: 10px;
   border-radius: 8px;
   outline: none;
+
+  font-family: 'Poppins', sans-serif;
 
   color: ${ThemeSet.colors.Font};
   border: 1.5px solid ${ThemeSet.colors.Font};
@@ -89,6 +91,10 @@ const FormInput = styled.input`
   &:focus {
     border: 1.5px solid ${ThemeSet.colors.FormFocusBorderColor};
     box-shadow: 0 2px 13px 0 ${ThemeSet.colors.FormFocusShadow};
+  }
+
+  &:focus-visible {
+    outline: none;
   }
 `
 

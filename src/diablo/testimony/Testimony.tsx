@@ -6,22 +6,21 @@ import {SectionTitle} from '../../components/SectionTitle'
 import {Icon} from '../../components/Icon'
 import {Slider} from './Slider'
 import {FlexWrapper} from '../../components/FlexWrapper'
+import {Container} from '../../components/Container'
 
 export const Testimony = () => {
     return (
         <StyledTestemony>
-
-            <SectionTitle title={'Testimony'} borderColor={'#EBE8E3'} borderHeight={'1.5px'}/>
-            <FlexWrapper direction={'column'} justifyContent={'center'} alignItems={'center'} flexWrap={'wrap'}>
-                <Icon iconId={'icon-home-mylogo'} width={'66'} height={'27'} viewBox={'0 0 66 27'}/>
-                <Slider/>
-            </FlexWrapper>
-
+            <Container>
+                <SectionTitle title={'Testimony'} borderColor={'#EBE8E3'} borderHeight={'1.5px'}/>
+                <FlexWrapper direction={'column'} justifyContent={'center'} alignItems={'center'} flexWrap={'wrap'}>
+                    <Icon iconId={'icon-contact-github'} width={'39'} height={'38'} viewBox={'0 0 39 38'}/>
+                    <Slider/>
+                </FlexWrapper>
+            </Container>
         </StyledTestemony>
     )
 }
 
-const StyledTestemony = styled.section`
-  min-height: 800px;
-  background: #89a6da;
+const StyledTestemony = styled.section`;
 `
