@@ -27,7 +27,14 @@ export const ButtonFrame = styled.button`
 
   &:active {
     transform: scale(0.96);
-    border: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${ThemeSet.colors.Font};
   }
 `
 

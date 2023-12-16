@@ -33,8 +33,6 @@ const StyledContactForm = styled.form`
   width: 100%;
   margin: 70px auto 0 auto;
 
-  outline: 1px solid deeppink;
-
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -94,7 +92,8 @@ const FormInput = styled.input`
   }
 
   &:focus-visible {
-    outline: none;
+    border: 1.5px solid ${ThemeSet.colors.FormFocusBorderColor};
+    box-shadow: 0 2px 13px 0 ${ThemeSet.colors.FormFocusShadow};
   }
 `
 
