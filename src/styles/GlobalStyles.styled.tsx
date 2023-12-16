@@ -47,6 +47,7 @@ export const GlobalStyles = createGlobalStyle`
   a, a:hover, a:active {
     text-decoration: none;
     cursor: pointer;
+    color: ${ThemeSet.colors.Font};
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -57,6 +58,7 @@ export const GlobalStyles = createGlobalStyle`
   button {
     background-color: unset;
     border: none;
+    cursor: pointer;
   }
 
   //  растояние между секциями
@@ -66,5 +68,7 @@ export const GlobalStyles = createGlobalStyle`
 
     outline: 1px solid #3dce2b;
   }
+
+
 
 `

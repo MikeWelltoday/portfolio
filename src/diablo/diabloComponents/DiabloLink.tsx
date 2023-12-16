@@ -1,38 +1,35 @@
 import styled from 'styled-components'
+
 import {ThemeSet} from '../../styles/ThemeStyles.styled'
 
-export const DiabloButton = styled.button`
-  width: 170px;
-  height: 32px;
-  font-weight: 400;
+
+export const DiabloLink = styled.a`
+  color: ${ThemeSet.colors.Font};
   font-size: 1.4rem;
+  font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: ${ThemeSet.colors.Font};
-
+  padding: 10px;
   position: relative;
   z-index: 0;
 
   &:hover {
     &::before {
-      width: 100%;
-      height: 100%;
+      display: inline-block;
     }
   }
 
   &::before {
-    position: absolute;
-    display: inline-block;
     content: '';
+    display: none;
+
+    position: absolute;
     z-index: -1;
-    bottom: 0;
+    bottom: 7px;
     left: 0;
     right: 0;
-    width: 50%;
     height: 10px;
-    margin: 0 auto;
     background-color: #473669;
   }
+}
 `
-
-

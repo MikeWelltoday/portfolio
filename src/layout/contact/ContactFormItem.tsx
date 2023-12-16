@@ -4,6 +4,9 @@ import styled from 'styled-components'
 // styles
 import {ThemeSet} from '../../styles/ThemeStyles.styled'
 
+// components
+import {ButtonFrame} from '../../components/ButtonFrame'
+
 export const ContactForm = () => {
     return (
         <StyledContactForm>
@@ -19,7 +22,7 @@ export const ContactForm = () => {
                 <FormInput as={'textarea'} name={'message'} id={'message'} required={true}/>
                 <FormLabel htmlFor={'message'} aria-labelledby={'message'}>message</FormLabel>
             </ContactFormItemBox>
-            <ContactFormButton type={'submit'}>contact me</ContactFormButton>
+            <ButtonFrame type={'submit'}>contact me</ButtonFrame>
         </StyledContactForm>
 
     )
@@ -36,6 +39,11 @@ const StyledContactForm = styled.form`
   flex-flow: column nowrap;
   justify-content: flex-start;
   row-gap: 25px;
+
+  ${ButtonFrame} {
+    width: 200px;
+    margin: 0 auto;
+  }
 `
 
 const ContactFormItemBox = styled.div`
@@ -51,11 +59,11 @@ const ContactFormItemBox = styled.div`
 const FormInput = styled.input`
   width: 100%;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 8px;
   outline: none;
 
   color: ${ThemeSet.colors.Font};
-  border: 2px solid ${ThemeSet.colors.Font};
+  border: 1.5px solid ${ThemeSet.colors.Font};
   background: ${ThemeSet.colors.BackgroundCardGradient};
   background-color: ${ThemeSet.colors.BackgroundCard};
 
@@ -69,8 +77,8 @@ const FormInput = styled.input`
     padding: 0 10px 0 10px;
 
     background: ${ThemeSet.colors.BackgroundCardGradient};
-    border-left: 2px solid ${ThemeSet.colors.FormFocusBorderColor};
-    border-right: 2px solid ${ThemeSet.colors.FormFocusBorderColor};
+    border-left: 1.5px solid ${ThemeSet.colors.FormFocusBorderColor};
+    border-right: 1.5px solid ${ThemeSet.colors.FormFocusBorderColor};
     letter-spacing: 1.5px;
     color: ${ThemeSet.colors.FormFocusBorderColor};
 
@@ -79,7 +87,7 @@ const FormInput = styled.input`
   }
 
   &:focus {
-    border: 2px solid ${ThemeSet.colors.FormFocusBorderColor};
+    border: 1.5px solid ${ThemeSet.colors.FormFocusBorderColor};
     box-shadow: 0 2px 13px 0 ${ThemeSet.colors.FormFocusShadow};
   }
 `
@@ -99,22 +107,4 @@ const FormLabel = styled.label`
   font-weight: 400;
   letter-spacing: 1.5px;
   opacity: 0.4;
-`
-
-const ContactFormButton = styled.button`
-  background: ${ThemeSet.colors.ButtonBackground};
-  display: block;
-  padding: 10px 15px;
-  box-shadow: 0 2px 13px 0 ${ThemeSet.colors.ButtonShadow};
-  cursor: pointer;
-  text-align: center;
-  width: 30%;
-  border-radius: 5px;
-  margin: 0 auto;
-
-  font-size: 1.2rem;
-  letter-spacing: 1.2px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: ${ThemeSet.colors.Font};
 `

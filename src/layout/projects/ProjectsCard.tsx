@@ -6,6 +6,7 @@ import {ThemeSet} from '../../styles/ThemeStyles.styled'
 
 // components
 import {Icon} from '../../components/Icon'
+import {ButtonFrame} from '../../components/ButtonFrame'
 
 //types
 type PortfolioCardType = {
@@ -19,7 +20,10 @@ type PortfolioCardType = {
 export const ProjectsCard = (props: PortfolioCardType) => {
     return (
         <StyledProjectsCard>
-            <CardImage src={`${props.cardImage}`} alt="sry"/>
+            <CardImageBox>
+                <CardImage src={`${props.cardImage}`} alt="sry"/>
+                <ButtonFrame>view</ButtonFrame>
+            </CardImageBox>
             <CardTitle>{props.cardTitle}</CardTitle>
             <CardDescription>{props.cardDescription}</CardDescription>
             <CardTechStack><span>Tech Stack: </span>{props.cardTechStack}</CardTechStack>
@@ -44,12 +48,60 @@ const StyledProjectsCard = styled.div`
   flex-flow: column nowrap;
   justify-content: flex-start;
   row-gap: 10px;
+
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+`
+
+const CardImageBox = styled.div`
+  display: block;
+  width: 100%;
+  height: 260px;
+  position: relative;
+  z-index: 0;
+
+  ${ButtonFrame} {
+    display: none;
+    z-index: 1;
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    border: 1px solid ${ThemeSet.colors.BackgroundCard};
+  }
+
+  transition: all 0.4s ease;
+
+  &:hover {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      backdrop-filter: blur(3px);
+      margin: 0 -20px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    ${ButtonFrame} {
+      display: block;
+    }
+  }
+
 `
 
 const CardImage = styled.img`
   margin-left: -15px;
   width: 330px;
-  height: 260px;
+  height: 100%;
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -100,7 +152,6 @@ const CardDecor = styled.div`
 `
 
 const CardProjectsLink = styled.a`
-  color: ${ThemeSet.colors.Font};
   text-align: center;
   font-size: 1.6rem;
   font-weight: 500;

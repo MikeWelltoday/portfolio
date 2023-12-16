@@ -42,8 +42,7 @@ const CardTitle = styled.a`
 
   text-transform: uppercase;
   cursor: pointer;
-
-  color: ${ThemeSet.colors.Font};
+  
   font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 1.2px;

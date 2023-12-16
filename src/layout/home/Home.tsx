@@ -33,6 +33,7 @@ export const Home = () => {
 }
 
 const StyledHome = styled.section`
+  margin-top: 20px;
 
   h1, h2, span {
     font-size: 4.4rem;
