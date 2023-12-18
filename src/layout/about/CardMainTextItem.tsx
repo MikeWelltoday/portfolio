@@ -33,18 +33,16 @@ const StyledCardMainTextItem = styled.div`
 
 const ItemTextBox = styled.div`
   flex: 0 0 120px;
-
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-end;
-  align-content: stretch;
+  text-align: right;
 `
 
 const ItemTitle = styled.h2`
-  display: block;
+  display: inline-block;
   font-size: 1.8rem;
   font-weight: 500;
   opacity: ${ThemeSet.fontOpacity};
+
+  background-color: orange;
 
   &:after {
     margin-top: 3px;
@@ -56,6 +54,7 @@ const ItemTitle = styled.h2`
 `
 
 const ItemText = styled.p`
+  background-color: #6fafda;
   flex: 1 1 auto;
   font-size: 1.6rem;
   font-weight: 300;

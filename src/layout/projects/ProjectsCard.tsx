@@ -49,11 +49,11 @@ const StyledProjectsCard = styled.div`
   justify-content: flex-start;
   row-gap: 10px;
 
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 
   &:hover {
     transform: scale(1.01);
-    outline: 2px solid ${ThemeSet.colors.FormFocusShadow}
+    outline: 2px solid ${ThemeSet.colors.FormFocusShadow};
   }
 `
 
@@ -119,7 +119,7 @@ const CardDescription = styled.p`
   opacity: ${ThemeSet.fontOpacity};
 `
 
-const CardTechStack = styled.h3`
+const CardTechStack = styled.h2`
   font: 300 1.6rem/1.2 "JetBrains Mono", monospace;
   opacity: ${ThemeSet.fontOpacity};
 

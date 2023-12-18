@@ -6,6 +6,8 @@ import {ThemeSet} from '../../styles/ThemeStyles.styled'
 
 // Components
 import {Container} from '../../components/Container'
+import {Menu} from './Menu'
+import {MenuMobile} from './MenuMobile'
 
 // menuItemsList
 const menuItemsList: string[] = ['Home', 'About', 'TechStack', 'Projects', 'Contacts']
@@ -16,15 +18,8 @@ export const Header = () => {
             <Container>
                 <FlexContainer>
                     <HeaderLogo aria-label={'header-logo'}>.MikhailKuznetsov</HeaderLogo>
-                    <Menu>
-                        <ItemsList>
-                            {menuItemsList.map((item, index) =>
-                                <ListItem key={index}>
-                                    <Link href="#">{item}</Link>
-                                </ListItem>
-                            )}
-                        </ItemsList>
-                    </Menu>
+                    <Menu menuItemsList={menuItemsList}/>
+                    <MenuMobile menuItemsList={menuItemsList}/>
                 </FlexContainer>
             </Container>
         </StyledHeader>
@@ -45,28 +40,14 @@ const FlexContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center;
-`
 
+  @media ${ThemeSet.media.tablet} {
+    justify-content: center;
+  }
+`
 const HeaderLogo = styled.h3`
   color: ${ThemeSet.colors.HeaderLogo};
   font: 300 2rem/1.2 'JetBrains Mono', monospace;
 `
 
-const Menu = styled.nav`
-`
-
-const ItemsList = styled.ul`
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-`
-
-const ListItem = styled.li`
-`
-
-const Link = styled.a`
-  font-size: 2rem;
-  font-weight: 500;
-`
 

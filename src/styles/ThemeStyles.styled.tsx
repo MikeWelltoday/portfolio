@@ -3,6 +3,7 @@ export const ThemeSet = {
     colors: {
         BackgroundMain: '#191919',
         BackgroundHeader: '#191919',
+        MobileMenuBackground: `#3c3c3c`,
         BackgroundCard: '#363636',
         BackgroundCardGradient: 'linear-gradient(131deg, #414141 0%, #2D2D2D 100.52%)',
         Font: '#EBE8E3',
@@ -12,7 +13,13 @@ export const ThemeSet = {
         FormFocusBorderColor: '#DEC14EFF',
         FormFocusShadow: 'rgba(226, 158, 0, 0.48)'
     },
-    fontOpacity: `0.9`
+
+    fontOpacity: `0.9`,
+
+    media: {
+        tablet: 'screen and (max-width: 758px)',
+        mobile: 'screen and (max-width: 576px)'
+    }
 
 }
 
