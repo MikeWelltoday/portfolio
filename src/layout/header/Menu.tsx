@@ -27,6 +27,7 @@ const StyledMenu = styled.nav`
 
   @media ${ThemeSet.media.tablet} {
     display: none;
+  }
 `
 
 const ItemsList = styled.ul`
