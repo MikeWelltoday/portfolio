@@ -22,7 +22,7 @@ export const ProjectsCard = (props: PortfolioCardType) => {
         <StyledProjectsCard>
             <CardImageBox>
                 <CardImage src={`${props.cardImage}`} alt="sry"/>
-                <ButtonFrame>view code</ButtonFrame>
+                <ButtonFrame>view project</ButtonFrame>
             </CardImageBox>
             <CardTitle>{props.cardTitle}</CardTitle>
             <CardDescription>{props.cardDescription}</CardDescription>

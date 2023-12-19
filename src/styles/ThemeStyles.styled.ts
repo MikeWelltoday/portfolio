@@ -18,7 +18,8 @@ export const ThemeSet = {
 
     media: {
         tablet: 'screen and (max-width: 758px)',
-        mobile: 'screen and (max-width: 576px)'
+        mobile: 'screen and (max-width: 576px)',
+        desktop: 'screen and (min-width: 1030px)'
     }
 
 }

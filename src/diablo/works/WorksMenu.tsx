@@ -27,13 +27,16 @@ export const WorksMenu = (props: WorksMenuType) => {
 const StyledWorksMenu = styled.nav`
 
   ul {
+    margin: 0 auto;
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
+
+    max-width: 352px;
+    width: 100%;
   }
 
   li {
- 
+
   }
 `
 

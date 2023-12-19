@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {DiabloLink} from '../diabloComponents/DiabloLink'
 import {DiabloButton} from '../diabloComponents/DiabloButton'
+import {ThemeSet} from '../../styles/ThemeStyles.styled'
 
 type WorkListProps = {
     title: string
@@ -28,9 +29,12 @@ export const WorkList = (props: WorkListProps) => {
 
 const StyledWorkList = styled.div`
   background: #252527;
-  min-width: 320px;
-  max-width: 470px;
-  flex: 1 0 47%;
+  width: 320px;
+  flex-grow: 1;
+
+  @media ${ThemeSet.media.desktop} {
+    max-width: 470px;
+  }
 
   ${DiabloLink} {
     padding: 10px 0;
@@ -55,21 +59,37 @@ const ImgWrapper = styled.div`
     transform: translate(-50%, -50%);
   }
 
+  &::before {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
   &:hover {
     &::before {
-      background-color: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(4px);
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
+      display: block;
     }
 
     ${DiabloButton} {
       display: block;
     }
+  }
+
+  @media ${ThemeSet.media.tablet} {
+    ${DiabloButton} {
+      display: block;
+    }
+
+    &::before {
+      display: block;
+    }
+
   }
 `
 

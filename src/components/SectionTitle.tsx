@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-// styles
 import {ThemeSet} from '../styles/ThemeStyles.styled'
+import {mixinFont} from '../styles/Common'
 
 type SectionTitleType = {
     title: string
@@ -33,9 +33,7 @@ const StyledSectionTitle = styled.h2<StyledSectionTitleType>`
   flex-wrap: nowrap;
   column-gap: 25px;
 
-  color: ${ThemeSet.colors.Font};
-  font-size: 4.8rem;
-  font-weight: 600;
+  ${mixinFont({weight: 600, fontMinRem: 3.5, fontMaxRem: 4.8})};
 
   &:before, &:after {
     content: '';

@@ -31,7 +31,7 @@ export const ContactForm = () => {
 const StyledContactForm = styled.form`
   max-width: 700px;
   width: 100%;
-  margin: 70px auto 0 auto;
+  margin: 50px auto 0 auto;
 
   display: flex;
   flex-flow: column nowrap;

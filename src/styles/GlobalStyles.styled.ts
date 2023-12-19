@@ -67,6 +67,10 @@ export const GlobalStyles = createGlobalStyle`
     display: flex;
     flex-direction: column;
 
+    @media ${ThemeSet.media.mobile} {
+      padding: 80px 0;
+    }
+
     outline: 1px solid #3dce2b;
   }
 

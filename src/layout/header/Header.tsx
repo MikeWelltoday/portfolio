@@ -40,10 +40,6 @@ const FlexContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-
-  @media ${ThemeSet.media.tablet} {
-    justify-content: center;
-  }
 `
 const HeaderLogo = styled.h3`
   color: ${ThemeSet.colors.HeaderLogo};

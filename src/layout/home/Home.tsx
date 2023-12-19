@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-// styles
+// styles+mixins
 import {ThemeSet} from '../../styles/ThemeStyles.styled'
+import {mixinFont} from '../../styles/Common'
 
 // Components
 import {Decor} from '../header/Decor'
@@ -36,19 +37,24 @@ const StyledHome = styled.section`
   margin-top: 20px;
 
   h1, h2, span {
-    font-size: 4.4rem;
-    font-weight: 600;
+    white-space: nowrap;
+    ${mixinFont({weight: 600, fontMaxRem: 4.4, fontMinRem: 3})}
   }
 
   //позиционирование decor
   position: relative;
 
   svg {
+    max-width: 628px;
     width: 100%;
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
+
+    @media ${ThemeSet.media.mobile} {
+      display: none;
+    }
   }
 `
 
@@ -59,7 +65,6 @@ const Photo = styled.img`
 `
 
 const HomeTextContainer = styled.div`
-  //background: cornflowerblue;
   border-top: ${ThemeSet.colors.Font} 1.5px solid;
   padding-top: 15px;
 `
