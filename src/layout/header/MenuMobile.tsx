@@ -37,10 +37,10 @@ const StyledMenuMobile = styled.nav`
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
-  top: -100px;
-  right: -100px;
-  width: 200px;
-  height: 200px;
+  top: -82px;
+  right: -82px;
+  width: 164px;
+  height: 164px;
   border-radius: 50%;
   z-index: 999999999;
 
@@ -49,10 +49,11 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     display: block;
     width: 36px;
     height: 2px;
-    background-color: red;
+    background-color: ${ThemeSet.colors.Font};
     position: absolute;
     left: 40px;
     bottom: 50px;
+    border-radius: 1px;
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
       // делаем среднюю линию прозрачной, когда менюшка активирована
@@ -63,9 +64,10 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       display: block;
       width: 36px;
       height: 2px;
-      background-color: red;
+      background-color: ${ThemeSet.colors.Font};
       position: absolute;
       transform: translateY(-10px);
+      border-radius: 1px;
 
       //  наклоняем линию
       ${props => props.isOpen && css<{ isOpen: boolean }>`
@@ -78,9 +80,10 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       display: block;
       width: 24px;
       height: 2px;
-      background-color: red;
+      background-color: ${ThemeSet.colors.Font};
       position: absolute;
       transform: translateY(10px);
+      border-radius: 1px;
 
       //  наклоняем линию
       ${props => props.isOpen && css<{ isOpen: boolean }>`
