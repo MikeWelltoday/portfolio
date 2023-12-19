@@ -57,7 +57,7 @@ const Card = styled.div`
   max-width: 1000px;
   margin: 0 auto;
   width: 100%;
-  padding: 15px 0 50px 0;
+  padding: 15px 5% 50px 5%;
   border-radius: 29px;
 
   background-color: ${ThemeSet.colors.BackgroundCard};
@@ -69,7 +69,7 @@ const CardBox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  padding: 0 5%;
+  //padding: 0 5%;
 
   background-color: rgba(255, 20, 147, 0.21);
 `

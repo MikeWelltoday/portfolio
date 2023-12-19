@@ -38,7 +38,7 @@ const ItemTextBox = styled.div`
 
 const ItemTitle = styled.h2`
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: 500;
   opacity: ${ThemeSet.fontOpacity};
 
@@ -56,7 +56,7 @@ const ItemTitle = styled.h2`
 const ItemText = styled.p`
   background-color: #6fafda;
   flex: 1 1 auto;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 300;
   letter-spacing: 0.2px;
   opacity: ${ThemeSet.fontOpacity};
