@@ -5,7 +5,7 @@ import {Icon} from '../../../components/Icon'
 //===============================================================================================================================================================
 
 // type
-type TechStackCardPropsType = {
+export type TechStackCardPropsType = {
     iconId: string
     width: string
     height: string

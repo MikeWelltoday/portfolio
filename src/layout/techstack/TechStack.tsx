@@ -1,13 +1,13 @@
 import React from 'react'
 import {ThemeSet} from '../../styles/ThemeStyles.styled'
 import {SectionTitle} from '../../components/sectionTitle/SectionTitle'
-import {TechStackCard} from './techStackCard/TechStackCard'
+import {TechStackCard, TechStackCardPropsType} from './techStackCard/TechStackCard'
 import {Container} from '../../components/Container'
 import {S} from './TechStack_Styles'
 
 //===============================================================================================================================================================
 
-const techStackCardData = [
+const techStackCardData: Array<TechStackCardPropsType> = [
     {
         iconId: 'icon-MyTechStack-HTML',
         width: '93',

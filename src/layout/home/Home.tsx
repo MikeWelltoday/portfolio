@@ -3,6 +3,7 @@ import {S} from './Home_Styles'
 import {Decor} from '../header/Decor'
 import {FlexWrapper} from '../../components/FlexWrapper'
 import {Container} from '../../components/Container'
+
 //===============================================================================================================================================================
 
 // img

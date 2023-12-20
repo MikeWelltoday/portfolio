@@ -1,34 +1,11 @@
-import React from 'react'
 import styled from 'styled-components'
+import {ThemeSet} from '../../../styles/ThemeStyles.styled'
+import {ButtonFrame} from '../../../components/ButtonFrame'
 
-// styles
-import {ThemeSet} from '../../styles/ThemeStyles.styled'
 
-// components
-import {ButtonFrame} from '../../components/ButtonFrame'
+//===============================================================================================================================================================
 
-export const ContactForm = () => {
-    return (
-        <StyledContactForm>
-            <ContactFormItemBox>
-                <FormInput type={'text'} name={'name'} id={'name'} required={true}/>
-                <FormLabel htmlFor={'name'} aria-labelledby={'name'}>name</FormLabel>
-            </ContactFormItemBox>
-            <ContactFormItemBox>
-                <FormInput type={'text'} name={'email'} id={'email'} required={true}/>
-                <FormLabel htmlFor={'email'} aria-labelledby={'email'}>email</FormLabel>
-            </ContactFormItemBox>
-            <ContactFormItemBox>
-                <FormInput as={'textarea'} name={'message'} id={'message'} required={true}/>
-                <FormLabel htmlFor={'message'} aria-labelledby={'message'}>message</FormLabel>
-            </ContactFormItemBox>
-            <ButtonFrame type={'submit'}>contact me</ButtonFrame>
-        </StyledContactForm>
-
-    )
-}
-
-const StyledContactForm = styled.form`
+const ContactForm = styled.form`
   max-width: 700px;
   width: 100%;
   margin: 50px auto 0 auto;
@@ -113,3 +90,12 @@ const FormLabel = styled.label`
   letter-spacing: 1.5px;
   opacity: 0.4;
 `
+
+//===============================================================================================================================================================
+
+export const S = {
+    ContactForm,
+    ContactFormItemBox,
+    FormInput,
+    FormLabel
+}

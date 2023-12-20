@@ -1,44 +1,55 @@
 import React from 'react'
-import styled from 'styled-components'
-
-//styles
+import {S} from './Contact_Styles'
 import {ThemeSet} from '../../styles/ThemeStyles.styled'
-
-// components
 import {SectionTitle} from '../../components/sectionTitle/SectionTitle'
-import {ContactLinksCard} from './ContactLinksCard'
+import {ContactLinksCard} from './contactLinksCard/ContactLinksCard'
 import {Container} from '../../components/Container'
-import {ContactForm} from './ContactFormItem'
+import {ContactForm} from './contactFormItem/ContactFormItem'
+import {ContactLinksCardPropsType} from './contactLinksCard/ContactLinksCard'
+
+//===============================================================================================================================================================
 
 
-export const Contact = () => {
+const contactLinksCardData: Array<ContactLinksCardPropsType> = [
+    {
+        logoLink: '#',
+        iconId: 'icon-contact-gmail',
+        width: '39',
+        height: '38',
+        viewBox: '0 0 39 38',
+        cardTitle: 'gmail'
+    }, {
+        logoLink: '#',
+        iconId: 'icon-contact-telegram',
+        width: '38',
+        height: '38',
+        viewBox: '0 0 38 38',
+        cardTitle: 'telegram'
+    }, {
+        logoLink: '#',
+        iconId: 'icon-contact-github',
+        width: '39',
+        height: '38',
+        viewBox: '0 0 39 38',
+        cardTitle: 'github'
+    }
+]
+
+export const Contact: React.FC = () => {
     return (
-        <StyledContact>
+        <S.Contact>
             <Container>
                 <SectionTitle title={'Contact'} borderColor={ThemeSet.colors.Font} borderHeight={'1.5px'}/>
-                <ContactLinks>
-                    <ContactLinksCard logoLink={'#'} iconId={'icon-contact-gmail'} width={'39'} height={'38'}
-                                      viewBox={'0 0 39 38'} cardTitle={'gmail'}/>
-                    <ContactLinksCard logoLink={'#'} iconId={'icon-contact-telegram'} width={'38'} height={'38'}
-                                      viewBox={'0 0 38 38'} cardTitle={'telegram'}/>
-                    <ContactLinksCard logoLink={'#'} iconId={'icon-contact-github'} width={'39'} height={'38'}
-                                      viewBox={'0 0 39 38'} cardTitle={'github'}/>
-                </ContactLinks>
+                <S.ContactLinks>
+                    {contactLinksCardData.map((item, index) =>
+                        <ContactLinksCard logoLink={item.logoLink} iconId={item.iconId} width={item.width}
+                                          height={item.height}
+                                          viewBox={item.viewBox} cardTitle={item.cardTitle} key={index}/>
+                    )}
+                </S.ContactLinks>
                 <ContactForm/>
             </Container>
 
-        </StyledContact>
+        </S.Contact>
     )
 }
-
-const StyledContact = styled.section`
-`
-
-const ContactLinks = styled.div`
-  background-color: #2a6450;
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  column-gap: 50px;
-`

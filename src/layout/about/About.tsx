@@ -2,7 +2,7 @@ import React from 'react'
 import {S} from './About_Styles'
 import {ThemeSet} from '../../styles/ThemeStyles.styled'
 import {SectionTitle} from '../../components/sectionTitle/SectionTitle'
-import {CardMainTextItem} from './cardMainTextItem/CardMainTextItem'
+import {CardMainTextItem, CardMainTextItemType} from './cardMainTextItem/CardMainTextItem'
 import {Container} from '../../components/Container'
 
 //===============================================================================================================================================================
@@ -10,7 +10,7 @@ import {Container} from '../../components/Container'
 //image
 import ImageAbout from '../../assets/images/image-about.webp'
 
-const cardMainTextData = [
+const cardMainTextData: Array<CardMainTextItemType> = [
     {
         ItemTitle: 'About Me',
         ItemText: 'Hardworking fron-end developer based in the Obninsk city, Russia.'

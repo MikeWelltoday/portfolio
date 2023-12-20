@@ -3,7 +3,7 @@ import {S} from './CardMainTextTitle_Styles'
 
 //===============================================================================================================================================================
 
-type CardMainTextItemType = {
+export type CardMainTextItemType = {
     ItemTitle: string
     ItemText: string
 }
