@@ -38,7 +38,8 @@ const StyledHome = styled.section`
 
   h1, h2, span {
     white-space: nowrap;
-    ${mixinFont({weight: 600, fontMaxRem: 4.4, fontMinRem: 3})}
+    ${mixinFont({weight: 600, fontMaxRem: 3.6, fontMinRem: 3})};
+
   }
 
   //позиционирование decor

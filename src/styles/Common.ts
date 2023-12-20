@@ -21,5 +21,3 @@ font-size: calc( (100vw - 36rem)/(103 - 36) * (${fontMaxRem} - ${fontMinRem}) + 
 
 
 
-
-

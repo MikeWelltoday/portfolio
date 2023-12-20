@@ -33,7 +33,7 @@ const StyledSectionTitle = styled.h2<StyledSectionTitleType>`
   flex-wrap: nowrap;
   column-gap: 25px;
 
-  ${mixinFont({weight: 600, fontMinRem: 3.5, fontMaxRem: 4.8})};
+  ${mixinFont({weight: 600, fontMinRem: 3.5, fontMaxRem: 4})};
 
   &:before, &:after {
     content: '';

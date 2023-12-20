@@ -51,10 +51,13 @@ const StyledProjectsCard = styled.div`
 
   transition: transform 0.3s ease-in-out;
 
-  &:hover {
-    transform: scale(1.01);
-    outline: 2px solid ${ThemeSet.colors.FormFocusShadow};
+  @media ${ThemeSet.media.desktop} {
+    &:hover {
+      transform: scale(1.01);
+      outline: 2px solid ${ThemeSet.colors.FormFocusShadow};
+    }
   }
+
 `
 
 const CardImageBox = styled.div`
@@ -70,20 +73,34 @@ const CardImageBox = styled.div`
     left: 23.2727272727%;
   }
 
+  &::before {
+    content: '';
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    margin: 0 -15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
   &:hover {
     &::before {
-      content: '';
       display: block;
-      position: absolute;
-      background-color: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(3px);
-      margin: 0 -15px;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
+    }
+
+    ${ButtonFrame} {
+      display: block;
+    }
+  }
+
+  @media ${ThemeSet.media.tablet} {
+    &::before {
+      display: block;
     }
 
     ${ButtonFrame} {
