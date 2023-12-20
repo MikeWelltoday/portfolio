@@ -1,8 +1,6 @@
 import React from 'react'
-// styles
 import {S} from './Menu_Styles'
-// types
-import {MenuPropsTypes} from './MenuTypes'
+import {MenuPropsTypes} from './Menu_Types'
 
 //===============================================================================================================================================================
 

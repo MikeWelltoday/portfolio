@@ -1,7 +1,5 @@
 import React from 'react'
-// styles
 import {S} from './Home_Styles'
-// Components
 import {Decor} from '../header/Decor'
 import {FlexWrapper} from '../../components/FlexWrapper'
 import {Container} from '../../components/Container'

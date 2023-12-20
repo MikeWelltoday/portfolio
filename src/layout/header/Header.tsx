@@ -1,8 +1,6 @@
 import React from 'react'
-// styles
 import {ThemeSet} from '../../styles/ThemeStyles.styled'
 import {S} from './Header_Styles'
-// components
 import {Container} from '../../components/Container'
 import {MenuDesktop} from './menu/MenuDesktop'
 import {MenuMobile} from './menu/MenuMobile'

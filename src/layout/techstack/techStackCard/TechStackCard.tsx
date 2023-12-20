@@ -1,22 +1,23 @@
 import React from 'react'
-import {Icon} from './Icon'
+import {S} from './TechStackCard_Styles'
+import {Icon} from '../../../components/Icon'
 
 //===============================================================================================================================================================
 
-type LogoPropsType = {
-    logoLink: string
+// type
+type TechStackCardPropsType = {
     iconId: string
     width: string
     height: string
     viewBox: string
+    techNameTitle: string
 }
 
-export const Logo: React.FC<LogoPropsType> = (props: LogoPropsType) => {
+export const TechStackCard: React.FC<TechStackCardPropsType> = (props: TechStackCardPropsType) => {
     return (
-        <a href={props.logoLink}>
+        <S.TechStackCard>
             <Icon iconId={props.iconId} width={props.width} height={props.height} viewBox={props.viewBox}/>
-        </a>
+            <S.TechName>{props.techNameTitle}</S.TechName>
+        </S.TechStackCard>
     )
 }
-
-

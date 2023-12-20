@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Decor = () => {
+export const Decor: React.FC = () => {
     return (
         <svg width="628" height="628" viewBox="0 0 628 628" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g opacity="0.25">

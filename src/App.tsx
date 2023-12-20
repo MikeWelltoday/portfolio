@@ -1,6 +1,5 @@
 import './App.css'
 import styled from 'styled-components'
-// Components
 import {Header} from './layout/header/Header'
 import {Home} from './layout/home/Home'
 import {TechStack} from './layout/techstack/TechStack'
@@ -8,6 +7,7 @@ import {About} from './layout/about/About'
 import {Projects} from './layout/projects/Projects'
 import {Contact} from './layout/contact/Contact'
 import {Footer} from './layout/footer/Footer'
+
 // diablo
 import {Works} from './diablo/works/Works'
 import {Testimony} from './diablo/testimony/Testimony'

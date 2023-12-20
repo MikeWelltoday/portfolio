@@ -10,7 +10,7 @@ import {Container} from '../../components/Container'
 //image
 import ImageAbout from '../../assets/images/image-about.webp'
 
-const cardData = [
+const cardMainTextData = [
     {
         ItemTitle: 'About Me',
         ItemText: 'Hardworking fron-end developer based in the Obninsk city, Russia.'
@@ -43,7 +43,7 @@ export const About: React.FC = () => {
 
                         <S.CardMainText>
                             {
-                                cardData.map((item, index) =>
+                                cardMainTextData.map((item, index) =>
                                     <CardMainTextItem ItemTitle={item.ItemTitle} ItemText={item.ItemText} key={index}/>
                                 )
                             }

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
-// type
+//===============================================================================================================================================================
+
 type FlexWrapper = {
     direction?: string
     justifyContent?: string

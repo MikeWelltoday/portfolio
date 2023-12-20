@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-
-// styles
 import {ThemeSet} from '../styles/ThemeStyles.styled'
+
+//===============================================================================================================================================================
 
 export const ButtonFrame = styled.button`
   background: ${ThemeSet.colors.ButtonBackground};
