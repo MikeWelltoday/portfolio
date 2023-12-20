@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 // components
-import {SectionTitle} from '../../components/SectionTitle'
+import {SectionTitle} from '../../components/sectionTitle/SectionTitle'
 import {DiabloButton} from '../diabloComponents/DiabloButton'
 import {Container} from '../../components/Container'
 

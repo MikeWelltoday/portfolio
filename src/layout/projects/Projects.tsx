@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 // components
 import {Container} from '../../components/Container'
-import {SectionTitle} from '../../components/SectionTitle'
+import {SectionTitle} from '../../components/sectionTitle/SectionTitle'
 import {ProjectsCard} from './ProjectsCard'
 
 //images

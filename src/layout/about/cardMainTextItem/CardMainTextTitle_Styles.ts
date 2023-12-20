@@ -1,26 +1,9 @@
-import React from 'react'
 import styled from 'styled-components'
+import {ThemeSet} from '../../../styles/ThemeStyles.styled'
 
-// styles
-import {ThemeSet} from '../../styles/ThemeStyles.styled'
+//===============================================================================================================================================================
 
-type CardMainTextItemType = {
-    ItemTitle: string
-    ItemText: string
-}
-
-export const CardMainTextItem = (props: CardMainTextItemType) => {
-    return (
-        <StyledCardMainTextItem>
-            <ItemTextBox>
-                <ItemTitle>{props.ItemTitle}</ItemTitle>
-            </ItemTextBox>
-            <ItemText>{props.ItemText}</ItemText>
-        </StyledCardMainTextItem>
-    )
-}
-
-const StyledCardMainTextItem = styled.div`
+const CardMainTextItem = styled.div`
   background: #1c4f3a;
   width: 100%;
   padding: 5px 0;
@@ -62,3 +45,12 @@ const ItemText = styled.p`
   opacity: ${ThemeSet.fontOpacity};
   text-align: justify;
 `
+
+//===============================================================================================================================================================
+
+export const S = {
+    CardMainTextItem,
+    ItemTextBox,
+    ItemTitle,
+    ItemText
+}

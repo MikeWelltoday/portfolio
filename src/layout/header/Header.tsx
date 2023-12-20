@@ -1,49 +1,43 @@
 import React from 'react'
-import styled from 'styled-components'
-
 // styles
 import {ThemeSet} from '../../styles/ThemeStyles.styled'
-
-// Components
+import {S} from './Header_Styles'
+// components
 import {Container} from '../../components/Container'
-import {Menu} from './Menu'
-import {MenuMobile} from './MenuMobile'
+import {MenuDesktop} from './menu/MenuDesktop'
+import {MenuMobile} from './menu/MenuMobile'
+//===============================================================================================================================================================
 
-// menuItemsList
+// props
 const menuItemsList: string[] = ['Home', 'About', 'TechStack', 'Projects', 'Contacts']
 
-export const Header = () => {
+
+export const Header: React.FC = () => {
+
+    const [width, setWidth] = React.useState(window.innerWidth)
+    const breakpoint = ThemeSet.media.tablet.value
+
+    React.useEffect(() => {
+        const handleWindowResize = () => {
+            setWidth(window.innerWidth)
+        }
+        window.addEventListener('resize', handleWindowResize)
+        return () => window.removeEventListener('resize', handleWindowResize)
+    }, [])
+
     return (
-        <StyledHeader>
+        <S.Header>
             <Container>
-                <FlexContainer>
-                    <HeaderLogo aria-label={'header-logo'}>.MikhailKuznetsov</HeaderLogo>
-                    <Menu menuItemsList={menuItemsList}/>
-                    <MenuMobile menuItemsList={menuItemsList}/>
-                </FlexContainer>
+                <S.FlexContainer>
+                    <S.HeaderLogo aria-label={'header-logo'}>.MikhailKuznetsov</S.HeaderLogo>
+                    {
+                        width <= breakpoint ? <MenuMobile menuItemsList={menuItemsList}/> :
+                            <MenuDesktop menuItemsList={menuItemsList}/>
+                    }
+                </S.FlexContainer>
             </Container>
-        </StyledHeader>
+        </S.Header>
     )
 }
-
-const StyledHeader = styled.header`
-  background-color: ${ThemeSet.colors.BackgroundHeader};
-  padding: 20px 0;
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-`
-
-const FlexContainer = styled.div`
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-`
-const HeaderLogo = styled.h3`
-  color: ${ThemeSet.colors.HeaderLogo};
-  font: 300 2rem/1.2 'JetBrains Mono', monospace;
-`
 
 

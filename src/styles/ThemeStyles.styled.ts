@@ -17,9 +17,18 @@ export const ThemeSet = {
     fontOpacity: `0.9`,
 
     media: {
-        tablet: 'screen and (max-width: 758px)',
-        mobile: 'screen and (max-width: 576px)',
-        desktop: 'screen and (min-width: 1030px)'
+        tablet: {
+            media: 'screen and (max-width: 758px)',
+            value: 758
+        },
+        mobile: {
+            media: 'screen and (max-width: 576px)',
+            value: 576
+        },
+        desktop: {
+            media: 'screen and (min-width: 1030px)',
+            value: 1030
+        }
     }
 
 }

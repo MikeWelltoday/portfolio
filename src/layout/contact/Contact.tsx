@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import {ThemeSet} from '../../styles/ThemeStyles.styled'
 
 // components
-import {SectionTitle} from '../../components/SectionTitle'
+import {SectionTitle} from '../../components/sectionTitle/SectionTitle'
 import {ContactLinksCard} from './ContactLinksCard'
 import {Container} from '../../components/Container'
 import {ContactForm} from './ContactFormItem'

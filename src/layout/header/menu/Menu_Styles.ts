@@ -1,39 +1,14 @@
-import React from 'react'
 import styled, {css} from 'styled-components'
-
 // styles
-import {ThemeSet} from '../../styles/ThemeStyles.styled'
+import {ThemeSet} from '../../../styles/ThemeStyles.styled'
 
-// types
-type MenuType = {
-    menuItemsList: string[]
-}
+//===============================================================================================================================================================
 
-export const MenuMobile = (props: MenuType) => {
-    return (
-        <StyledMenuMobile>
+const MenuDesktop = styled.nav``
 
-            <BurgerButton isOpen={false}>
-                <span></span>
-            </BurgerButton>
+//===============================================================================================================================================================
 
-            <ItemsListPopup isOpen={false}>
-                {props.menuItemsList.map((item, index) =>
-                    <ListItem key={index}>
-                        <Link href="#">{item}</Link>
-                    </ListItem>
-                )}
-            </ItemsListPopup>
-        </StyledMenuMobile>
-    )
-}
-
-const StyledMenuMobile = styled.nav`
-  display: none;
-  @media ${ThemeSet.media.tablet} {
-    display: block;
-  }
-`
+const MenuMobile = styled.nav``
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
@@ -94,7 +69,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   }
 `
 
-const ItemsListPopup = styled.ul<{ isOpen: boolean }>`
+const MenuPopup = styled.div <{ isOpen: boolean }>`
   display: none;
 
   background-color: ${ThemeSet.colors.MobileMenuBackground};
@@ -107,13 +82,25 @@ const ItemsListPopup = styled.ul<{ isOpen: boolean }>`
   bottom: 0;
   z-index: 99999;
 
-  ${props => props.isOpen && css<{ isOpen: boolean }>`
+  ul {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     gap: 25px;
+  }
+
+  ${props => props.isOpen && css<{ isOpen: boolean }>`
+    display: block;
   `}
+`
+
+//===============================================================================================================================================================
+
+const ItemsList = styled.ul`
+  display: flex;
+  justify-content: center;
+  gap: 18px;
 `
 
 const ListItem = styled.li`
@@ -124,3 +111,21 @@ const Link = styled.a`
   font-weight: 500;
 `
 
+//===============================================================================================================================================================
+
+export const S = {
+
+    //MenuDesktop
+    MenuDesktop,
+
+    // MenuMobile
+    MenuMobile,
+    BurgerButton,
+    MenuPopup,
+
+    // Menu
+    ItemsList,
+    ListItem,
+    Link
+
+}

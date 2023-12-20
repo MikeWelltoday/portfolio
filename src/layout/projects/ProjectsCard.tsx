@@ -51,10 +51,15 @@ const StyledProjectsCard = styled.div`
 
   transition: transform 0.3s ease-in-out;
 
-  @media ${ThemeSet.media.desktop} {
+  &:hover {
+    transform: scale(1.01);
+    outline: 2px solid ${ThemeSet.colors.FormFocusShadow};
+  }
+
+  @media ${ThemeSet.media.tablet.media} {
     &:hover {
-      transform: scale(1.01);
-      outline: 2px solid ${ThemeSet.colors.FormFocusShadow};
+      transform: none;
+      outline: unset;
     }
   }
 
@@ -98,7 +103,7 @@ const CardImageBox = styled.div`
     }
   }
 
-  @media ${ThemeSet.media.tablet} {
+  @media ${ThemeSet.media.tablet.media} {
     &::before {
       display: block;
     }

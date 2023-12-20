@@ -32,7 +32,7 @@ const StyledWorkList = styled.div`
   width: 320px;
   flex-grow: 1;
 
-  @media ${ThemeSet.media.desktop} {
+  @media ${ThemeSet.media.desktop.media} {
     max-width: 470px;
   }
 
@@ -81,7 +81,7 @@ const ImgWrapper = styled.div`
     }
   }
 
-  @media ${ThemeSet.media.tablet} {
+  @media ${ThemeSet.media.tablet.media} {
     ${DiabloButton} {
       display: block;
     }

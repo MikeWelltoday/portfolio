@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 // components
-import {SectionTitle} from '../../components/SectionTitle'
+import {SectionTitle} from '../../components/sectionTitle/SectionTitle'
 import {Icon} from '../../components/Icon'
 import {Slider} from './Slider'
 import {FlexWrapper} from '../../components/FlexWrapper'
