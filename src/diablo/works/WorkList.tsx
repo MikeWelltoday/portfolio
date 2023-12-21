@@ -4,7 +4,9 @@ import {DiabloLink} from '../diabloComponents/DiabloLink'
 import {DiabloButton} from '../diabloComponents/DiabloButton'
 import {ThemeSet} from '../../styles/ThemeStyles.styled'
 
-type WorkListProps = {
+//===============================================================================================================================================================
+
+export type WorkListProps = {
     title: string
     text: string
     src: string

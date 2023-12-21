@@ -1,31 +1,16 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-
-// components
-import {WorkList} from './WorkList'
+import {WorkList, WorkListProps} from './WorkList'
 import {Container} from '../../components/Container'
+
+//===============================================================================================================================================================
 
 // images
 import firstImage from './../../assets/images/image-portfolio-1.webp'
 import secondImage from './../../assets/images/image-portfolio-2.webp'
-import {menuItemsListType, WorksMenu} from './WorksMenu'
+import {menuItemType, WorksMenu} from './WorksMenu'
 
-const worksData = [
-    {
-        src: firstImage,
-        text: 'angularangula rangrangularagu larangulara ngularangu larangular',
-        title: 'Angular',
-        type: 'spa'
-    },
-    {
-        src: secondImage,
-        text: 'angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular',
-        title: 'Angular',
-        type: 'react'
-    }
-]
-
-const menuItemsList: menuItemsListType[] = [
+const menuItemsList: Array<menuItemType> = [
     {
         title: 'All',
         status: 'all'
@@ -42,6 +27,21 @@ const menuItemsList: menuItemsListType[] = [
         title: 'Spa',
         status: 'spa'
     }]
+
+const worksData: WorkListProps[] = [
+    {
+        src: firstImage,
+        text: 'angularangula rangrangularagu larangulara ngularangu larangular',
+        title: 'Angular',
+        type: 'spa'
+    },
+    {
+        src: secondImage,
+        text: 'angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular',
+        title: 'Angular',
+        type: 'react'
+    }
+]
 
 export const Works = () => {
 
@@ -71,7 +71,9 @@ export const Works = () => {
     return (
         <StyledWorks>
             <Container>
-                <WorksMenu menuItemsList={menuItemsList} setCurrentFilterStatus={setCurrentFilterStatus}/>
+                <WorksMenu menuItemsList={menuItemsList} changeFilterStatus={changeFilterStatus}
+                           currentFilterStatus={currentFilterStatus}
+                />
                 <WorkListsWrapper>
                     {
                         filteredWorks.map((item, index) =>

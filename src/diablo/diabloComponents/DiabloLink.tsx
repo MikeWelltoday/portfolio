@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 
 import {ThemeSet} from '../../styles/ThemeStyles.styled'
 
 
-export const DiabloLink = styled.a`
+export const DiabloLink = styled.a<{ active?: boolean }>`
   color: ${ThemeSet.colors.Font};
   font-size: 1.4rem;
   font-weight: 400;
@@ -19,6 +19,7 @@ export const DiabloLink = styled.a`
     }
   }
 
+
   &::before {
     content: '';
     display: none;
@@ -30,6 +31,10 @@ export const DiabloLink = styled.a`
     right: 0;
     height: 10px;
     background-color: #473669;
+
+    ${props => props.active === true && css<{ active?: boolean }>`
+      display: inline-block;
+    `}
   }
 }
 `
