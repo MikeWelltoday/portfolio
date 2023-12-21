@@ -8,6 +8,7 @@ type WorkListProps = {
     title: string
     text: string
     src: string
+    type: 'all' | 'landing' | 'react' | 'spa'
 }
 
 export const WorkList = (props: WorkListProps) => {

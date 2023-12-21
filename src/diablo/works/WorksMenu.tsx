@@ -5,8 +5,15 @@ import styled from 'styled-components'
 import {DiabloLink} from '../diabloComponents/DiabloLink'
 
 // types
+export type menuItemsListType = {
+    title: string
+    status: 'all' | 'landing' | 'react' | 'spa'
+}
+
+
 type WorksMenuType = {
-    menuItemsList: string[]
+    menuItemsList: Array<menuItemsListType>
+    
 }
 
 export const WorksMenu = (props: WorksMenuType) => {
@@ -15,7 +22,7 @@ export const WorksMenu = (props: WorksMenuType) => {
             <ul>
                 {props.menuItemsList.map((item, index) =>
                     <li key={index}>
-                        <DiabloLink href="#">{item}</DiabloLink>
+                        <DiabloLink href="">{item.title}</DiabloLink>
                     </li>
                 )}
             </ul>
