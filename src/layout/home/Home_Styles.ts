@@ -45,7 +45,11 @@ const HelloTitle = styled.span``
 
 const NameTitle = styled.h2``
 
-const DeveloperTitle = styled.h1``
+const DeveloperTitle = styled.h1`
+  p {
+    display: none;
+  }
+`
 
 //===============================================================================================================================================================
 export const S = {

@@ -3,10 +3,12 @@ import styled from 'styled-components'
 
 // components
 import {SectionTitle} from '../../components/sectionTitle/SectionTitle'
-import {Icon} from '../../components/Icon'
+import {Icon, IconPropsType} from '../../components/Icon'
 import {Slider} from './Slider'
 import {FlexWrapper} from '../../components/FlexWrapper'
 import {Container} from '../../components/Container'
+
+//===============================================================================================================================================================
 
 export const Testimony = () => {
     return (
@@ -22,5 +24,5 @@ export const Testimony = () => {
     )
 }
 
-const StyledTestemony = styled.section`;
+const StyledTestemony = styled.section`
 `

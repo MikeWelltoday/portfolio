@@ -1,4 +1,6 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
+import Tilt from 'react-parallax-tilt'
 import {S} from './About_Styles'
 import {ThemeSet} from '../../styles/ThemeStyles.styled'
 import {SectionTitle} from '../../components/sectionTitle/SectionTitle'
@@ -32,15 +34,18 @@ const cardMainTextData: Array<CardMainTextItemType> = [
 export const About: React.FC = () => {
     return (
         <S.About>
+
+
             <Container>
                 <S.Card>
                     <SectionTitle title={'About'} borderColor={`${ThemeSet.colors.BackgroundMain}`}
                                   borderHeight={'3px'}/>
                     <S.CardBox>
                         <S.CardPersonBox>
-                            <S.PersonPhoto src={`${ImageAbout}`} alt="sry"/>
+                            <Tilt>
+                                <S.PersonPhoto src={`${ImageAbout}`} alt="sry"/>
+                            </Tilt>
                         </S.CardPersonBox>
-
                         <S.CardMainText>
                             {
                                 cardMainTextData.map((item, index) =>

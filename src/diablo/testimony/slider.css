@@ -1,0 +1,32 @@
+/*   !!! Микссиины сюда не проимпортировать !!!   */
+.Slider__StyledSlider-cnxRfJ {
+    margin-top: 50px;
+}
+
+.alice-carousel__dots {
+    margin-top: 0;
+}
+
+.alice-carousel__dots-item:not(.__custom) {
+    display: inline-block;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+
+    transition: all 0.05s ease;
+}
+
+.alice-carousel__dots-item:not(.__custom):not(:last-child) {
+    margin-right: 25px;
+}
+
+.alice-carousel__dots-item:not(.__custom):hover, .alice-carousel__dots-item:not(.__custom).__active {
+    background-color: #e3c10c;
+    width: 30px;
+}
+
+.alice-carousel__prev-btn, .alice-carousel__next-btn {
+    display: none;
+}
