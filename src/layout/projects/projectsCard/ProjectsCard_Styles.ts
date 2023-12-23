@@ -18,7 +18,7 @@ const ProjectsCard = styled.div`
   justify-content: flex-start;
   row-gap: 10px;
 
-  transition: transform 0.3s ease-in-out;
+  transition: ${ThemeSet.animations.transition};
 
   &:hover {
     transform: scale(1.01);
@@ -49,10 +49,10 @@ const CardImageBox = styled.div`
 
   &::before {
     content: '';
-    display: none;
+    display: block;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(2px);
     margin: 0 -15px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -60,11 +60,16 @@ const CardImageBox = styled.div`
     right: 0;
     top: 0;
     bottom: 0;
+
+    //animation
+    opacity: 0;
+    transition: ${ThemeSet.animations.transition};
   }
 
   &:hover {
     &::before {
-      display: block;
+      //animation
+      opacity: 1;
     }
 
     ${ButtonFrame} {
@@ -74,7 +79,7 @@ const CardImageBox = styled.div`
 
   @media ${ThemeSet.media.tablet.media} {
     &::before {
-      display: block;
+      opacity: 1;
     }
 
     ${ButtonFrame} {

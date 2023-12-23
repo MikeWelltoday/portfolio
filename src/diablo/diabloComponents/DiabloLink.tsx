@@ -13,28 +13,32 @@ export const DiabloLink = styled.a<{ active?: boolean }>`
   position: relative;
   z-index: 0;
 
-  &:hover {
-    &::before {
-      display: inline-block;
-    }
-  }
-
-
   &::before {
     content: '';
-    display: none;
+    display: inline-block;
 
     position: absolute;
     z-index: -1;
     bottom: 7px;
     left: 0;
     right: 0;
-    height: 10px;
+    height: 0;
     background-color: #473669;
 
+    transition: ${ThemeSet.animations.transition};
+
     ${props => props.active === true && css<{ active?: boolean }>`
-      display: inline-block;
+      height: 10px;
     `}
   }
+
+  &:hover {
+    &::before {
+      height: 10px;
+      background-color: orange;
+    }
+  }
+
+
 }
 `

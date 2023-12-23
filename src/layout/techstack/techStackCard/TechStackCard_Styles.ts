@@ -15,6 +15,8 @@ const TechStackCard = styled.div`
   svg {
     flex: 0 0 auto;
     opacity: 0.9;
+
+    color: ${ThemeSet.colors.BackgroundMain};
   }
 
   h3 {

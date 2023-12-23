@@ -29,6 +29,10 @@ export const ThemeSet = {
             media: 'screen and (min-width: 1030px)',
             value: 1030
         }
+    },
+
+    animations: {
+        transition: '.2s ease-in-out'
     }
 
 }

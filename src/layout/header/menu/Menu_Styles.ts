@@ -44,6 +44,9 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       transform: translateY(-10px);
       border-radius: 1px;
 
+      //animation
+      transition: ${ThemeSet.animations.transition};
+
       //  наклоняем линию
       ${props => props.isOpen && css<{ isOpen: boolean }>`
         transform: rotate(-45deg) translateY(0);
@@ -60,6 +63,9 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       transform: translateY(10px);
       border-radius: 1px;
 
+      //animation
+      transition: ${ThemeSet.animations.transition};
+
       //  наклоняем линию
       ${props => props.isOpen && css<{ isOpen: boolean }>`
         transform: rotate(45deg) translateY(0);
@@ -70,7 +76,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 `
 
 const MenuPopup = styled.div <{ isOpen: boolean }>`
-  display: none;
+  display: block;
 
   background-color: ${ThemeSet.colors.MobileMenuBackground};
   opacity: 0.95;
@@ -83,15 +89,26 @@ const MenuPopup = styled.div <{ isOpen: boolean }>`
   z-index: 99999;
 
   ul {
+    padding-top: 10px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 10px;
+    transition: 0.4s ease-in-out;
   }
 
+  //animation
+  transform: translateY(-100%);
+  transition: 0.6s ease-in-out 0.2s;
+
   ${props => props.isOpen && css<{ isOpen: boolean }>`
-    display: block;
+    transform: translateY(0);
+
+    & ul {
+      transition: 0.4s ease-in-out 0.6s;
+      gap: 35px;
+    }
   `}
 `
 

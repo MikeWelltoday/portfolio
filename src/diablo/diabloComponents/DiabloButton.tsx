@@ -13,16 +13,6 @@ export const DiabloButton = styled.button`
   position: relative;
   z-index: 0;
 
-  &:hover {
-
-    &::before {
-      transition: all 0.3s ease;
-      width: 100%;
-      height: 100%;
-      border-radius: 8px;
-    }
-  }
-
   &::before {
     position: absolute;
     display: inline-block;
@@ -35,6 +25,16 @@ export const DiabloButton = styled.button`
     height: 10px;
     margin: 0 auto;
     background-color: #473669;
+    transition: ${ThemeSet.animations.transition};
+  }
+
+  &:hover {
+    &::before {
+
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
   }
 `
 

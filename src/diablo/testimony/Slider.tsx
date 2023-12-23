@@ -3,7 +3,6 @@ import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import styled from 'styled-components'
 import './slider.css'
-import {Icon} from '../../components/Icon'
 
 //===============================================================================================================================================================
 

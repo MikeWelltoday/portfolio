@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
 import {animateScroll as scroll} from 'react-scroll'
-import {css} from 'styled-components'
 
 //===============================================================================================================================================================
 
