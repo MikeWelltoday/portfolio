@@ -16,6 +16,7 @@ const Home = styled.section`
   //позиционирование decor
   position: relative;
 
+
   svg {
     max-width: 628px;
     width: 100%;

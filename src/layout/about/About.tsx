@@ -33,9 +33,7 @@ const cardMainTextData: Array<CardMainTextItemType> = [
 
 export const About: React.FC = () => {
     return (
-        <S.About>
-
-
+        <S.About id={'about'}>
             <Container>
                 <S.Card>
                     <SectionTitle title={'About'} borderColor={`${ThemeSet.colors.BackgroundMain}`}

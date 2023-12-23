@@ -46,7 +46,7 @@ const projectsCardData: Array<PortfolioCardPropsType> = [
 
 export const Projects: React.FC = () => {
     return (
-        <S.Projects>
+        <S.Projects id={'projects'}>
             <Container>
                 <SectionTitle title={'Projects'} borderColor={'#EBE8E3'} borderHeight={'1.5px'}/>
                 <S.ProjectsCardBox>

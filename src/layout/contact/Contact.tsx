@@ -37,7 +37,7 @@ const contactLinksCardData: Array<ContactLinksCardPropsType> = [
 
 export const Contact: React.FC = () => {
     return (
-        <S.Contact>
+        <S.Contact id={'contact'}>
             <Container>
                 <SectionTitle title={'Contact'} borderColor={ThemeSet.colors.Font} borderHeight={'1.5px'}/>
                 <S.ContactLinks>

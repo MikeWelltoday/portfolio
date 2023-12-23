@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-// styles
 import {ThemeSet} from '../../styles/ThemeStyles.styled'
 
 //===============================================================================================================================================================
@@ -19,9 +18,13 @@ const FlexContainer = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
 `
-const HeaderLogo = styled.h3`
+const HeaderLogo = styled.a`
   color: ${ThemeSet.colors.HeaderLogo};
   font: 300 2rem/1.2 'JetBrains Mono', monospace;
+
+  &.active {
+    color: yellow;
+  }
 `
 
 //===============================================================================================================================================================

@@ -1,15 +1,12 @@
 import React from 'react'
 import {ThemeSet} from '../../styles/ThemeStyles.styled'
+import {animateScroll as scroll} from 'react-scroll'
 import {S} from './Header_Styles'
 import {Container} from '../../components/Container'
 import {MenuDesktop} from './menu/MenuDesktop'
 import {MenuMobile} from './menu/MenuMobile'
 
 //===============================================================================================================================================================
-
-// props
-const menuItemsList: string[] = ['Home', 'About', 'TechStack', 'Projects', 'Contacts']
-
 
 export const Header: React.FC = () => {
 
@@ -28,10 +25,11 @@ export const Header: React.FC = () => {
         <S.Header>
             <Container>
                 <S.FlexContainer>
-                    <S.HeaderLogo aria-label={'header-logo'}>.MikhailKuznetsov</S.HeaderLogo>
+                    <S.HeaderLogo aria-label={'header-logo'} onClick={() => scroll.scrollToTop()}>
+                        .MikhailKuznetsov
+                    </S.HeaderLogo>
                     {
-                        width <= breakpoint ? <MenuMobile menuItemsList={menuItemsList}/> :
-                            <MenuDesktop menuItemsList={menuItemsList}/>
+                        width <= breakpoint ? <MenuMobile/> : <MenuDesktop/>
                     }
                 </S.FlexContainer>
             </Container>

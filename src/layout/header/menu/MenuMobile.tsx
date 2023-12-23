@@ -1,11 +1,10 @@
 import React, {useState} from 'react'
 import {S} from './Menu_Styles'
-import {MenuPropsTypes} from './Menu_Types'
 import {Menu} from './Menu'
 
 //===============================================================================================================================================================
 
-export const MenuMobile: React.FC<MenuPropsTypes> = (props: MenuPropsTypes) => {
+export const MenuMobile: React.FC = () => {
 
     const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false)
 
@@ -19,7 +18,7 @@ export const MenuMobile: React.FC<MenuPropsTypes> = (props: MenuPropsTypes) => {
                 <span></span>
             </S.BurgerButton>
             <S.MenuPopup isOpen={menuIsOpen} onClick={() => setMenuIsOpen(false)}>
-                <Menu menuItemsList={props.menuItemsList}/>
+                <Menu/>
             </S.MenuPopup>
         </S.MenuMobile>
     )

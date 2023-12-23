@@ -29,7 +29,7 @@ export const GlobalStyles = createGlobalStyle`
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    
+
     //font-family: 'JetBrains Mono', monospace;
 
     height: 100%;
@@ -68,6 +68,9 @@ export const GlobalStyles = createGlobalStyle`
     padding: 100px 0;
     display: flex;
     flex-direction: column;
+
+    //background for particles
+      // background-color: ${ThemeSet.colors.BackgroundMain};
 
     @media ${ThemeSet.media.mobile} {
       padding: 80px 0;

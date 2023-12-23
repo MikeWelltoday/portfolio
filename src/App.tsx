@@ -13,12 +13,17 @@ import {Works} from './diablo/works/Works'
 import {Testimony} from './diablo/testimony/Testimony'
 import {DiabloContacts} from './diablo/diabloContacts/DiabloContacts'
 import {DiabloFooter} from './diablo/diabloFooter/DiabloFooter'
+import {Particle} from './diablo/particle/Particle'
+import {GoTopBtn} from './components/goToTop/GoTopBtn'
+import React from 'react'
 
 //===============================================================================================================================================================
 
 function App() {
     return (
         <div className="App">
+
+            {/*<Particle/>*/}
             <Header/>
             <Home/>
             <About/>
@@ -26,8 +31,10 @@ function App() {
             <Projects/>
             <Contact/>
             <Footer/>
+            <GoTopBtn/>
 
             <Border>BORDER</Border>
+
             <Works/>
             <Testimony/>
             <DiabloContacts/>

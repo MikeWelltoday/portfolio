@@ -41,6 +41,7 @@ export const DiabloFooter = () => {
                         </SocialItem>
                     </SocialList>
                     <Copyright>© 2023 Svetlana Dyablo, All Rights Reserved.</Copyright>
+
                 </FlexWrapper>
             </Container>
         </StyledDiabloFooter>

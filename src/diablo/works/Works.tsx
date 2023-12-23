@@ -85,7 +85,8 @@ export const Works = () => {
     )
 }
 
-const StyledWorks = styled.section``
+const StyledWorks = styled.section`
+`
 
 const WorkListsWrapper = styled.div`
   display: flex;

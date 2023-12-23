@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components'
-// styles
 import {ThemeSet} from '../../../styles/ThemeStyles.styled'
+import {Link} from 'react-scroll'
 
 //===============================================================================================================================================================
 
@@ -106,9 +106,14 @@ const ItemsList = styled.ul`
 const ListItem = styled.li`
 `
 
-const Link = styled.a`
+const NavLink = styled(Link)`
   font-size: 2rem;
   font-weight: 500;
+  text-transform: capitalize;
+
+  &.active {
+    color: yellow;
+  }
 `
 
 //===============================================================================================================================================================
@@ -126,6 +131,6 @@ export const S = {
     // Menu
     ItemsList,
     ListItem,
-    Link
+    NavLink
 
 }

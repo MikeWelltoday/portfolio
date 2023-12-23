@@ -117,7 +117,7 @@ const techStackCardData: Array<TechStackCardPropsType> = [
 
 export const TechStack: React.FC = () => {
     return (
-        <S.TechStack>
+        <S.TechStack id={'techStack'}>
             <Container>
                 <SectionTitle title={'TechStack'} borderColor={`${ThemeSet.colors.Font}`} borderHeight={'1.5px'}/>
                 <S.TechStackCardBox>

@@ -12,7 +12,7 @@ import ImageHome from './../../assets/images/image-home.webp'
 
 export const Home: React.FC = () => {
     return (
-        <S.Home>
+        <S.Home id={'home'}>
             <Container>
                 <FlexWrapper direction={'column'} justifyContent={'flex-start'} alignItems={'center'}
                              flexWrap={'nowrap'}>
