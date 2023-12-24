@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import {WorkList, WorkListProps} from './WorkList'
 import {Container} from '../../components/Container'
+import {AnimatePresence, motion} from 'framer-motion'
 
 //===============================================================================================================================================================
 
@@ -33,13 +34,22 @@ const worksData: WorkListProps[] = [
         src: firstImage,
         text: 'angularangula rangrangularagu larangulara ngularangu larangular',
         title: 'Angular',
-        type: 'spa'
+        type: 'spa',
+        id: 'spa'
     },
     {
         src: secondImage,
         text: 'angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular',
         title: 'Angular',
-        type: 'react'
+        type: 'react',
+        id: 'react'
+    },
+    {
+        src: secondImage,
+        text: 'angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular angular angul arang rangu laragula rangularang ularangu larangular',
+        title: 'Angular',
+        type: 'landing',
+        id: 'landing'
     }
 ]
 
@@ -75,10 +85,25 @@ export const Works = () => {
                            currentFilterStatus={currentFilterStatus}
                 />
                 <WorkListsWrapper>
-                    {
-                        filteredWorks.map((item, index) =>
-                            <WorkList title={item.title} text={item.text} src={item.src} type={item.type} key={index}/>
-                        )}
+                    <AnimatePresence>
+
+                        {
+                            filteredWorks.map((item) =>
+                                <motion.div
+                                    initial={{opacity: 0, scale: 0.5}}
+                                    animate={{opacity: 1, scale: 1}}
+                                    transition={{duration: 0.5}}
+                                    key={item.id}
+
+                                    layout
+                                >
+                                    <WorkList title={item.title} text={item.text} src={item.src} type={item.type}
+                                              key={item.id}/>
+                                </motion.div>
+                            )
+                        }
+
+                    </AnimatePresence>
                 </WorkListsWrapper>
             </Container>
         </StyledWorks>

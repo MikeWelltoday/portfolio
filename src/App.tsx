@@ -14,7 +14,7 @@ import {Testimony} from './diablo/testimony/Testimony'
 import {DiabloContacts} from './diablo/diabloContacts/DiabloContacts'
 import {DiabloFooter} from './diablo/diabloFooter/DiabloFooter'
 import {Particle} from './diablo/particle/Particle'
-import {GoTopBtn} from './components/goToTop/GoTopBtn'
+import {GoTopBtn} from './layout/goToTopBtn/GoTopBtn'
 import React from 'react'
 
 //===============================================================================================================================================================

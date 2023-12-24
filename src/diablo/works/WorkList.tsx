@@ -11,9 +11,11 @@ export type WorkListProps = {
     text: string
     src: string
     type: 'all' | 'landing' | 'react' | 'spa'
+    id?: 'all' | 'landing' | 'react' | 'spa'
 }
 
 export const WorkList = (props: WorkListProps) => {
+
     return (
         <StyledWorkList>
             <ImgWrapper>

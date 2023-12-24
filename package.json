@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.16.0",
+    "@emotion/react": "^11.11.3",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.3",
     "@svgr/webpack": "5.5.0",
     "@testing-library/jest-dom": "5.14.1",
@@ -30,6 +31,7 @@
     "eslint-config-react-app": "7.0.1",
     "eslint-webpack-plugin": "3.1.1",
     "file-loader": "6.2.0",
+    "framer-motion": "^10.16.16",
     "fs-extra": "10.0.0",
     "html-webpack-plugin": "5.5.0",
     "identity-obj-proxy": "3.0.0",
@@ -46,6 +48,7 @@
     "react": "18.2.0",
     "react-alice-carousel": "^2.8.0",
     "react-app-polyfill": "3.0.0",
+    "react-awesome-reveal": "^4.2.7",
     "react-dev-utils": "12.0.1",
     "react-dom": "18.2.0",
     "react-parallax-tilt": "^1.7.179",

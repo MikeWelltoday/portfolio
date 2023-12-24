@@ -4,6 +4,7 @@ import {SectionTitle} from '../../components/sectionTitle/SectionTitle'
 import {TechStackCard, TechStackCardPropsType} from './techStackCard/TechStackCard'
 import {Container} from '../../components/Container'
 import {S} from './TechStack_Styles'
+import {Reveal} from 'react-awesome-reveal'
 
 //===============================================================================================================================================================
 
@@ -121,13 +122,15 @@ export const TechStack: React.FC = () => {
             <Container>
                 <SectionTitle title={'TechStack'} borderColor={`${ThemeSet.colors.Font}`} borderHeight={'1.5px'}/>
                 <S.TechStackCardBox>
-                    {
-                        techStackCardData.map((item, index) =>
-                            <TechStackCard iconId={item.iconId} width={item.width} height={item.height}
-                                           viewBox={item.viewBox}
-                                           techNameTitle={item.techNameTitle} key={index}/>
-                        )
-                    }
+                    <Reveal cascade={true} damping={0.03} triggerOnce={true}>
+                        {
+                            techStackCardData.map((item, index) =>
+                                <TechStackCard iconId={item.iconId} width={item.width} height={item.height}
+                                               viewBox={item.viewBox}
+                                               techNameTitle={item.techNameTitle} key={index}/>
+                            )
+                        }
+                    </Reveal>
                 </S.TechStackCardBox>
             </Container>
         </S.TechStack>
