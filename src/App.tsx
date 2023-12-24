@@ -1,5 +1,7 @@
+import React from 'react'
 import './App.css'
 import styled from 'styled-components'
+import {Particle} from './diablo/particle/Particle'
 import {Header} from './layout/header/Header'
 import {Home} from './layout/home/Home'
 import {TechStack} from './layout/techstack/TechStack'
@@ -7,15 +9,14 @@ import {About} from './layout/about/About'
 import {Projects} from './layout/projects/Projects'
 import {Contact} from './layout/contact/Contact'
 import {Footer} from './layout/footer/Footer'
+import {GoTopBtn} from './layout/goToTopBtn/GoTopBtn'
 
 // diablo
 import {Works} from './diablo/works/Works'
 import {Testimony} from './diablo/testimony/Testimony'
 import {DiabloContacts} from './diablo/diabloContacts/DiabloContacts'
 import {DiabloFooter} from './diablo/diabloFooter/DiabloFooter'
-import {Particle} from './diablo/particle/Particle'
-import {GoTopBtn} from './layout/goToTopBtn/GoTopBtn'
-import React from 'react'
+
 
 //===============================================================================================================================================================
 

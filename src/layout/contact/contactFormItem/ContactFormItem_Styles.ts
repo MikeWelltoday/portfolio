@@ -6,6 +6,8 @@ import {ButtonFrame} from '../../../components/ButtonFrame'
 //===============================================================================================================================================================
 
 const ContactForm = styled.form`
+  position: relative;
+
   max-width: 700px;
   width: 100%;
   margin: 50px auto 0 auto;
@@ -37,7 +39,7 @@ const FormInput = styled.input`
   border-radius: 8px;
   outline: none;
 
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', 'Popins', sans-serif;
 
   color: ${ThemeSet.colors.Font};
   border: 1.5px solid ${ThemeSet.colors.Font};
@@ -50,7 +52,7 @@ const FormInput = styled.input`
   height: 50px;
 
   &:focus ~ label {
-    transform: translateX(15px) translateY(-6px);
+    transform: translateX(20px) translateY(-7px);
     padding: 0 10px 0 10px;
 
     background: ${ThemeSet.colors.BackgroundCardGradient};
@@ -69,6 +71,8 @@ const FormInput = styled.input`
   }
 
   &:focus-visible {
+    //заменим выделение по табу на обычную focus
+    outline: none;
     border: 1.5px solid ${ThemeSet.colors.FormFocusBorderColor};
     box-shadow: 0 2px 13px 0 ${ThemeSet.colors.FormFocusShadow};
   }
@@ -78,7 +82,7 @@ const FormLabel = styled.label`
   position: absolute;
   left: 0;
   top: 0;
-  padding: 15px 10px;
+  padding: 18px 15px;
   pointer-events: none;
   transition: 0.5s;
 

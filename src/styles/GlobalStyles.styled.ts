@@ -1,7 +1,7 @@
 import {createGlobalStyle} from 'styled-components'
-
-// styles
 import {ThemeSet} from './ThemeStyles.styled'
+
+//===============================================================================================================================================================
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   *:focus-visible {
-    outline: 2px solid ${ThemeSet.colors.FormFocusBorderColor};
+    outline: 2px solid greenyellow;
   }
 
   html {
@@ -24,12 +24,14 @@ export const GlobalStyles = createGlobalStyle`
   body {
     min-width: 360px;
 
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
+    //font-family: 'Inter', sans-serif;
+    //font-family: 'Poppins', sans-serif;
     //font-family: 'JetBrains Mono', monospace;
 
     height: 100%;
