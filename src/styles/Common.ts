@@ -17,6 +17,26 @@ line-height: ${lineHeight || 1.2};
 font-size: calc( (100vw - 36rem)/(103 - 36) * (${fontMaxRem} - ${fontMinRem}) + ${fontMinRem}rem);
 `
 
+type responsiveFontType = {
+    fontSizeMinPx: number
+    fontSizeMaxPx: number
+    screenWidthMinPx?: number
+    screenWidthMaxPx?: number
+}
+
+export const responsiveFont = ({fontSizeMinPx, fontSizeMaxPx}: responsiveFontType) => `
+font-size: ${responsiveFontCalcFunction({fontSizeMinPx, fontSizeMaxPx})}
+`
+
+const responsiveFontCalcFunction = ({
+                                        fontSizeMinPx,
+                                        fontSizeMaxPx,
+                                        screenWidthMinPx = 360,
+                                        screenWidthMaxPx = 1030
+                                    }: responsiveFontType) => {
+    return '123'
+}
+
 
 
 
