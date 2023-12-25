@@ -6,9 +6,11 @@ import Typewriter from 'typewriter-effect'
 
 import ImageHome from './../../../assets/images/image-home.webp'
 
+
 export const Person: React.FC = () => {
     return (
         <S.Person>
+
             <S.PhotoBox>
                 <S.Photo src={`${ImageHome}`} alt="sry"/>
             </S.PhotoBox>

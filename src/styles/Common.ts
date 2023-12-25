@@ -21,39 +21,28 @@ font-size: calc( (100vw - 36rem)/(103 - 36) * (${fontMaxRem} - ${fontMinRem}) + 
 
 //===============================================================================================================================================================
 
-type responsiveFontType = {
-    fontSizeMinRem: number
-    fontSizeMaxRem: number
-}
-
-export const responsiveFont = ({fontSizeMinRem, fontSizeMaxRem}: responsiveFontType) => `
-font-size: calc( (100vw - 36rem)/(103 - 36) * (${fontSizeMaxRem} - ${fontSizeMinRem}) + ${fontSizeMaxRem}rem)
-`
-
-//===============================================================================================================================================================
-
 export const positionRelativeFromParticles = () => `position: relative;`
 
 //===============================================================================================================================================================
 
 type respFontType = {
-    PxMax: number
-    PxMin: number
-    Vmax?: number
-    Vmin?: number
+    fsMaxPx: number
+    fsMinPx: number
+    scrnMax?: number
+    scrnMin?: number
 }
 
 
-export const respFont = ({PxMax, PxMin, Vmax, Vmin}: respFontType) => `
-font-size: ${respFontFnc({PxMax, PxMin, Vmax, Vmin})}
+export const responsiveFont = ({fsMaxPx, fsMinPx, scrnMax, scrnMin}: respFontType) => `
+font-size: ${responsiveFontFunction({fsMaxPx: fsMaxPx, fsMinPx: fsMinPx, scrnMax: scrnMax, scrnMin: scrnMin})}
 `
 
-export const respFontFnc = ({PxMax, PxMin, Vmax = 1030, Vmin = 360}: respFontType) => {
-    const variablePart = (PxMax - PxMin) / (Vmax - Vmin)
-    const rem = parseFloat(((PxMax - Vmax * variablePart) / 16).toFixed(3))
+export const responsiveFontFunction = ({fsMaxPx, fsMinPx, scrnMax = 1030, scrnMin = 360}: respFontType) => {
+    const variablePart = (fsMaxPx - fsMinPx) / (scrnMax - scrnMin)
+    const rem = parseFloat(((fsMaxPx - scrnMax * variablePart) / 16).toFixed(3))
     const vw = parseFloat((100 * variablePart).toFixed(2))
 
-    return `clamp(${PxMin}px, ${rem}rem + ${vw}vw, ${PxMax}px)`
+    return `clamp(${fsMinPx}px, ${rem}rem + ${vw}vw, ${fsMaxPx}px)`
 }
 
 

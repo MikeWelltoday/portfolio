@@ -22,6 +22,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    overflow-x: hidden;
+
     min-width: 360px;
 
     font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

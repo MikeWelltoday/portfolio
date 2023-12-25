@@ -5,11 +5,9 @@ import {ThemeSet} from '../../../styles/ThemeStyles.styled'
 //===============================================================================================================================================================
 
 const Person = styled.div`
-  outline: 1px solid blue;
-
   display: flex;
   flex-flow: row wrap;
-  row-gap: 30px;
+  row-gap: 20px;
   align-items: stretch;
   justify-content: center;
 `
@@ -35,13 +33,17 @@ const TextContainer = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
-  outline: 1px solid green;
 
   span, h2, h1 {
     letter-spacing: 1.5px;
     white-space: nowrap;
-    ${positionRelativeFromParticles()}
+    ${positionRelativeFromParticles()};
     background-color: ${ThemeSet.color.background.body};
+  }
+
+  h2, h1 {
+    font-weight: 600;
+    ${responsiveFont({fsMaxPx: 54, fsMinPx: 32})}
   }
 `
 
@@ -52,23 +54,11 @@ const Hello = styled.span`
 `
 
 const Name = styled.h2`
-  font-weight: 600;
   color: ${ThemeSet.color.font.yellow.yellow70};
-  font-size: 44px;
-
-  @media screen and (max-width: 1030px) {
-    ${responsiveFont({fontSizeMinRem: 2.1, fontSizeMaxRem: 3.5})}
-  }
 `
 
 const Developer = styled.h1`
-  font-weight: 600;
   color: ${ThemeSet.color.font.yellow.yellow50};
-  font-size: 44px;
-
-  @media screen and (max-width: 1030px) {
-    ${responsiveFont({fontSizeMinRem: 2.1, fontSizeMaxRem: 3.5})}
-  }
 
   p {
     display: none;
