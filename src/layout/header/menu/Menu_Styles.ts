@@ -24,7 +24,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     display: block;
     width: 36px;
     height: 2px;
-    background-color: ${ThemeSet.colors.Font};
+    background-color: ${ThemeSet.color.font.grey.grey80};
     position: absolute;
     left: 40px;
     bottom: 50px;
@@ -39,13 +39,10 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       display: block;
       width: 36px;
       height: 2px;
-      background-color: ${ThemeSet.colors.Font};
+      background-color: ${ThemeSet.color.font.grey.grey80};
       position: absolute;
       transform: translateY(-10px);
       border-radius: 1px;
-
-      //animation
-      transition: ${ThemeSet.animations.transition};
 
       //  наклоняем линию
       ${props => props.isOpen && css<{ isOpen: boolean }>`
@@ -58,13 +55,10 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       display: block;
       width: 24px;
       height: 2px;
-      background-color: ${ThemeSet.colors.Font};
+      background-color: ${ThemeSet.color.font.grey.grey80};
       position: absolute;
       transform: translateY(10px);
       border-radius: 1px;
-
-      //animation
-      transition: ${ThemeSet.animations.transition};
 
       //  наклоняем линию
       ${props => props.isOpen && css<{ isOpen: boolean }>`
@@ -78,8 +72,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 const MenuPopup = styled.div <{ isOpen: boolean }>`
   display: block;
 
-  background-color: ${ThemeSet.colors.MobileMenuBackground};
-  opacity: 0.95;
+  background-color: ${ThemeSet.color.background.header.headerPopUp};
 
   position: fixed;
   top: 0;
@@ -88,26 +81,34 @@ const MenuPopup = styled.div <{ isOpen: boolean }>`
   bottom: 0;
   z-index: 99999;
 
+  //animation
+  transform: translateY(-100%);
+
+  //анимация при исчезновении
+  transition: 0.6s ease 0.4s;
+
   ul {
-    padding-top: 10px;
+    padding-top: 100px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    transition: 0.4s ease-in-out;
-  }
+    row-gap: 18px;
 
-  //animation
-  transform: translateY(-100%);
-  transition: 0.6s ease-in-out 0.2s;
+    //анимация при исчезновении
+    transition: 0.4s ease 0.2s;
+  }
 
   ${props => props.isOpen && css<{ isOpen: boolean }>`
     transform: translateY(0);
 
+    //анимация при появлении
+    transition: 0.6s ease 0.2s;
+
     & ul {
-      transition: 0.4s ease-in-out 0.6s;
-      gap: 35px;
+      //анимация при появлении
+      transition: 0.4s ease 0.7s;
+      gap: 50px;
     }
   `}
 `
@@ -125,11 +126,25 @@ const ListItem = styled.li`
 
 const NavLink = styled(Link)`
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: capitalize;
 
+  &:hover {
+    color: ${ThemeSet.color.font.yellow.yellow50};
+  }
+
   &.active {
-    color: yellow;
+    color: ${ThemeSet.color.font.yellow.yellow90};
+
+    &:after {
+      content: '';
+      display: block;
+      margin-top: 2px;
+      width: 100%;
+      height: 2px;
+      background-color: ${ThemeSet.color.font.yellow.yellow90};
+      border-radius: 1px;
+    }
   }
 `
 

@@ -4,7 +4,7 @@ import {ThemeSet} from '../../styles/ThemeStyles.styled'
 //===============================================================================================================================================================
 
 const Header = styled.header`
-  background-color: ${ThemeSet.colors.BackgroundHeader};
+  background-color: ${ThemeSet.color.background.header.header};
   padding: 20px 0;
   position: sticky;
   top: 0;
@@ -19,12 +19,12 @@ const FlexContainer = styled.div`
   justify-content: space-between;
 `
 const HeaderLogo = styled.a`
-  color: ${ThemeSet.colors.HeaderLogo};
+  color: ${ThemeSet.color.font.headerLogo};
   font: 300 2rem/1.2 'JetBrains Mono', monospace;
 
-  &.active {
-    color: yellow;
-  }
+  //&.active {
+  //  color: yellow;
+  //}
 `
 
 //===============================================================================================================================================================

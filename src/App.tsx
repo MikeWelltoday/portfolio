@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import styled from 'styled-components'
-import {Particle} from './diablo/particle/Particle'
+import {Particle} from './layout/particle/Particle'
 import {Header} from './layout/header/Header'
 import {Home} from './layout/home/Home'
 import {TechStack} from './layout/techstack/TechStack'
@@ -24,10 +24,10 @@ function App() {
     return (
         <div className="App">
 
-            {/*<Particle/>*/}
+            <Particle/>
             <Header/>
             <Home/>
-            <About/>
+            {/*<About/>*/}
             <TechStack/>
             <Projects/>
             <Contact/>

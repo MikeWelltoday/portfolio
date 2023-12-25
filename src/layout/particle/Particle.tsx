@@ -3,7 +3,8 @@ import {useCallback} from 'react'
 import type {Container, Engine} from 'tsparticles-engine'
 import Particles from 'react-tsparticles'
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import {loadSlim} from 'tsparticles-slim' // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
+import {loadSlim} from 'tsparticles-slim'
+import {ThemeSet} from '../../styles/ThemeStyles.styled' // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 
 //===============================================================================================================================================================
 
@@ -28,18 +29,9 @@ export const Particle = () => {
             init={particlesInit}
             loaded={particlesLoaded}
             options={{
-                // background: {
-                //     color: {
-                //         value: '#0d47a1'
-                //     }
-                // },
                 fpsLimit: 120,
                 interactivity: {
                     events: {
-                        // onClick: {
-                        //     enable: true,
-                        //     mode: 'push'
-                        // },
                         onHover: {
                             enable: true,
                             mode: 'repulse'
@@ -51,21 +43,14 @@ export const Particle = () => {
                             quantity: 4
                         },
                         repulse: {
-                            distance: 200,
+                            distance: 400,
                             duration: 0.4
                         }
                     }
                 },
                 particles: {
                     color: {
-                        value: 'rgba(192,168,85,0.39)'
-                    },
-                    links: {
-                        color: 'rgba(232,201,61,0.76)',
-                        distance: 200,
-                        enable: true,
-                        opacity: 0.4,
-                        width: 1
+                        value: `${ThemeSet.color.font.yellow.yellow50}`
                     },
                     move: {
                         direction: 'none',
@@ -74,7 +59,7 @@ export const Particle = () => {
                             default: 'bounce'
                         },
                         random: false,
-                        speed: 2,
+                        speed: 1,
                         straight: false
                     },
                     number: {
@@ -82,16 +67,16 @@ export const Particle = () => {
                             enable: true,
                             area: 1000
                         },
-                        value: 20
+                        value: 30
                     },
                     opacity: {
-                        value: 0.4
+                        value: 1
                     },
                     shape: {
                         type: 'circle'
                     },
                     size: {
-                        value: {min: 0.2, max: 1}
+                        value: {min: 1, max: 3}
                     }
                 },
                 detectRetina: true
@@ -99,3 +84,6 @@ export const Particle = () => {
         />
     )
 }
+
+
+

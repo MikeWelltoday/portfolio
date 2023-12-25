@@ -36,8 +36,8 @@ export const GlobalStyles = createGlobalStyle`
 
     height: 100%;
     line-height: 1.2;
-    background-color: ${ThemeSet.colors.BackgroundMain};
-    color: ${ThemeSet.colors.Font}
+    background-color: ${ThemeSet.color.background.body};
+    color: ${ThemeSet.color.font.grey.grey90}
   }
 
   img {
@@ -51,7 +51,6 @@ export const GlobalStyles = createGlobalStyle`
   a, a:hover, a:active {
     text-decoration: none;
     cursor: pointer;
-    color: ${ThemeSet.colors.Font};
   }
 
   h1, h2, h3, h4, h5, h6 {
