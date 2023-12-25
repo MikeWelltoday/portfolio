@@ -43,7 +43,7 @@ export const Particle = () => {
                             quantity: 4
                         },
                         repulse: {
-                            distance: 400,
+                            distance: 300,
                             duration: 0.4
                         }
                     }

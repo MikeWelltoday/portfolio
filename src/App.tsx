@@ -18,6 +18,9 @@ import {DiabloContacts} from './diablo/diabloContacts/DiabloContacts'
 import {DiabloFooter} from './diablo/diabloFooter/DiabloFooter'
 
 
+import {respFont} from './styles/Common'
+
+
 //===============================================================================================================================================================
 
 function App() {
@@ -56,4 +59,6 @@ const Border = styled.div`
   font-size: 48px;
   text-align: center;
   margin: 20px 0;
+
+  ${respFont({PxMax: 40, PxMin: 20})}
 `

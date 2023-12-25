@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {mixinFont, responsiveFont} from '../../../styles/Common'
+import {responsiveFont, positionRelativeFromParticles} from '../../../styles/Common'
 import {ThemeSet} from '../../../styles/ThemeStyles.styled'
 
 //===============================================================================================================================================================
@@ -15,11 +15,12 @@ const Person = styled.div`
 `
 
 const PhotoBox = styled.div`
-  //outline: 1px solid darkmagenta;
   text-align: right;
   flex: 0 0 27%;
 `
 const Photo = styled.img`
+  ${positionRelativeFromParticles()}
+  position: relative;
   width: 150px;
   height: 150px;
   object-fit: contain;
@@ -39,6 +40,8 @@ const TextContainer = styled.div`
   span, h2, h1 {
     letter-spacing: 1.5px;
     white-space: nowrap;
+    ${positionRelativeFromParticles()}
+    background-color: ${ThemeSet.color.background.body};
   }
 `
 
@@ -54,7 +57,7 @@ const Name = styled.h2`
   font-size: 44px;
 
   @media screen and (max-width: 1030px) {
-    ${responsiveFont({fontMinRem: 2.6, fontMaxRem: 4.4})}
+    ${responsiveFont({fontSizeMinRem: 2.1, fontSizeMaxRem: 3.5})}
   }
 `
 
@@ -64,7 +67,7 @@ const Developer = styled.h1`
   font-size: 44px;
 
   @media screen and (max-width: 1030px) {
-    ${responsiveFont({fontMinRem: 2.6, fontMaxRem: 4.4})}
+    ${responsiveFont({fontSizeMinRem: 2.1, fontSizeMaxRem: 3.5})}
   }
 
   p {
