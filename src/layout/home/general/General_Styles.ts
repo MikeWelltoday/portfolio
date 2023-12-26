@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 import {ThemeSet} from '../../../styles/ThemeStyles.styled'
 import {positionRelativeFromParticles, responsiveFont} from '../../../styles/Common'
+import {motion} from 'framer-motion'
 
 //===============================================================================================================================================================
 
-const General = styled.div`
+const General = styled(motion.div)`
   padding: 100px 15% 0 15%;
 
   @media ${ThemeSet.media.mobile.media} {

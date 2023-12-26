@@ -40,7 +40,7 @@ export const Contact: React.FC = () => {
     return (
         <S.Contact id={'contact'}>
             <Container>
-                <SectionTitle title={'Contact'} borderColor={ThemeSet.colors.Font} borderHeight={'1.5px'}/>
+                <SectionTitle title={'Contact'}/>
                 <S.ContactLinks>
                     {contactLinksCardData.map((item, index) =>
                         <ContactLinksCard logoLink={item.logoLink} iconId={item.iconId} width={item.width}

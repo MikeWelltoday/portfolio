@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {responsiveFont, positionRelativeFromParticles} from '../../../styles/Common'
 import {ThemeSet} from '../../../styles/ThemeStyles.styled'
+import {motion} from 'framer-motion'
 
 //===============================================================================================================================================================
 
@@ -12,7 +13,7 @@ const Person = styled.div`
   justify-content: center;
 `
 
-const PhotoBox = styled.div`
+const PhotoBox = styled(motion.div)`
   text-align: right;
   flex: 0 0 27%;
 `
@@ -47,17 +48,17 @@ const TextContainer = styled.div`
   }
 `
 
-const Hello = styled.span`
+const Hello = styled(motion.span)`
   font-weight: 400;
   color: ${ThemeSet.color.font.yellow.yellow90};
   font-size: 18px;
 `
 
-const Name = styled.h2`
+const Name = styled(motion.h2)`
   color: ${ThemeSet.color.font.yellow.yellow70};
 `
 
-const Developer = styled.h1`
+const Developer = styled(motion.h1)`
   color: ${ThemeSet.color.font.yellow.yellow50};
 
   p {

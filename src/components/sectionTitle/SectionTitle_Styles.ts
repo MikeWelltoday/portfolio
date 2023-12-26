@@ -1,18 +1,14 @@
 import styled from 'styled-components'
-// styles
-import {mixinFont} from '../../styles/Common'
-
-//===============================================================================================================================================================
-
-type StyledSectionTitleType = {
-    borderColor: string
-    borderHeight: string
-}
+import {ThemeSet} from '../../styles/ThemeStyles.styled'
+import {positionRelativeFromParticles, responsiveFont} from '../../styles/Common'
 
 //===============================================================================================================================================================
 
 // SectionTitle =>
-const SectionTitle = styled.h2<StyledSectionTitleType>`
+const SectionTitle = styled.h2`
+
+  ${positionRelativeFromParticles()}
+  background-color: ${ThemeSet.color.background.body};
 
   margin-bottom: 30px;
 
@@ -23,13 +19,16 @@ const SectionTitle = styled.h2<StyledSectionTitleType>`
   flex-wrap: nowrap;
   column-gap: 25px;
 
-  ${mixinFont({weight: 600, fontMinRem: 3.5, fontMaxRem: 4})};
+
+  ${responsiveFont({fsMaxPx: 42, fsMinPx: 24})};
+  font-weight: 500;
+  letter-spacing: 1.5px;
 
   &:before, &:after {
     content: '';
     flex: 1 0 auto;
-    height: ${props => props.borderHeight};
-    background: ${props => props.borderColor};
+    height: 1px;
+    background-color: ${ThemeSet.color.font.grey.grey50};
   }
 `
 

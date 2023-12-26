@@ -120,7 +120,7 @@ export const TechStack: React.FC = () => {
     return (
         <S.TechStack id={'techStack'}>
             <Container>
-                <SectionTitle title={'TechStack'} borderColor={`${ThemeSet.colors.Font}`} borderHeight={'1.5px'}/>
+                <SectionTitle title={'TechStack'}/>
                 <S.TechStackCardBox>
                     <Reveal cascade={true} damping={0.03} triggerOnce={true}>
                         {

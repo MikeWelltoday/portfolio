@@ -14,7 +14,7 @@ export const Testimony = () => {
     return (
         <StyledTestemony>
             <Container>
-                <SectionTitle title={'Testimony'} borderColor={'#EBE8E3'} borderHeight={'1.5px'}/>
+                <SectionTitle title={'Testimony'}/>
                 <FlexWrapper direction={'column'} justifyContent={'center'} alignItems={'center'} flexWrap={'wrap'}>
                     <Icon iconId={'icon-contact-github'} width={'39'} height={'38'} viewBox={'0 0 39 38'}/>
                     <Slider/>

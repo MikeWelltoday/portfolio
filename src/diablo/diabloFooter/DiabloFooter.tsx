@@ -4,8 +4,6 @@ import {Icon} from '../../components/Icon'
 import {FlexWrapper} from '../../components/FlexWrapper'
 import {Container} from '../../components/Container'
 
-import {motion} from 'framer-motion'
-
 const list = [
     {
         iconId: 'icon-contact-telegram',
@@ -35,6 +33,7 @@ const list = [
 
 
 export const DiabloFooter = () => {
+
     return (
         <StyledDiabloFooter>
 
@@ -44,20 +43,7 @@ export const DiabloFooter = () => {
                     <SocialList>
                         {
                             list.map((item, index) => (
-                                <SocialItem
-                                    /* настройка параметров анимации */
-                                    transition={{duration: 0.5, delay: 0.1 * (index + 1)}}
-
-                                    /* ОТКУДА ЭЛЕМЕНТ БУДЕТ ПОЯВЛЯТЬСЯ */
-                                    initial={{opacity: 0, scale: 0.5, y: 200, x: 300}}
-
-                                    /* КУДА ЭЛЕМЕНТ СТАНОВИТЬСЯ */
-                                    animate={{opacity: 1, scale: 1, y: 0, x: 0}}
-
-                                    /* КУДА ЭЛЕМЕНТ БУДЕТ УХОДИТЬ ПРИ ИСЧЕЗАНИИ */
-                                    exit={{opacity: 0, scale: 0.5, x: 300}}
-
-                                    key={index}>
+                                <SocialItem key={index}>
                                     <SolicalLink>
                                         <Icon iconId={item.iconId} width={item.width} height={item.height}
                                               viewBox={item.viewBox}/>
@@ -93,7 +79,7 @@ const SocialList = styled.ul`
   margin: 30px 0;
 `
 
-const SocialItem = styled(motion.li)`
+const SocialItem = styled.li`
   transition: all 0.3s ease;
 
   &:hover {

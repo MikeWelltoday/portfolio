@@ -30,7 +30,12 @@ export const Menu: React.FC = () => {
     return (
         <S.ItemsList>
             {menuItemsList.map((item, index) =>
-                <S.ListItem key={index}>
+                <S.ListItem
+                    key={index}
+                    transition={{duration: 0.4, delay: 0.15 * (index + 1)}}
+                    initial={{opacity: 0, scale: 1, x: 0, y: -15}}
+                    animate={{opacity: 1, scale: 1, x: 0, y: 0}}
+                >
                     <S.NavLink
                         // ссылка на тег
                         to={item.href}

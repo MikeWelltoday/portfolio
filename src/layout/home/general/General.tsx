@@ -11,7 +11,11 @@ const textList = [
 
 export const General: React.FC = () => {
     return (
-        <S.General>
+        <S.General
+            transition={{duration: 0.6, delay: 1.8}}
+            initial={{opacity: 0, scale: 1, x: 0, y: -15}}
+            animate={{opacity: 1, scale: 1, x: 0, y: 0}}
+        >
             <S.Title>general</S.Title>
             {
                 textList.map((item, index) => (

@@ -48,7 +48,7 @@ export const Projects: React.FC = () => {
     return (
         <S.Projects id={'projects'}>
             <Container>
-                <SectionTitle title={'Projects'} borderColor={'#EBE8E3'} borderHeight={'1.5px'}/>
+                <SectionTitle title={'Projects'}/>
                 <S.ProjectsCardBox>
                     {
                         projectsCardData.map((item, index) =>

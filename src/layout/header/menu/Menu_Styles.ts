@@ -1,6 +1,7 @@
 import styled, {css} from 'styled-components'
 import {ThemeSet} from '../../../styles/ThemeStyles.styled'
 import {Link} from 'react-scroll'
+import {motion} from 'framer-motion'
 
 //===============================================================================================================================================================
 
@@ -121,7 +122,7 @@ const ItemsList = styled.ul`
   gap: 18px;
 `
 
-const ListItem = styled.li`
+const ListItem = styled(motion.li)`
 `
 
 const NavLink = styled(Link)`

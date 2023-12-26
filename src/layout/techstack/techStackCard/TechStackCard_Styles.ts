@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {ThemeSet} from '../../../styles/ThemeStyles.styled'
+import {positionRelativeFromParticles} from '../../../styles/Common'
 
 //===============================================================================================================================================================
 
@@ -14,7 +15,7 @@ const TechStackCard = styled.div`
 
   svg {
     flex: 0 0 auto;
-    opacity: 0.9;
+    opacity: 0.8;
 
     color: ${ThemeSet.colors.BackgroundMain};
   }
@@ -22,8 +23,6 @@ const TechStackCard = styled.div`
   h3 {
     flex: 1 0 auto;
   }
-
-  outline: 1px solid orange;
 `
 
 const TechName = styled.h3`

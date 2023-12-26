@@ -6,18 +6,33 @@ import Typewriter from 'typewriter-effect'
 
 import ImageHome from './../../../assets/images/image-home.webp'
 
-
 export const Person: React.FC = () => {
     return (
         <S.Person>
 
-            <S.PhotoBox>
+            <S.PhotoBox
+                transition={{duration: 0.4, delay: 1}}
+                initial={{opacity: 0, scale: 1, y: 15}}
+                animate={{opacity: 1, scale: 1, y: 0}}
+            >
                 <S.Photo src={`${ImageHome}`} alt="sry"/>
             </S.PhotoBox>
             <S.TextContainer>
-                <S.Hello>Hi, my name is</S.Hello>
-                <S.Name>Mikhail Kuznetsov.</S.Name>
-                <S.Developer>
+                <S.Hello
+                    transition={{duration: 0.4, delay: 1.2}}
+                    initial={{opacity: 0, scale: 1, x: 0, y: 15}}
+                    animate={{opacity: 1, scale: 1, x: 0, y: 0}}
+                >Hi, my name is</S.Hello>
+                <S.Name
+                    transition={{duration: 0.4, delay: 1.4}}
+                    initial={{opacity: 0, scale: 1, x: 0, y: 15}}
+                    animate={{opacity: 1, scale: 1, x: 0, y: 0}}
+                >Mikhail Kuznetsov.</S.Name>
+                <S.Developer
+                    transition={{duration: 0.4, delay: 1.6}}
+                    initial={{opacity: 0, scale: 1, x: 0, y: 15}}
+                    animate={{opacity: 1, scale: 1, x: 0, y: 0}}
+                >
                     <p>front-End developer</p>
                     <Typewriter
                         options={{

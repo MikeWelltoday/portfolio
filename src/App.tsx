@@ -26,7 +26,7 @@ function App() {
             <Particle/>
             <Header/>
             <Home/>
-            {/*<About/>*/}
+            <About/>
             <TechStack/>
             <Projects/>
             <Contact/>
