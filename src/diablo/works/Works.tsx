@@ -86,7 +86,6 @@ export const Works = () => {
                 />
                 <WorkListsWrapper>
                     <AnimatePresence>
-
                         {
                             filteredWorks.map((item) =>
                                 <motion.div
@@ -94,7 +93,6 @@ export const Works = () => {
                                     animate={{opacity: 1, scale: 1}}
                                     transition={{duration: 0.5}}
                                     key={item.id}
-
                                     layout
                                 >
                                     <WorkList title={item.title} text={item.text} src={item.src} type={item.type}
@@ -102,7 +100,6 @@ export const Works = () => {
                                 </motion.div>
                             )
                         }
-
                     </AnimatePresence>
                 </WorkListsWrapper>
             </Container>

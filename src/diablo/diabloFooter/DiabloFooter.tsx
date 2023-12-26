@@ -6,19 +6,32 @@ import {Container} from '../../components/Container'
 
 import {motion} from 'framer-motion'
 
-// создаем Объект-анимирования
-const animationObj = {
-    // СОСТОЯНИЕ => перед анимацией
-    hidden: {
-        x: -300,
-        opacity: 1
+const list = [
+    {
+        iconId: 'icon-contact-telegram',
+        width: '38',
+        height: '38',
+        viewBox: '0 0 38 38'
     },
-
-    visible: {
-        x: 0,
-        opacity: 1
+    {
+        iconId: 'icon-contact-telegram',
+        width: '38',
+        height: '38',
+        viewBox: '0 0 38 38'
+    },
+    {
+        iconId: 'icon-contact-telegram',
+        width: '38',
+        height: '38',
+        viewBox: '0 0 38 38'
+    },
+    {
+        iconId: 'icon-contact-telegram',
+        width: '38',
+        height: '38',
+        viewBox: '0 0 38 38'
     }
-}
+]
 
 
 export const DiabloFooter = () => {
@@ -28,42 +41,31 @@ export const DiabloFooter = () => {
             <Container>
                 <FlexWrapper direction={'column'} justifyContent={'center'} alignItems={'center'} flexWrap={'nowrap'}>
                     <Name>Svetlana</Name>
+                    <SocialList>
+                        {
+                            list.map((item, index) => (
+                                <SocialItem
+                                    /* настройка параметров анимации */
+                                    transition={{duration: 0.5, delay: 0.1 * (index + 1)}}
 
-                    <motion.div
-                        initial={animationObj.hidden}
-                        whileInView={animationObj.visible}>
+                                    /* ОТКУДА ЭЛЕМЕНТ БУДЕТ ПОЯВЛЯТЬСЯ */
+                                    initial={{opacity: 0, scale: 0.5, y: 200, x: 300}}
 
-                        <SocialList>
-                            <SocialItem variants={animationObj}>
-                                <SolicalLink>
-                                    <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'}
-                                          viewBox={'0 0 38 38'}/>
-                                </SolicalLink>
-                            </SocialItem>
+                                    /* КУДА ЭЛЕМЕНТ СТАНОВИТЬСЯ */
+                                    animate={{opacity: 1, scale: 1, y: 0, x: 0}}
 
-                            <SocialItem variants={animationObj}>
-                                <SolicalLink>
-                                    <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'}
-                                          viewBox={'0 0 38 38'}/>
-                                </SolicalLink>
-                            </SocialItem>
+                                    /* КУДА ЭЛЕМЕНТ БУДЕТ УХОДИТЬ ПРИ ИСЧЕЗАНИИ */
+                                    exit={{opacity: 0, scale: 0.5, x: 300}}
 
-                            <SocialItem variants={animationObj}>
-                                <SolicalLink>
-                                    <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'}
-                                          viewBox={'0 0 38 38'}/>
-                                </SolicalLink>
-                            </SocialItem>
-
-                            <SocialItem variants={animationObj}>
-                                <SolicalLink>
-                                    <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'}
-                                          viewBox={'0 0 38 38'}/>
-                                </SolicalLink>
-                            </SocialItem>
-                        </SocialList>
-
-                    </motion.div>
+                                    key={index}>
+                                    <SolicalLink>
+                                        <Icon iconId={item.iconId} width={item.width} height={item.height}
+                                              viewBox={item.viewBox}/>
+                                    </SolicalLink>
+                                </SocialItem>
+                            ))
+                        }
+                    </SocialList>
 
                     <Copyright>© 2023 Svetlana Dyablo, All Rights Reserved.</Copyright>
 

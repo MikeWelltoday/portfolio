@@ -20,10 +20,10 @@ export const GoTopBtn = () => {
             {showBtn &&
                 (
                     <StyledGoTopBtn onClick={() => scroll.scrollToTop()}
-                                    initial={{opacity: 0, scale: 0.5}}
-                                    animate={{opacity: 1, scale: 1}}
-                                    transition={{duration: 0.5}}
-                                    exit={{opacity: 0, scale: 0.5}}
+                                    transition={{duration: 0.8}}
+                                    initial={{x: 200}}
+                                    animate={{x: 0}}
+                                    exit={{x: 200}}
                                     key={'svg'}
                     >
                         <svg id="svg" width="60" height="60" viewBox="0 0 60 60" fill="none"

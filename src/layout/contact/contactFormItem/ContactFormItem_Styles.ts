@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import {ThemeSet} from '../../../styles/ThemeStyles.styled'
 import {ButtonFrame} from '../../../components/ButtonFrame'
 
@@ -33,7 +33,7 @@ const ContactFormItemBox = styled.div`
   position: relative;
 `
 
-const FormInput = styled.input`
+const FormInput = styled.input<{ change: boolean }>`
   width: 100%;
   padding: 10px;
   border-radius: 8px;
@@ -51,11 +51,29 @@ const FormInput = styled.input`
   transition: 0.5s;
   height: 50px;
 
+  ${props => props.change && css<{ change: boolean }>`
+    ~ label {
+      transform: translateX(20px) translateY(-7px);
+      padding: 0 10px 0 10px;
+
+      background-color: ${ThemeSet.color.background.card.card};
+      background: ${ThemeSet.color.background.card.cardGradient};
+      border-left: 1.5px solid ${ThemeSet.colors.Font};
+      border-right: 1.5px solid ${ThemeSet.colors.Font};
+      color: ${ThemeSet.colors.Font};
+      letter-spacing: 1.5px;
+
+
+      opacity: 1;
+      font-size: 1.2rem;
+    }
+  `}
   &:focus ~ label {
     transform: translateX(20px) translateY(-7px);
     padding: 0 10px 0 10px;
 
-    background: ${ThemeSet.colors.BackgroundCardGradient};
+    background-color: ${ThemeSet.color.background.card.card};
+    background: ${ThemeSet.color.background.card.cardGradient};
     border-left: 1.5px solid ${ThemeSet.colors.FormFocusBorderColor};
     border-right: 1.5px solid ${ThemeSet.colors.FormFocusBorderColor};
     letter-spacing: 1.5px;
@@ -64,6 +82,7 @@ const FormInput = styled.input`
     opacity: 1;
     font-size: 1.2rem;
   }
+
 
   &:focus {
     border: 1.5px solid ${ThemeSet.colors.FormFocusBorderColor};

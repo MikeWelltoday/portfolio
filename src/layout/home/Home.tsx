@@ -19,7 +19,6 @@ export const Home: React.FC = () => {
                         <General/>
                     </Fade>
                 </S.Wrapper>
-
             </Container>
         </S.Home>
     )
