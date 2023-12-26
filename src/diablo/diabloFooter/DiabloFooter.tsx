@@ -4,6 +4,23 @@ import {Icon} from '../../components/Icon'
 import {FlexWrapper} from '../../components/FlexWrapper'
 import {Container} from '../../components/Container'
 
+import {motion} from 'framer-motion'
+
+// создаем Объект-анимирования
+const animationObj = {
+    // СОСТОЯНИЕ => перед анимацией
+    hidden: {
+        x: -300,
+        opacity: 1
+    },
+
+    visible: {
+        x: 0,
+        opacity: 1
+    }
+}
+
+
 export const DiabloFooter = () => {
     return (
         <StyledDiabloFooter>
@@ -11,35 +28,43 @@ export const DiabloFooter = () => {
             <Container>
                 <FlexWrapper direction={'column'} justifyContent={'center'} alignItems={'center'} flexWrap={'nowrap'}>
                     <Name>Svetlana</Name>
-                    <SocialList>
-                        <SocialItem>
-                            <SolicalLink>
-                                <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'}
-                                      viewBox={'0 0 38 38'}/>
-                            </SolicalLink>
-                        </SocialItem>
 
-                        <SocialItem>
-                            <SolicalLink>
-                                <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'}
-                                      viewBox={'0 0 38 38'}/>
-                            </SolicalLink>
-                        </SocialItem>
+                    <motion.div
+                        initial={animationObj.hidden}
+                        whileInView={animationObj.visible}>
 
-                        <SocialItem>
-                            <SolicalLink>
-                                <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'}
-                                      viewBox={'0 0 38 38'}/>
-                            </SolicalLink>
-                        </SocialItem>
+                        <SocialList>
+                            <SocialItem variants={animationObj}>
+                                <SolicalLink>
+                                    <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'}
+                                          viewBox={'0 0 38 38'}/>
+                                </SolicalLink>
+                            </SocialItem>
 
-                        <SocialItem>
-                            <SolicalLink>
-                                <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'}
-                                      viewBox={'0 0 38 38'}/>
-                            </SolicalLink>
-                        </SocialItem>
-                    </SocialList>
+                            <SocialItem variants={animationObj}>
+                                <SolicalLink>
+                                    <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'}
+                                          viewBox={'0 0 38 38'}/>
+                                </SolicalLink>
+                            </SocialItem>
+
+                            <SocialItem variants={animationObj}>
+                                <SolicalLink>
+                                    <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'}
+                                          viewBox={'0 0 38 38'}/>
+                                </SolicalLink>
+                            </SocialItem>
+
+                            <SocialItem variants={animationObj}>
+                                <SolicalLink>
+                                    <Icon iconId={'icon-contact-telegram'} width={'38'} height={'38'}
+                                          viewBox={'0 0 38 38'}/>
+                                </SolicalLink>
+                            </SocialItem>
+                        </SocialList>
+
+                    </motion.div>
+
                     <Copyright>© 2023 Svetlana Dyablo, All Rights Reserved.</Copyright>
 
                 </FlexWrapper>
@@ -66,7 +91,7 @@ const SocialList = styled.ul`
   margin: 30px 0;
 `
 
-const SocialItem = styled.li`
+const SocialItem = styled(motion.li)`
   transition: all 0.3s ease;
 
   &:hover {
