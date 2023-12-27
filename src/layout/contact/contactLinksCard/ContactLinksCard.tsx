@@ -19,7 +19,7 @@ export const ContactLinksCard: React.FC<ContactLinksCardPropsType> = (props: Con
         <S.ContactLinksCard>
             <Logo logoLink={props.logoLink} iconId={props.iconId} width={props.width} height={props.height}
                   viewBox={props.viewBox}/>
-            <S.CardTitle href={props.logoLink}>{props.cardTitle}</S.CardTitle>
+            <S.CardTitle target={'_blank'} href={props.logoLink}>{props.cardTitle}</S.CardTitle>
         </S.ContactLinksCard>
     )
 }

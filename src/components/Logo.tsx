@@ -13,7 +13,7 @@ type LogoPropsType = {
 
 export const Logo: React.FC<LogoPropsType> = (props: LogoPropsType) => {
     return (
-        <a href={props.logoLink}>
+        <a href={props.logoLink} target={'_blank'}>
             <Icon iconId={props.iconId} width={props.width} height={props.height} viewBox={props.viewBox}/>
         </a>
     )

@@ -1,15 +1,13 @@
 import styled, {css} from 'styled-components'
 import {ButtonFrame} from '../../../../components/ButtonFrame'
+import {motion} from 'framer-motion'
 
 //===============================================================================================================================================================
 
-const FormSendMessage = styled.div<{ isFormSendMessageOpen: boolean }>`
-  display: none;
-
+const FormSendMessage = styled(motion.div)<{ isFormSendMessageOpen: boolean }>`
+  display: block;
   position: absolute;
   top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
   width: 250px;
   height: 150px;
 
@@ -27,7 +25,7 @@ const FormSendMessage = styled.div<{ isFormSendMessageOpen: boolean }>`
 
 
   ${props => props.isFormSendMessageOpen && css<{ isFormSendMessageOpen: boolean }>`
-    display: block;
+    //display: block;
   `}
 `
 

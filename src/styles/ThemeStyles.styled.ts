@@ -13,7 +13,7 @@ export const ThemeSet = {
             },
             button: {
                 buttonGradient: 'linear-gradient(87deg, #E2A300 4.47%, #E29500 95.53%)',
-                button: 'rgba(226, 158, 0, 0.48)'
+                background: '#E2A300'
             }
         },
         font: {
@@ -40,6 +40,13 @@ export const ThemeSet = {
                 form: '#DEC14EFF',
                 formFocus: '#DEC14EFF'
             }
+        },
+        button: {
+            shadow: 'rgba(226, 158, 0, 0.48)'
+        },
+        form: {
+            focusColor: '#DEC14EFF',
+            focusShadow: 'rgba(226, 158, 0, 0.48)'
         }
     },
 

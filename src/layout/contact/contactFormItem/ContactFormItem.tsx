@@ -3,6 +3,8 @@ import {S} from './ContactFormItem_Styles'
 import {ButtonFrame} from '../../../components/ButtonFrame'
 import emailjs from '@emailjs/browser'
 import {FormSendMessage} from './formSendMessage/FormSendMessage'
+import {Fade} from 'react-awesome-reveal'
+import {AnimatePresence} from 'framer-motion'
 
 //===============================================================================================================================================================
 
@@ -52,26 +54,33 @@ export const ContactForm: React.FC = () => {
 
     return (
         <S.ContactForm ref={form} onSubmit={sendEmail} onClick={() => setIsFormSendMessageOpen(false)}>
-            <S.ContactFormItemBox>
-                <S.FormInput type={'text'} id={'name'} required={true} name={'user_name'}
-                             onChange={handleInputChangeName}
-                             change={inputChangeName}/>
-                <S.FormLabel htmlFor={'name'} aria-labelledby={'name'}>name</S.FormLabel>
-            </S.ContactFormItemBox>
-            <S.ContactFormItemBox>
-                <S.FormInput type={'text'} id={'email'} required={true} name={'email'} onChange={handleInputChangeEmail}
-                             change={inputChangeEmail}/>
-                <S.FormLabel htmlFor={'email'} aria-labelledby={'email'}>email</S.FormLabel>
-            </S.ContactFormItemBox>
-            <S.ContactFormItemBox>
-                <S.FormInput as={'textarea'} id={'message'} required={true} name={'message'}
-                             onChange={handleInputChangeMessage} change={inputChangeMessage}/>
-                <S.FormLabel htmlFor={'message'} aria-labelledby={'message'}>message</S.FormLabel>
-            </S.ContactFormItemBox>
-            <ButtonFrame type={'submit'}>contact me</ButtonFrame>
-
+            <Fade cascade={true} damping={0.05} triggerOnce={true} direction={'up'}>
+                <S.ContactFormItemBox>
+                    <S.FormInput type={'text'} id={'name'} required={true} name={'user_name'}
+                                 onChange={handleInputChangeName}
+                                 change={inputChangeName}/>
+                    <S.FormLabel htmlFor={'name'} aria-labelledby={'name'}>name</S.FormLabel>
+                </S.ContactFormItemBox>
+                <S.ContactFormItemBox>
+                    <S.FormInput type={'text'} id={'email'} required={true} name={'email'}
+                                 onChange={handleInputChangeEmail}
+                                 change={inputChangeEmail}/>
+                    <S.FormLabel htmlFor={'email'} aria-labelledby={'email'}>email</S.FormLabel>
+                </S.ContactFormItemBox>
+                <S.ContactFormItemBox>
+                    <S.FormInput as={'textarea'} id={'message'} required={true} name={'message'}
+                                 onChange={handleInputChangeMessage} change={inputChangeMessage}/>
+                    <S.FormLabel htmlFor={'message'} aria-labelledby={'message'}>message</S.FormLabel>
+                </S.ContactFormItemBox>
+                <ButtonFrame type={'submit'}>contact me</ButtonFrame>
+            </Fade>
             {/*окно информирования об отправке формы*/}
-            <FormSendMessage isFormSendMessageOpen={isFormSendMessageOpen}/>
+            <AnimatePresence>
+
+                {isFormSendMessageOpen && (
+                    <FormSendMessage isFormSendMessageOpen={isFormSendMessageOpen}/>
+                )}
+            </AnimatePresence>
         </S.ContactForm>
 
     )

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {ThemeSet} from '../../styles/ThemeStyles.styled'
+import {responsiveFont} from '../../styles/Common'
 
 //===============================================================================================================================================================
 
@@ -9,15 +10,15 @@ const Footer = styled.footer`
 const Small = styled.small`
   display: block;
   text-align: center;
-  opacity: 0.5;
-  font-size: 1.4rem;
+  color: ${ThemeSet.color.font.grey.grey50};
   font-weight: 400;
+  ${responsiveFont({fsMaxPx: 16, fsMinPx: 14})};
 
   &:before {
     content: '';
     height: 1.5px;
     display: block;
-    background-color: ${ThemeSet.colors.Font};
+    background-color: ${ThemeSet.color.font.grey.grey50};
     margin-bottom: 10px;
   }
 `

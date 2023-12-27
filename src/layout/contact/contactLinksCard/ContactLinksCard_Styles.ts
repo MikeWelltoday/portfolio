@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {ThemeSet} from '../../../styles/ThemeStyles.styled'
 
 //===============================================================================================================================================================
 
@@ -11,11 +12,18 @@ const ContactLinksCard = styled.div`
   align-items: center;
   row-gap: 10px;
 
-  background-color: #99839b;
+  svg {
+    color: ${ThemeSet.color.font.grey.grey100};
+  }
+
+  &:hover > a, &:hover > a > svg {
+    color: ${ThemeSet.color.font.yellow.yellow100};
+  }
+  
 `
 
 const CardTitle = styled.a`
-  background-color: #6e6e50;
+  color: ${ThemeSet.color.font.grey.grey70};
 
   text-transform: uppercase;
   cursor: pointer;

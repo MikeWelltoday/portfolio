@@ -6,7 +6,6 @@ const Contact = styled.section`
 `
 
 const ContactLinks = styled.div`
-  background-color: #2a6450;
   width: 100%;
   display: flex;
   flex-flow: row nowrap;

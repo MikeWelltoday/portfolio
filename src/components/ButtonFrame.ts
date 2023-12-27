@@ -4,14 +4,18 @@ import {ThemeSet} from '../styles/ThemeStyles.styled'
 //===============================================================================================================================================================
 
 export const ButtonFrame = styled.button`
-  background: ${ThemeSet.colors.ButtonBackground};
-  box-shadow: 0 0 5px ${ThemeSet.colors.ButtonShadow}, 0 0 20px ${ThemeSet.colors.ButtonShadow};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: ${ThemeSet.color.background.button};
+  background: ${ThemeSet.color.background.button.buttonGradient};
+  box-shadow: 0 0 5px ${ThemeSet.color.button.shadow}, 0 0 20px ${ThemeSet.color.button.shadow};
   text-align: center;
-  //width: 100%;
   height: 35px;
   border-radius: 12px;
 
-  line-height: 35px;
+  line-height: 1.2;
   font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -20,9 +24,9 @@ export const ButtonFrame = styled.button`
   transition: all 0.2s ease;
 
   &:hover {
-    box-shadow: 0 0 5px ${ThemeSet.colors.ButtonShadow},
-    0 0 20px ${ThemeSet.colors.ButtonShadow},
-    0 0 25px ${ThemeSet.colors.ButtonShadow};
+    box-shadow: 0 0 5px ${ThemeSet.color.button.shadow},
+    0 0 20px ${ThemeSet.color.button.shadow},
+    0 0 25px ${ThemeSet.color.button.shadow};
   }
 
   &:active {
@@ -34,7 +38,7 @@ export const ButtonFrame = styled.button`
   }
 
   &:focus-visible {
-    outline: 2px solid ${ThemeSet.colors.Font};
+    outline: 2px solid ${ThemeSet.color.font.grey.grey100};
   }
 `
 

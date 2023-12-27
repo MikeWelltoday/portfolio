@@ -41,16 +41,18 @@ const FormInput = styled.input<{ change: boolean }>`
 
   font-family: 'Inter', 'Popins', sans-serif;
 
-  color: ${ThemeSet.colors.Font};
-  border: 1.5px solid ${ThemeSet.colors.Font};
-  background: ${ThemeSet.colors.BackgroundCardGradient};
-  background-color: ${ThemeSet.colors.BackgroundCard};
+  color: ${ThemeSet.color.font.grey.grey100};
+  border: 1.5px solid ${ThemeSet.color.font.grey.grey70};
+  background-color: ${ThemeSet.color.background.card.card};
+  background: ${ThemeSet.color.background.card.cardGradient};
+
 
   font-size: 1.4em;
   font-weight: 400;
   transition: 0.5s;
   height: 50px;
 
+  //текст написан, но инпут не в фокусе => что бы лейбл не вернулся на место, и не наехал не текс, которой вводил пользователь
   ${props => props.change && css<{ change: boolean }>`
     ~ label {
       transform: translateX(20px) translateY(-7px);
@@ -58,9 +60,9 @@ const FormInput = styled.input<{ change: boolean }>`
 
       background-color: ${ThemeSet.color.background.card.card};
       background: ${ThemeSet.color.background.card.cardGradient};
-      border-left: 1.5px solid ${ThemeSet.colors.Font};
-      border-right: 1.5px solid ${ThemeSet.colors.Font};
-      color: ${ThemeSet.colors.Font};
+      border-left: 1.5px solid ${ThemeSet.color.font.grey.grey70};
+      border-right: 1.5px solid ${ThemeSet.color.font.grey.grey70};
+      color: ${ThemeSet.color.font.grey.grey90};
       letter-spacing: 1.5px;
 
 
@@ -74,10 +76,10 @@ const FormInput = styled.input<{ change: boolean }>`
 
     background-color: ${ThemeSet.color.background.card.card};
     background: ${ThemeSet.color.background.card.cardGradient};
-    border-left: 1.5px solid ${ThemeSet.colors.FormFocusBorderColor};
-    border-right: 1.5px solid ${ThemeSet.colors.FormFocusBorderColor};
+    border-left: 1.5px solid ${ThemeSet.color.form.focusColor};
+    border-right: 1.5px solid ${ThemeSet.color.form.focusColor};
     letter-spacing: 1.5px;
-    color: ${ThemeSet.colors.FormFocusBorderColor};
+    color: ${ThemeSet.color.form.focusColor};
 
     opacity: 1;
     font-size: 1.2rem;
@@ -85,15 +87,15 @@ const FormInput = styled.input<{ change: boolean }>`
 
 
   &:focus {
-    border: 1.5px solid ${ThemeSet.colors.FormFocusBorderColor};
-    box-shadow: 0 2px 13px 0 ${ThemeSet.colors.FormFocusShadow};
+    border: 1.5px solid ${ThemeSet.color.form.focusColor};
+    box-shadow: 0 2px 13px 0 ${ThemeSet.color.form.focusShadow};
   }
 
   &:focus-visible {
     //заменим выделение по табу на обычную focus
     outline: none;
-    border: 1.5px solid ${ThemeSet.colors.FormFocusBorderColor};
-    box-shadow: 0 2px 13px 0 ${ThemeSet.colors.FormFocusShadow};
+    border: 1.5px solid ${ThemeSet.color.form.focusColor};
+    box-shadow: 0 2px 13px 0 ${ThemeSet.color.form.focusShadow};
   }
 `
 
@@ -105,7 +107,7 @@ const FormLabel = styled.label`
   pointer-events: none;
   transition: 0.5s;
 
-  color: ${ThemeSet.colors.Font};
+  color: ${ThemeSet.color.font.grey.grey100};
   text-transform: uppercase;
 
   font-size: 1.4em;
