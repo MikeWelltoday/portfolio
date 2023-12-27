@@ -15,7 +15,7 @@ export const Person: React.FC = () => {
                 initial={{opacity: 0, scale: 1, y: 15}}
                 animate={{opacity: 1, scale: 1, y: 0}}
             >
-                <S.Photo src={`${ImageHome}`} alt="sry"/>
+                <S.Photo src={ImageHome} alt="sry"/>
             </S.PhotoBox>
             <S.TextContainer>
                 <S.Hello

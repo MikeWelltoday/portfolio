@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import {ThemeSet} from '../../../styles/ThemeStyles.styled'
-import {positionRelativeFromParticles} from '../../../styles/Common'
 
 //===============================================================================================================================================================
 
@@ -17,7 +16,7 @@ const TechStackCard = styled.div`
     flex: 0 0 auto;
     opacity: 0.8;
 
-    color: ${ThemeSet.colors.BackgroundMain};
+    color: ${ThemeSet.color.background.body};
   }
 
   h3 {
@@ -28,9 +27,8 @@ const TechStackCard = styled.div`
 const TechName = styled.h3`
   font: 300 2rem/1.2 "JetBrains Mono", monospace;
   letter-spacing: -0.5px;
-  opacity: 0.7;
 
-  color: ${ThemeSet.colors.Font};
+  color: ${ThemeSet.color.font.grey.grey60};
 
   display: flex;
   flex-flow: row nowrap;
