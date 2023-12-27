@@ -5,6 +5,7 @@ import {Container} from '../../components/Container'
 import {Content} from './contect/Content'
 import {Fade} from 'react-awesome-reveal'
 
+
 //===============================================================================================================================================================
 
 //image
@@ -16,14 +17,12 @@ export const About: React.FC = () => {
         <S.About id={'about'}>
             <Container>
                 <SectionTitle title={'About'}/>
-                <S.Main>
-                    {/*<Fade triggerOnce={true} direction={'left'} delay={100}>*/}
-                    <Content/>
-                    {/*</Fade>*/}
-                    {/*<Fade triggerOnce={true} direction={'right'} delay={100}>*/}
-                    <S.Photo src={ImageAbout} alt="sry"/>
-                    {/*</Fade>*/}
-                </S.Main>
+                <Fade triggerOnce={true} direction={'left'} delay={100}>
+                    <S.Main>
+                        <Content/>
+                        <S.Photo src={ImageAbout} alt="sry"/>
+                    </S.Main>
+                </Fade>
             </Container>
         </S.About>
     )

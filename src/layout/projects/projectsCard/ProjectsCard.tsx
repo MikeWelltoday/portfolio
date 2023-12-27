@@ -23,7 +23,7 @@ export const ProjectsCard = (props: PortfolioCardPropsType) => {
             </S.CardImageBox>
             <S.CardTitle>{props.cardTitle}</S.CardTitle>
             <S.CardDescription>{props.cardDescription}</S.CardDescription>
-            <S.CardTechStack><span>Tech Stack: </span>{props.cardTechStack}</S.CardTechStack>
+            <S.CardTechStack><span>Tech Stack:</span>{props.cardTechStack}</S.CardTechStack>
             <S.CardDecor>
                 <Icon iconId={'icon-projects-GitHub'} width={'20'} height={'20'} viewBox={'0 0 20 20'}/>
             </S.CardDecor>

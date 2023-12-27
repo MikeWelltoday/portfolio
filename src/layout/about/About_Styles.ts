@@ -8,9 +8,8 @@ const About = styled.section`
 const Main = styled.div`
   display: flex;
   align-items: flex-start;
-  justify-content: space-evenly;
-
-  background-color: rgba(205, 92, 92, 0.71);
+  justify-content: center;
+  column-gap: 30px;
 
   //хардкод от изменения высоты при отрисовки слайдера
   height: 290px;

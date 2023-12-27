@@ -9,9 +9,8 @@ const ProjectsCard = styled.div`
   height: 600px;
   border-radius: 20px;
   padding: 0 15px 25px 15px;
-  background: ${ThemeSet.colors.BackgroundCardGradient};
-  background-color: ${ThemeSet.colors.BackgroundCard};
-  box-shadow: 0 4px 15px 0 rgba(27, 27, 27, 0.28);
+  background: ${ThemeSet.color.background.card.card};
+  background-color: ${ThemeSet.color.background.card.cardGradient};
 
   display: flex;
   flex-flow: column nowrap;
@@ -22,7 +21,7 @@ const ProjectsCard = styled.div`
 
   &:hover {
     transform: scale(1.01);
-    outline: 2px solid ${ThemeSet.colors.FormFocusShadow};
+    outline: 2.5px solid ${ThemeSet.color.font.yellow.yellow70};
   }
 
   @media ${ThemeSet.media.tablet.media} {
@@ -112,15 +111,18 @@ const CardDescription = styled.p`
   font-size: 1.8rem;
   font-weight: 300;
   line-height: 1.4;
-  opacity: ${ThemeSet.fontOpacity};
+  color: ${ThemeSet.color.font.grey.grey70};
 `
 
 const CardTechStack = styled.h2`
-  font: 300 1.6rem/1.2 "JetBrains Mono", monospace;
+  font: 300 1.5rem/1.2 "JetBrains Mono", monospace;
   opacity: ${ThemeSet.fontOpacity};
 
   span {
-    font: 500 1.8rem/1.2 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-right: 10px;
   }
 `
 
@@ -148,7 +150,10 @@ const CardProjectsLink = styled.a`
   font-weight: 500;
   text-decoration: underline;
 
+  color: ${ThemeSet.color.font.grey.grey100};
+
   &:hover {
+    color: ${ThemeSet.color.font.yellow.yellow100};
     text-decoration: underline;
   }
 `

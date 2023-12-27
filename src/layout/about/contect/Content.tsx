@@ -27,7 +27,7 @@ const textList: Array<{ text: string[], status: string }> = [
         status: 'experience'
     },
     {
-        text: ['I companies reach and companies reach', 'theirby designing '],
+        text: ['I companies reach and companies reach', 'theirby designing ', 'theirgoals by designing user-centric digital and companies reach '],
         status: 'education'
     }
 ]

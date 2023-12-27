@@ -1,20 +1,17 @@
 import styled, {css} from 'styled-components'
 import {ThemeSet} from '../../../styles/ThemeStyles.styled'
 import {positionRelativeFromParticles, responsiveFont} from '../../../styles/Common'
-import {motion} from 'framer-motion'
 
 //===============================================================================================================================================================
 
 const Content = styled.div`
-  width: 100%;
-  background-color: rgba(78, 29, 180, 0.27);
 
   display: flex;
   align-items: flex-start;
 
   @media screen and (max-width: 600px) {
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 40px;
     align-items: center;
   }
 `
@@ -85,13 +82,10 @@ const TextBox = styled.div`
   padding: 0 20px;
   min-width: 330px;
   max-width: 400px;
-
-  background-color: rgba(0, 255, 255, 0.38);
 `
 
-const TextAnimationBox = styled(motion.div)`
+const TextAnimationBox = styled.div`
   width: 100%;
-  background-color: #e3c10c;
 `
 
 const Text = styled.p`

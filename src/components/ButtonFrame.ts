@@ -7,7 +7,7 @@ export const ButtonFrame = styled.button`
   background: ${ThemeSet.colors.ButtonBackground};
   box-shadow: 0 0 5px ${ThemeSet.colors.ButtonShadow}, 0 0 20px ${ThemeSet.colors.ButtonShadow};
   text-align: center;
-  width: 100%;
+  //width: 100%;
   height: 35px;
   border-radius: 12px;
 
@@ -15,7 +15,7 @@ export const ButtonFrame = styled.button`
   font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #000;
+  color: ${ThemeSet.color.background.body};
 
   transition: all 0.2s ease;
 
