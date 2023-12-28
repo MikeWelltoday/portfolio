@@ -27,7 +27,7 @@ const Menu = styled.ul`
     position: absolute;
     z-index: 1;
     background-color: ${ThemeSet.color.font.grey.grey50};
-    left: 1.5px;
+    left: 1.9px;
     top: 0;
     width: 1px;
     height: 100%;

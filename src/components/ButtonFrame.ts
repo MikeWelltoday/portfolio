@@ -27,6 +27,7 @@ export const ButtonFrame = styled.button`
     box-shadow: 0 0 5px ${ThemeSet.color.button.shadow},
     0 0 20px ${ThemeSet.color.button.shadow},
     0 0 25px ${ThemeSet.color.button.shadow};
+    transform: scale(1.05);
   }
 
   &:active {

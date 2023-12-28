@@ -33,6 +33,11 @@ export const ContactForm: React.FC = () => {
 
         // при клике по форме исчезнет окно информирования об отправлке формы
         setIsFormSendMessageOpen(true)
+
+        //     после отправки лейблы вернуться на место
+        setInputChangeName(false)
+        setInputChangeEmail(false)
+        setInputChangeMessage(false)
     }
 
     // ###когда введен текст => label над формой для Name
@@ -74,13 +79,14 @@ export const ContactForm: React.FC = () => {
                 </S.ContactFormItemBox>
                 <ButtonFrame type={'submit'}>contact me</ButtonFrame>
             </Fade>
+
             {/*окно информирования об отправке формы*/}
             <AnimatePresence>
-
                 {isFormSendMessageOpen && (
-                    <FormSendMessage isFormSendMessageOpen={isFormSendMessageOpen}/>
+                    <FormSendMessage/>
                 )}
             </AnimatePresence>
+
         </S.ContactForm>
 
     )
