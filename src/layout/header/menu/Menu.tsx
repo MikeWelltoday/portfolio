@@ -26,6 +26,7 @@ const menuItemsList: Array<{ title: string, href: string }> = [
     }
 ]
 
+
 export const Menu: React.FC = () => {
     return (
         <S.ItemsList>

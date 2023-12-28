@@ -4,8 +4,9 @@ import {ThemeSet} from '../../../styles/ThemeStyles.styled'
 //===============================================================================================================================================================
 
 const ContactLinksCard = styled.div`
-  width: 70px;
-  height: 60px;
+
+  width: 80px;
+  height: 65px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -19,7 +20,7 @@ const ContactLinksCard = styled.div`
   &:hover > a, &:hover > a > svg {
     color: ${ThemeSet.color.font.yellow.yellow100};
   }
-  
+
 `
 
 const CardTitle = styled.a`
