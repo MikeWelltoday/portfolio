@@ -66,21 +66,60 @@ export const GlobalStyles = createGlobalStyle`
     cursor: pointer;
   }
 
+  //  scroll
+  //для fireFox 
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: ${ThemeSet.color.scrollbar.thumb}, ${ThemeSet.color.scrollbar.track};
+  }
+
+  //для Chrome, safari, ... 
+  *::-webkit-scrollbar {
+    width: 18px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background-color: ${ThemeSet.color.scrollbar.track};
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: ${ThemeSet.color.scrollbar.thumb};
+    border-radius: 8px;
+    border: 3px solid ${ThemeSet.color.scrollbar.track};
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: ${ThemeSet.color.font.yellow.yellow50};
+  }
+
   //  растояние между секциями
   section {
     padding: 100px 0;
     display: flex;
     flex-direction: column;
+    //outline: 1px solid green;
 
     //background for particles
       // background-color: ${ThemeSet.colors.BackgroundMain};
 
     @media ${ThemeSet.media.mobile} {
       padding: 80px 0;
-    }
-
-    outline: 1px solid #3dce2b;
+    };
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

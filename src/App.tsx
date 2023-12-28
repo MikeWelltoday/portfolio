@@ -33,12 +33,12 @@ function App() {
             <Footer/>
             <GoTopBtn/>
 
-            <Border>BORDER</Border>
-
-            <Works/>
-            <Testimony/>
-            <DiabloContacts/>
-            <DiabloFooter/>
+            
+            {/*<Border>BORDER</Border>*/}
+            {/*<Works/>*/}
+            {/*<Testimony/>*/}
+            {/*<DiabloContacts/>*/}
+            {/*<DiabloFooter/>*/}
         </div>
     )
 }

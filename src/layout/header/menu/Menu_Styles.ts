@@ -9,7 +9,11 @@ const MenuDesktop = styled.nav``
 
 //===============================================================================================================================================================
 
-const MenuMobile = styled.nav``
+const MenuMobile = styled.nav`
+  a {
+    font-size: 24px;
+  }
+`
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
@@ -119,14 +123,16 @@ const MenuPopup = styled.div <{ isOpen: boolean }>`
 const ItemsList = styled.ul`
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 18px;
 `
 
 const ListItem = styled(motion.li)`
+  height: 100%;
 `
 
 const NavLink = styled(Link)`
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   text-transform: capitalize;
 
@@ -140,7 +146,6 @@ const NavLink = styled(Link)`
     &:after {
       content: '';
       display: block;
-      margin-top: 2px;
       width: 100%;
       height: 2px;
       background-color: ${ThemeSet.color.font.yellow.yellow90};

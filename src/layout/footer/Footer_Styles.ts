@@ -16,7 +16,7 @@ const Small = styled.small`
 
   &:before {
     content: '';
-    height: 1.5px;
+    height: 1px;
     display: block;
     background-color: ${ThemeSet.color.font.grey.grey50};
     margin-bottom: 10px;

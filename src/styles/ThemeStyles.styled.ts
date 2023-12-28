@@ -47,6 +47,10 @@ export const ThemeSet = {
         form: {
             focusColor: '#DEC14EFF',
             focusShadow: 'rgba(226, 158, 0, 0.48)'
+        },
+        scrollbar: {
+            track: '#232323',
+            thumb: '#454545'
         }
     },
 

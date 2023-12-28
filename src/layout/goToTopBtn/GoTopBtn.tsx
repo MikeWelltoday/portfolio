@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react'
-import styled from 'styled-components'
 import {animateScroll as scroll} from 'react-scroll'
 import {AnimatePresence, motion} from 'framer-motion'
+import {S} from './GoTopBtn_Styles'
+import {Icon} from '../../components/Icon'
 
 //===============================================================================================================================================================
 
@@ -10,58 +11,43 @@ export const GoTopBtn = () => {
     const [showBtn, setShowBtn] = useState(false)
 
     useEffect(() => {
-        window.addEventListener('scroll', () => {
-            window.scrollY >= 300 ? setShowBtn(true) : setShowBtn(false)
-        })
+
+        const handleScrollAndResize = () => {
+            setShowBtn(window.scrollY >= 300 && window.innerWidth >= 1180)
+        }
+
+        window.addEventListener('scroll', handleScrollAndResize)
+        window.addEventListener('resize', handleScrollAndResize)
+
+        //оптимизация для установки начального значения и очистки ресурсов при размонтировании компонента.
+        //Эта часть кода полезна в том случае, если вы хотите, чтобы обработчик событий выполнился сразу после монтирования компонента, и если вы хотите избежать утечек памяти, удаляя слушатели событий при размонтировании компонента. Если вы уверены, что вам это не требуется, и ваш код работает правильно, то нет необходимости добавлять эту часть.
+
+        // Вызываем обработчик, чтобы установить начальное значение
+        handleScrollAndResize()
+
+        // Функция => Убираем слушатели событий при размонтировании компонента ( когда мы его скрываем или не отрисовываем )
+        // Теперь слушатели будут добавлены при монтировании компонента и удалены при его размонтировании.
+        return () => {
+            window.removeEventListener('scroll', handleScrollAndResize)
+            window.removeEventListener('resize', handleScrollAndResize)
+        }
     }, [])
 
     return (
         <AnimatePresence>
             {showBtn &&
                 (
-                    <StyledGoTopBtn onClick={() => scroll.scrollToTop()}
-                                    transition={{duration: 0.8}}
-                                    initial={{x: 200}}
-                                    animate={{x: 0}}
-                                    exit={{x: 200}}
-                                    key={'svg'}
+                    <S.GoTopBtn onClick={() => scroll.scrollToTop()}
+                                transition={{duration: 0.8}}
+                                initial={{x: 200}}
+                                animate={{x: 0}}
+                                exit={{x: 200}}
+                                key={'svg'}
                     >
-                        <svg id="svg" width="60" height="60" viewBox="0 0 60 60" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="30" cy="30" r="30" transform="rotate(90 30 30)"
-                                    fill="url(#paint0_linear_3_385)"/>
-                            <path d="M40.5 28.5L30 18L19.5 28.5" stroke="#E4E4E4" strokeWidth="2" strokeLinecap="round"
-                                  strokeLinejoin="round"/>
-                            <path d="M30 18L30 42" stroke="#E4E4E4" strokeWidth="2" strokeLinecap="round"
-                                  strokeLinejoin="round"/>
-                            <defs>
-                                <linearGradient id="paint0_linear_3_385" x1="-1.90735e-06" y1="-1.90735e-06"
-                                                x2="57.0661"
-                                                y2="-2.6715" gradientUnits="userSpaceOnUse">
-                                    <stop stopColor="#E2A300"/>
-                                    <stop offset="1" stopColor="#E29500"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </StyledGoTopBtn>
+                        <Icon iconId={'icon-GoTopBtn'} width={'60'} height={'60'} viewBox={'0 0 60 60'}/>
+                    </S.GoTopBtn>
                 )
             }
         </AnimatePresence>
     )
 }
-
-const StyledGoTopBtn = styled(motion.div)`
-  background-color: aqua;
-  padding: 8px;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-
-  svg {
-    cursor: pointer;
-  }
-`
