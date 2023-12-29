@@ -13,6 +13,7 @@ const FormSendMessage = styled(motion.div)`
   left: 0;
   right: 0;
 
+
   background-color: ${ThemeSet.color.background.card.card};
 
   text-align: center;
