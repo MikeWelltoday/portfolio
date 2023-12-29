@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components'
+import styled from 'styled-components'
 import {ButtonFrame} from '../../../../components/ButtonFrame'
 import {motion} from 'framer-motion'
 import {ThemeSet} from '../../../../styles/ThemeStyles.styled'
