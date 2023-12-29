@@ -116,7 +116,6 @@ const CardDescription = styled.p`
 
 const CardTechStack = styled.h2`
   font: 300 1.5rem/1.2 "JetBrains Mono", monospace;
-  opacity: ${ThemeSet.fontOpacity};
 
   span {
     font-weight: 500;
@@ -136,7 +135,7 @@ const CardDecor = styled.div`
 
 
   &:before, &:after {
-    background-color: ${ThemeSet.colors.BackgroundMain};
+    background-color: ${ThemeSet.color.background.body};
     display: block;
     content: '';
     height: 4px;

@@ -108,9 +108,6 @@ export const GlobalStyles = createGlobalStyle`
     flex-direction: column;
     //outline: 1px solid green;
 
-    //background for particles
-      // background-color: ${ThemeSet.colors.BackgroundMain};
-
     @media ${ThemeSet.media.mobile} {
       padding: 80px 0;
     };
