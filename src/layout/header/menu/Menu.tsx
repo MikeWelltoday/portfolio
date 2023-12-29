@@ -26,8 +26,11 @@ const menuItemsList: Array<{ title: string, href: string }> = [
     }
 ]
 
+type MenuType = {
+    onMenuItemClick?: () => void
+}
 
-export const Menu: React.FC = () => {
+export const Menu: React.FC<MenuType> = (props: MenuType) => {
     return (
         <S.ItemsList>
             {menuItemsList.map((item, index) =>
@@ -55,6 +58,13 @@ export const Menu: React.FC = () => {
                         delay={150}
                         //игнорировать отключение анимаций
                         ignoreCancelEvents={false}
+
+                        onClick={() => {
+                            if (props.onMenuItemClick) {
+                                props.onMenuItemClick()
+                            }
+                        }}
+
                     >{item.title}</S.NavLink>
                 </S.ListItem>
             )}

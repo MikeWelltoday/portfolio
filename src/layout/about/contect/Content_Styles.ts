@@ -16,7 +16,7 @@ const Content = styled.div`
   }
 `
 
-const Menu = styled.ul`
+const Menu = styled.nav`
   position: relative;
   min-width: 200px;
   margin-right: 20px;
@@ -50,6 +50,9 @@ const MenuDecor = styled.div<{ decorPosition: string }>`
 
   transition: 0.4s ease;
   top: ${props => props.decorPosition};
+`
+
+const MenuList = styled.ul`
 `
 
 const MenuItem = styled.li<{ active: boolean }>`
@@ -121,6 +124,7 @@ export const S = {
     Content,
     Menu,
     MenuDecor,
+    MenuList,
     MenuItem,
     TextBox,
     TextAnimationBox,

@@ -18,7 +18,7 @@ const General = styled(motion.div)`
   }
 `
 
-const Title = styled.h4`
+const Title = styled.h2`
 
   width: 100%;
   margin-bottom: 15px;

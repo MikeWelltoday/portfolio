@@ -46,7 +46,8 @@ export const Contact: React.FC = () => {
                         {contactLinksCardData.map((item, index) =>
                             <ContactLinksCard logoLink={item.logoLink} iconId={item.iconId} width={item.width}
                                               height={item.height}
-                                              viewBox={item.viewBox} cardTitle={item.cardTitle} key={index}/>
+                                              viewBox={item.viewBox} cardTitle={item.cardTitle} key={index}
+                            />
                         )}
                     </Reveal>
                 </S.ContactLinks>

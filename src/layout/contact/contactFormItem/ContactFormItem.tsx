@@ -58,7 +58,8 @@ export const ContactForm: React.FC = () => {
 
 
     return (
-        <S.ContactForm ref={form} onSubmit={sendEmail} onClick={() => setIsFormSendMessageOpen(false)}>
+        <S.ContactForm ref={form} onSubmit={sendEmail} onClick={() => setIsFormSendMessageOpen(false)}
+                       autoComplete="off">
             <Fade cascade={true} damping={0.05} triggerOnce={true} direction={'up'}>
                 <S.ContactFormItemBox>
                     <S.FormInput type={'text'} id={'name'} required={true} name={'user_name'}

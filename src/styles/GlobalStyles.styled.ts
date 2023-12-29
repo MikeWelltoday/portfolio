@@ -12,6 +12,14 @@ export const GlobalStyles = createGlobalStyle`
     border: 0;
   }
 
+  //input
+  // input:-webkit-autofill,
+  // input:-webkit-autofill:hover,
+  // input:-webkit-autofill:focus,
+  // input:-webkit-autofill:active {
+  //   -webkit-box-shadow: 0 0 0 30px ${ThemeSet.color.background.card.card} inset !important;
+  // }
+
   *:focus-visible {
     outline: 2px solid greenyellow;
   }

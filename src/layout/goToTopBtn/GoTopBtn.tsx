@@ -43,6 +43,7 @@ export const GoTopBtn = () => {
                                 animate={{x: 0}}
                                 exit={{x: 200}}
                                 key={'svg'}
+                                aria-label={'gototopbutton'}
                     >
                         <Icon iconId={'icon-GoTopBtn'} width={'60'} height={'60'} viewBox={'0 0 60 60'}/>
                     </S.GoTopBtn>

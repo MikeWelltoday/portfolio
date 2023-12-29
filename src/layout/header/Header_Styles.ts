@@ -21,9 +21,8 @@ const FlexContainer = styled.div`
 `
 const HeaderLogo = styled.a`
   color: ${ThemeSet.color.font.headerLogo};
-  font: 300 2rem/1.2 'JetBrains Mono', monospace;
 
-  &:hover {
+  &:hover svg {
     color: ${ThemeSet.color.font.yellow.yellow50};
   }
 `

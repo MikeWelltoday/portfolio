@@ -60,15 +60,17 @@ export const Content: React.FC = () => {
     return (
         <S.Content>
             <S.Menu>
-                <S.MenuDecor decorPosition={decorPosition}/>
-                {
-                    contentList.map((item, index) => (
-                        <S.MenuItem key={index} onClick={() => setCurrentMenuStatus(item.title)}
-                                    active={item.title === currentMenuStatus}>
-                            {item.title}
-                        </S.MenuItem>
-                    ))
-                }
+                <S.MenuDecor decorPosition={decorPosition} role="presentation"/>
+                <S.MenuList>
+                    {
+                        contentList.map((item, index) => (
+                            <S.MenuItem key={index} onClick={() => setCurrentMenuStatus(item.title)}
+                                        active={item.title === currentMenuStatus}>
+                                {item.title}
+                            </S.MenuItem>
+                        ))
+                    }
+                </S.MenuList>
             </S.Menu>
             <S.TextBox>
                 <AnimatePresence>

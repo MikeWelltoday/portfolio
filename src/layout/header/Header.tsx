@@ -5,6 +5,7 @@ import {S} from './Header_Styles'
 import {Container} from '../../components/Container'
 import {MenuDesktop} from './menu/MenuDesktop'
 import {MenuMobile} from './menu/MenuMobile'
+import {Icon} from '../../components/Icon'
 
 //===============================================================================================================================================================
 
@@ -26,7 +27,7 @@ export const Header: React.FC = () => {
             <Container>
                 <S.FlexContainer>
                     <S.HeaderLogo aria-label={'header-logo'} onClick={() => scroll.scrollToTop()}>
-                        .MikhailKuznetsov
+                        <Icon iconId={'icon-header-logo'} width={'199'} height={'17'} viewBox={'0 0 199 17'}/>
                     </S.HeaderLogo>
                     {
                         width <= breakpoint ? <MenuMobile/> : <MenuDesktop/>

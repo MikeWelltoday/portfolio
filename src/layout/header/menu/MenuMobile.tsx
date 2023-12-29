@@ -13,6 +13,10 @@ export const MenuMobile: React.FC = () => {
         setMenuIsOpen(!menuIsOpen)
     }
 
+    const onMenuItemClick = () => {
+        setMenuIsOpen(false)
+    }
+
     return (
         <S.MenuMobile>
             <motion.div
@@ -20,13 +24,14 @@ export const MenuMobile: React.FC = () => {
                 initial={{opacity: 0, scale: 1}}
                 animate={{opacity: 1, scale: 1}}
             >
-                <S.BurgerButton isOpen={menuIsOpen} onClick={onBurgerButtonClick}>
+                <S.BurgerButton isOpen={menuIsOpen} onClick={onBurgerButtonClick}
+                                aria-label={'open mobile-tablet menu'}>
                     <span></span>
                 </S.BurgerButton>
             </motion.div>
 
             <S.MenuPopup isOpen={menuIsOpen} onClick={() => setMenuIsOpen(false)}>
-                <Menu/>
+                <Menu onMenuItemClick={onMenuItemClick}/>
             </S.MenuPopup>
         </S.MenuMobile>
     )
