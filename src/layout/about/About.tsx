@@ -10,7 +10,6 @@ import {Fade} from 'react-awesome-reveal'
 
 //image
 import ImageAbout from '../../assets/images/image-about.webp'
-import ImageAboutX2 from '../../assets/images/image-about-x2.webp'
 
 
 export const About: React.FC = () => {
@@ -21,7 +20,7 @@ export const About: React.FC = () => {
                 <Fade triggerOnce={true} direction={'left'} delay={100}>
                     <S.Main>
                         <Content/>
-                        <S.Photo src={ImageAbout} alt="sry" srcSet={`${ImageAboutX2} 2x`}/>
+                        <S.Photo src={ImageAbout} alt="sry"/>
                     </S.Main>
                 </Fade>
             </Container>
