@@ -5,6 +5,7 @@ import Typewriter from 'typewriter-effect'
 //===============================================================================================================================================================
 
 import ImageHome from './../../../assets/images/image-home.webp'
+import ImageHomeX2 from './../../../assets/images/image-home-x2.webp'
 
 export const Person: React.FC = () => {
     return (
@@ -15,7 +16,7 @@ export const Person: React.FC = () => {
                 initial={{opacity: 0, scale: 1, y: 15}}
                 animate={{opacity: 1, scale: 1, y: 0}}
             >
-                <S.Photo src={ImageHome} alt="sry"/>
+                <S.Photo src={ImageHome} alt="sry" srcSet={`${ImageHomeX2} 2x`}/>
             </S.PhotoBox>
             <S.TextContainer>
                 <S.Hello
