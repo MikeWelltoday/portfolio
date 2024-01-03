@@ -30,7 +30,7 @@ type MenuType = {
     onMenuItemClick?: () => void
 }
 
-export const Menu: React.FC<MenuType> = (props: MenuType) => {
+export const Menu: React.FC<MenuType> = (props) => {
     return (
         <S.ItemsList>
             {menuItemsList.map((item, index) =>

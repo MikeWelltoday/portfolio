@@ -14,7 +14,7 @@ export type PortfolioCardPropsType = {
     cardPortfolioLink: string
 }
 
-export const ProjectsCard = (props: PortfolioCardPropsType) => {
+export const ProjectsCard: React.FC<PortfolioCardPropsType> = (props) => {
     return (
         <S.ProjectsCard>
             <S.CardImageBox>

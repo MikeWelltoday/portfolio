@@ -13,7 +13,7 @@ export type TechStackCardPropsType = {
     techNameTitle: string
 }
 
-export const TechStackCard: React.FC<TechStackCardPropsType> = (props: TechStackCardPropsType) => {
+export const TechStackCard: React.FC<TechStackCardPropsType> = (props) => {
     return (
         <S.TechStackCard>
             <Icon iconId={props.iconId} width={props.width} height={props.height} viewBox={props.viewBox}/>

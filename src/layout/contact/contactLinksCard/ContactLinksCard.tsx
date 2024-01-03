@@ -14,7 +14,7 @@ export type ContactLinksCardPropsType = {
     cardTitle: string
 }
 
-export const ContactLinksCard: React.FC<ContactLinksCardPropsType> = (props: ContactLinksCardPropsType) => {
+export const ContactLinksCard: React.FC<ContactLinksCardPropsType> = (props) => {
     return (
         <S.ContactLinksCard>
             <Logo logoLink={props.logoLink} iconId={props.iconId} width={props.width} height={props.height}
