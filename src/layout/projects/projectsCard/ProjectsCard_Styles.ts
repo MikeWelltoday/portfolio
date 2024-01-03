@@ -22,12 +22,33 @@ const ProjectsCard = styled.div`
   &:hover {
     transform: scale(1.01);
     outline: 2.5px solid ${ThemeSet.color.font.yellow.yellow70};
+
+    div:first-child {
+      &::before {
+        //animation
+        opacity: 1;
+      }
+
+      ${ButtonFrame} {
+        display: block;
+      }
+    }
   }
 
   @media ${ThemeSet.media.tablet.media} {
     &:hover {
       transform: none;
       outline: unset;
+    }
+
+    div:first-child {
+      &::before {
+        opacity: 1;
+      }
+
+      ${ButtonFrame} {
+        display: block;
+      }
     }
   }
 
@@ -64,28 +85,6 @@ const CardImageBox = styled.div`
     opacity: 0;
     transition: ${ThemeSet.animations.transition};
   }
-
-  &:hover {
-    &::before {
-      //animation
-      opacity: 1;
-    }
-
-    ${ButtonFrame} {
-      display: block;
-    }
-  }
-
-  @media ${ThemeSet.media.tablet.media} {
-    &::before {
-      opacity: 1;
-    }
-
-    ${ButtonFrame} {
-      display: block;
-    }
-  }
-
 `
 
 const CardImage = styled.img`
@@ -102,7 +101,7 @@ const CardTitle = styled.h3`
   font-size: 2.8rem;
   font-weight: 500;
   letter-spacing: 1.2px;
-
+  padding-top: 10px;
 `
 
 const CardDescription = styled.p`

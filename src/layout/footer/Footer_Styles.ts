@@ -18,7 +18,7 @@ const Small = styled.small`
     content: '';
     height: 1px;
     display: block;
-    background-color: ${ThemeSet.color.font.grey.grey50};
+    background-color: ${ThemeSet.color.font.grey.grey30};
     margin-bottom: 10px;
   }
 `

@@ -7,8 +7,8 @@ import {ThemeSet} from '../../styles/ThemeStyles.styled'
 const GoTopBtn = styled(motion.div)`
   padding: 2px;
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 5px;
+  right: 10px;
 
   &:hover {
     transform: scale(1.1);

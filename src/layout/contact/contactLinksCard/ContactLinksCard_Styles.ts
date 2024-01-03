@@ -20,7 +20,6 @@ const ContactLinksCard = styled.div`
   &:hover > a, &:hover > a > svg {
     color: ${ThemeSet.color.font.yellow.yellow100};
   }
-
 `
 
 const CardTitle = styled.a`

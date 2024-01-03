@@ -26,10 +26,11 @@ const Menu = styled.nav`
     content: '';
     position: absolute;
     z-index: 1;
-    background-color: ${ThemeSet.color.font.grey.grey50};
-    left: 1.9px;
+    background-color: ${ThemeSet.color.font.grey.grey20};
+    border-radius: 2px;
+    left: 1px;
     top: 0;
-    width: 1px;
+    width: 2px;
     height: 100%;
   }
 

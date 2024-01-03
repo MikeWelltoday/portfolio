@@ -9,9 +9,11 @@ const FormSendMessage = styled(motion.div)`
   display: block;
   position: absolute;
   height: 150px;
+  width: 500px;
   top: 10%;
-  left: 0;
-  right: 0;
+  left: 50%;
+  // !important - чтобы перебить стили из библиотеки framerMotion
+  transform: translateX(-50%) !important;
 
 
   background-color: ${ThemeSet.color.background.card.card};

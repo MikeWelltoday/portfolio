@@ -13,7 +13,7 @@ export const GoTopBtn = () => {
     useEffect(() => {
 
         const handleScrollAndResize = () => {
-            setShowBtn(window.scrollY >= 300 && window.innerWidth >= 1180)
+            setShowBtn(window.scrollY >= 300 && window.innerWidth >= 1190)
         }
 
         window.addEventListener('scroll', handleScrollAndResize)

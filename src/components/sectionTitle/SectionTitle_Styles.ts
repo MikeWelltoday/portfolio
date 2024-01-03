@@ -10,7 +10,7 @@ const SectionTitle = styled.h2`
   ${positionRelativeFromParticles()}
   background-color: ${ThemeSet.color.background.body};
 
-  margin-bottom: 30px;
+  margin-bottom: 80px;
 
   width: 100%;
   display: flex;
@@ -28,7 +28,7 @@ const SectionTitle = styled.h2`
     content: '';
     flex: 1 0 auto;
     height: 1px;
-    background-color: ${ThemeSet.color.font.grey.grey50};
+    background-color: ${ThemeSet.color.font.grey.grey30};
   }
 `
 

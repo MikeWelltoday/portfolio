@@ -37,7 +37,7 @@ const Title = styled.h2`
     content: '';
     flex-grow: 1;
     height: 1px;
-    background-color: ${ThemeSet.color.font.grey.grey50};
+    background-color: ${ThemeSet.color.font.grey.grey30};
   }
 `
 
