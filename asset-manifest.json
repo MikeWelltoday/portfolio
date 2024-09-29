@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.31d6cfe0.css",
-    "main.js": "/portfolio/static/js/main.c56ede26.js",
+    "main.js": "/portfolio/static/js/main.dae952f0.js",
     "static/js/787.25eaef86.chunk.js": "/portfolio/static/js/787.25eaef86.chunk.js",
     "static/media/image-home-x2.webp": "/portfolio/static/media/image-home-x2.d957fa81add724200a03.webp",
     "static/media/image-home.webp": "/portfolio/static/media/image-home.85567f079c09cc24ce0a.webp",
     "static/media/iconsSprite.svg": "/portfolio/static/media/iconsSprite.8e0bf1f48cb0ccb45eb729fe4c74d525.svg",
-    "static/media/image-portfolio-4.webp": "/portfolio/static/media/image-portfolio-4.84652277f699f6e3ae0e.webp",
     "static/media/image-about.webp": "/portfolio/static/media/image-about.7cf333d35e70df5f3fcb.webp",
-    "static/media/image-portfolio-2.webp": "/portfolio/static/media/image-portfolio-2.044584698c5d0d035409.webp",
-    "static/media/image-portfolio-3.webp": "/portfolio/static/media/image-portfolio-3.fd45222abc1266d99af5.webp",
-    "static/media/image-portfolio-1.webp": "/portfolio/static/media/image-portfolio-1.c93fd0fb9a578d8c9e1c.webp",
+    "static/media/Memorizer.webp": "/portfolio/static/media/Memorizer.8e2f685a58f82c7e12a6.webp",
+    "static/media/tech-ui-kit.webp": "/portfolio/static/media/tech-ui-kit.f48eb3c673b7f17b6426.webp",
+    "static/media/Tasker.webp": "/portfolio/static/media/Tasker.a6d4dff95c52cf2bb28e.webp",
+    "static/media/Inctagram.webp": "/portfolio/static/media/Inctagram.4ebd8cf76066315b5c27.webp",
     "index.html": "/portfolio/index.html",
-    "main.c56ede26.js.map": "/portfolio/static/js/main.c56ede26.js.map",
+    "main.dae952f0.js.map": "/portfolio/static/js/main.dae952f0.js.map",
     "787.25eaef86.chunk.js.map": "/portfolio/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.c56ede26.js"
+    "static/js/main.dae952f0.js"
   ]
 }
