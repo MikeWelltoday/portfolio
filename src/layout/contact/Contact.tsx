@@ -13,21 +13,21 @@ import {Reveal} from 'react-awesome-reveal'
 
 const contactLinksCardData: Array<ContactLinksCardPropsType> = [
     {
-        logoLink: 'https://www.google.ru/?hl=ru',
+        logoLink: 'https://mailto:mk.mikhail.k@gmail.com',
         iconId: 'icon-contact-gmail',
         width: '39',
         height: '38',
         viewBox: '0 0 39 38',
-        cardTitle: 'gmail'
+        cardTitle: 'Почта'
     }, {
-        logoLink: 'https://www.google.ru/?hl=ru',
+        logoLink: 'https://t.me/MkKuzV',
         iconId: 'icon-contact-telegram',
         width: '38',
         height: '38',
         viewBox: '0 0 38 38',
-        cardTitle: 'telegram'
+        cardTitle: 'Телеграм'
     }, {
-        logoLink: 'https://www.google.ru/?hl=ru',
+        logoLink: 'https://github.com/MikeWelltoday',
         iconId: 'icon-contact-github',
         width: '39',
         height: '38',
@@ -40,7 +40,7 @@ export const Contact: React.FC = () => {
     return (
         <S.Contact id={'contact'}>
             <Container>
-                <SectionTitle title={'Contact'}/>
+                <SectionTitle title={'Контакты'}/>
                 <S.ContactLinks>
                     <Reveal cascade={true} damping={0.15} triggerOnce={true}>
                         {contactLinksCardData.map((item, index) =>

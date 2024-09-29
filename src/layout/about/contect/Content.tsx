@@ -5,54 +5,73 @@ import {S} from './Content_Styles'
 //===============================================================================================================================================================
 
 const contentList: Array<{ title: string }> = [
-    {title: 'personal information'},
-    {title: 'skills'},
-    {title: 'experience'},
-    {title: 'education'}
+    {title: 'Задачи'},
+    {title: 'Технологии'},
+    {title: 'Образование'},
+    {title: 'Языки'}
 ]
 
 const textList: Array<{ text: string[], status: string }> = [
     {
-        text: ['I help businesses and companies reach and companies reach', 'theirgoals by designing user-centric digital and companies reach ', 'Goals by designing user-centric digital and companies reach and companies reach and companies reach and companies reach products\n' +
-        '& interactive experiences.'],
-        status: 'personal information'
+        text: [
+            'работа в команде (teamlead, backend, PM, QA), рефакторинг, фикс багов',
+            'создание библиотеки UI компонентов (storybook, snapshot)',
+            'применение в проектах FSD и TDD',
+            'авторизация через JWT refresh token, логинизация (через Git и Google)',
+            'обработка и валидация форм с ReactHookForm, Formik, Zod',
+            'пагинация, сортировка, поиск и фильтрация данных с сервера',
+            'работа с сервером, CRUD операции'
+        ],
+        status: 'Задачи'
     },
     {
-        text: ['I businesses and companies', 'theirdesigning user-centric ', 'als by dch and niesch products' +
-        '& interactive experiences.'],
-        status: 'skills'
+        text: [
+            'TS, JS',
+            'React, NextJS',
+            'Redux, RTK, RTK-query',
+            'Rest-API, WebSocket, Axios',
+            'HTML, CSS, SCSS, Styled-Components',
+            'Storybook, RadixUI, MaterialUI, HeadlessUI',
+            'Jest',
+            'ReactHookForm, Formik, Zod'
+        ],
+        status: 'Технологии'
     },
     {
-        text: ['I and companies reach and companies reach', 'theirby designing user-centric digital and companies reach '],
-        status: 'experience'
+        text: [
+            'IT-INCUBATOR ( 2023 ): front-end разработчик',
+            'РОСАТОМ/ТАР ( 2018-2021 ): ведущий инженер',
+            'НИ ТПУ ( 2012-2018 ): инженер'
+        ],
+        status: 'Образование'
     },
     {
-        text: ['I companies reach and companies reach', 'theirby designing ', 'theirgoals by designing user-centric digital and companies reach '],
-        status: 'education'
+        text: ['English: advanced - C1 ( in progress )'],
+        status: 'Языки'
     }
 ]
 
 export const Content: React.FC = () => {
 
     const [decorPosition, setDecorPosition] = useState('0%')
-    const [currentMenuStatus, setCurrentMenuStatus] = useState('personal information')
-    const [currentTextList, setCurrentTextList] = useState(textList.filter(item => item.status === 'personal information'))
+    const [currentMenuStatus, setCurrentMenuStatus] = useState('Задачи')
+    const [currentTextList, setCurrentTextList] = useState(textList.filter(item => item.status === 'Задачи'))
 
     useEffect(() => {
-        if (currentMenuStatus === 'personal information') {
-            setCurrentTextList(textList.filter(item => item.status === 'personal information'))
+        if (currentMenuStatus === 'Задачи') {
+            setCurrentTextList(textList.filter(item => item.status === 'Задачи'))
             setDecorPosition('0%')
         }
-        if (currentMenuStatus === 'skills') {
-            setCurrentTextList(textList.filter(item => item.status === 'skills'))
+        if (currentMenuStatus === 'Технологии') {
+            setCurrentTextList(textList.filter(item => item.status === 'Технологии'))
             setDecorPosition('25%')
         }
-        if (currentMenuStatus === 'experience') {
-            setCurrentTextList(textList.filter(item => item.status === 'experience'))
+        if (currentMenuStatus === 'Образование') {
+            setCurrentTextList(textList.filter(item => item.status === 'Образование'))
             setDecorPosition('50%')
         }
-        if (currentMenuStatus === 'education') {
-            setCurrentTextList(textList.filter(item => item.status === 'education'))
+        if (currentMenuStatus === 'Языки') {
+            setCurrentTextList(textList.filter(item => item.status === 'Языки'))
             setDecorPosition('75%')
         }
     }, [currentMenuStatus])

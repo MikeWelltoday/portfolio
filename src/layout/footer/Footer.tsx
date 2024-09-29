@@ -8,7 +8,7 @@ export const Footer = () => {
     return (
         <S.Footer>
             <Container>
-                <S.Small>© 2023 Kuznetsov Mikhail, with best regards.</S.Small>
+                <S.Small>Кузценов Михаил, web-portfolio</S.Small>
             </Container>
         </S.Footer>
     )

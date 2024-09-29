@@ -14,7 +14,7 @@ export const FormSendMessage: React.FC = () => {
                            exit={{opacity: 0, scale: 0.2}}
                            key={'message'}
         >
-            <S.Title>😉 Thanks for Your Message 🤗</S.Title>
+            <S.Title>😉 Спасибо за ваше сообщение! 🤗</S.Title>
             <ButtonFrame type={'button'}>OK</ButtonFrame>
         </S.FormSendMessage>
     )

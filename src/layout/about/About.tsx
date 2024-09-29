@@ -16,7 +16,7 @@ export const About: React.FC = () => {
     return (
         <S.About id={'about'}>
             <Container>
-                <SectionTitle title={'About'}/>
+                <SectionTitle title={'Навыки'}/>
                 <Fade triggerOnce={true} direction={'left'} delay={100}>
                     <S.Main>
                         <Content/>

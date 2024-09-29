@@ -23,21 +23,21 @@ export const Person: React.FC = () => {
                     transition={{duration: 0.4, delay: 1.2}}
                     initial={{opacity: 0, scale: 1, x: 0, y: 15}}
                     animate={{opacity: 1, scale: 1, x: 0, y: 0}}
-                >Hi, my name is</S.Hello>
+                >Привет, меня зовут</S.Hello>
                 <S.Name
                     transition={{duration: 0.4, delay: 1.4}}
                     initial={{opacity: 0, scale: 1, x: 0, y: 15}}
                     animate={{opacity: 1, scale: 1, x: 0, y: 0}}
-                >Mikhail Kuznetsov.</S.Name>
+                >Михаил Кузнецов.</S.Name>
                 <S.Developer
                     transition={{duration: 0.4, delay: 1.6}}
                     initial={{opacity: 0, scale: 1, x: 0, y: 15}}
                     animate={{opacity: 1, scale: 1, x: 0, y: 0}}
                 >
-                    <p>front-End developer</p>
+                    <p>Web разработчик</p>
                     <Typewriter
                         options={{
-                            strings: ['Web Developer'],
+                            strings: ['Web разработчик'],
                             autoStart: true,
                             loop: true,
                             delay: 200,

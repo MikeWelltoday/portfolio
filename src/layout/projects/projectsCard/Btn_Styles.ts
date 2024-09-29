@@ -1,9 +1,8 @@
 import styled from 'styled-components'
-import {ThemeSet} from '../styles/ThemeStyles.styled'
+import {ThemeSet} from '../../../styles/ThemeStyles.styled'
 
-//===============================================================================================================================================================
 
-export const ButtonFrame = styled.button`
+export const Btn = styled.a`
     background-color: ${ThemeSet.color.background.button};
     background: ${ThemeSet.color.background.button.buttonGradient};
     box-shadow: 0 0 5px ${ThemeSet.color.button.shadow}, 0 0 20px ${ThemeSet.color.button.shadow};
@@ -43,5 +42,3 @@ export const ButtonFrame = styled.button`
         outline: 2px solid ${ThemeSet.color.font.grey.grey100};
     }
 `
-
-

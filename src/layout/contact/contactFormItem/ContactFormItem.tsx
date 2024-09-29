@@ -18,6 +18,8 @@ export const ContactForm: React.FC = () => {
     const sendEmail = (e: any) => {
         e.preventDefault()
 
+        console.log('sesese')
+
         //на случай если ничего не придет в for.current
         // елси for.current == undefined => функция просто остановиться
         if (!form.current) return
@@ -65,20 +67,20 @@ export const ContactForm: React.FC = () => {
                     <S.FormInput type={'text'} id={'name'} required={true} name={'user_name'}
                                  onChange={handleInputChangeName}
                                  change={inputChangeName}/>
-                    <S.FormLabel htmlFor={'name'} aria-labelledby={'name'}>name</S.FormLabel>
+                    <S.FormLabel htmlFor={'name'} aria-labelledby={'name'}>Имя</S.FormLabel>
                 </S.ContactFormItemBox>
                 <S.ContactFormItemBox>
                     <S.FormInput type={'text'} id={'email'} required={true} name={'email'}
                                  onChange={handleInputChangeEmail}
                                  change={inputChangeEmail}/>
-                    <S.FormLabel htmlFor={'email'} aria-labelledby={'email'}>email</S.FormLabel>
+                    <S.FormLabel htmlFor={'email'} aria-labelledby={'email'}>Почта</S.FormLabel>
                 </S.ContactFormItemBox>
                 <S.ContactFormItemBox>
                     <S.FormInput as={'textarea'} id={'message'} required={true} name={'message'}
                                  onChange={handleInputChangeMessage} change={inputChangeMessage}/>
-                    <S.FormLabel htmlFor={'message'} aria-labelledby={'message'}>message</S.FormLabel>
+                    <S.FormLabel htmlFor={'message'} aria-labelledby={'message'}>Сообщение</S.FormLabel>
                 </S.ContactFormItemBox>
-                <ButtonFrame type={'submit'}>contact me</ButtonFrame>
+                <ButtonFrame type={'submit'}>Связаться</ButtonFrame>
             </Fade>
 
             {/*окно информирования об отправке формы*/}

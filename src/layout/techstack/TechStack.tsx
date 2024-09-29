@@ -51,13 +51,13 @@ const techStackCardData: Array<TechStackCardPropsType> = [
         viewBox: '0 0 113 103',
         techNameTitle: 'React'
     },
-    {
-        iconId: 'icon-MyTechStack-Angular',
-        width: '105',
-        height: '105',
-        viewBox: '0 0 105 105',
-        techNameTitle: 'Angular'
-    },
+    // {
+    //     iconId: 'icon-MyTechStack-Angular',
+    //     width: '105',
+    //     height: '105',
+    //     viewBox: '0 0 105 105',
+    //     techNameTitle: 'Angular'
+    // },
     {
         iconId: 'icon-MyTechStack-Redux',
         width: '105',
@@ -72,20 +72,20 @@ const techStackCardData: Array<TechStackCardPropsType> = [
         viewBox: '0 0 105 105',
         techNameTitle: 'NextJS'
     },
-    {
-        iconId: 'icon-MyTechStack-NodeJS',
-        width: '105',
-        height: '105',
-        viewBox: '0 0 105 105',
-        techNameTitle: 'nodeJS'
-    },
-    {
-        iconId: 'icon-MyTechStack-GraphQL',
-        width: '105',
-        height: '120',
-        viewBox: '0 0 105 120',
-        techNameTitle: 'GraphQL'
-    },
+    // {
+    //     iconId: 'icon-MyTechStack-NodeJS',
+    //     width: '105',
+    //     height: '105',
+    //     viewBox: '0 0 105 105',
+    //     techNameTitle: 'nodeJS'
+    // },
+    // {
+    //     iconId: 'icon-MyTechStack-GraphQL',
+    //     width: '105',
+    //     height: '120',
+    //     viewBox: '0 0 105 120',
+    //     techNameTitle: 'GraphQL'
+    // },
     {
         iconId: 'icon-MyTechStack-WebPack',
         width: '120',
@@ -99,28 +99,28 @@ const techStackCardData: Array<TechStackCardPropsType> = [
         height: '87',
         viewBox: '0 0 117 87',
         techNameTitle: 'SASS'
-    },
-    {
-        iconId: 'icon-MyTechStack-TailWind',
-        width: '115',
-        height: '90',
-        viewBox: '0 0 115 90',
-        techNameTitle: 'TailWind'
-    },
-    {
-        iconId: 'icon-MyTechStack-GitHub',
-        width: '88',
-        height: '88',
-        viewBox: '0 0 88 88',
-        techNameTitle: 'GitHub'
     }
+    // {
+    //     iconId: 'icon-MyTechStack-TailWind',
+    //     width: '115',
+    //     height: '90',
+    //     viewBox: '0 0 115 90',
+    //     techNameTitle: 'TailWind'
+    // },
+    // {
+    //     iconId: 'icon-MyTechStack-GitHub',
+    //     width: '88',
+    //     height: '88',
+    //     viewBox: '0 0 88 88',
+    //     techNameTitle: 'GitHub'
+    // }
 ]
 
 export const TechStack: React.FC = () => {
     return (
         <S.TechStack id={'techStack'}>
             <Container>
-                <SectionTitle title={'TechStack'}/>
+                <SectionTitle title={'Технологии'}/>
                 <S.TechStackCardBox>
                     <Reveal cascade={true} damping={0.03} triggerOnce={true}>
                         {

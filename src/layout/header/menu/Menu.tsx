@@ -5,23 +5,23 @@ import {S} from './Menu_Styles'
 
 const menuItemsList: Array<{ title: string, href: string }> = [
     {
-        title: 'home',
+        title: 'Обо мне',
         href: 'home'
     },
     {
-        title: 'about',
+        title: 'Навыки',
         href: 'about'
     },
     {
-        title: 'techStack',
+        title: 'Технологии',
         href: 'techStack'
     },
     {
-        title: 'projects',
+        title: 'Проекты',
         href: 'projects'
     },
     {
-        title: 'contact',
+        title: 'Контакты',
         href: 'contact'
     }
 ]
